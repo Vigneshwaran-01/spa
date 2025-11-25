@@ -138,7 +138,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
 
           {/* RIGHT SIDE: The Pill Button */}
           <div className="flex-shrink-0 w-full lg:w-auto flex justify-start lg:justify-end">
-            <button className="group relative inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-4 rounded-full text-base font-bold transition-transform active:scale-95 hover:bg-slate-900">
+            <button className="group relative inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-2 rounded-full text-base font-bold transition-transform active:scale-95 hover:bg-slate-900">
               Read now
               {/* Green Arrow Icon */}
               <ArrowRight className="w-5 h-5 text-green-400 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={3} />
