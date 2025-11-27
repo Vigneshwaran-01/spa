@@ -8,6 +8,98 @@ import { Award, Target } from "lucide-react";
 import { Cloud, Zap, UploadCloud, FileSearch, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { AlertTriangle, Globe, Bug, ShieldAlert, AlertCircle } from "lucide-react";
 
+function StatCard({ label, value, suffix, subtext, chartVisual, highlight = false } ) {
+  return (
+    <div className={`relative group p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1 
+      ${highlight 
+        ? 'bg-gradient-to-b from-blue-900/20 to-slate-900/60 border-blue-500/30 shadow-[0_0_30px_-10px_rgba(59,130,246,0.15)]' 
+        : 'bg-white/5 border-white/10 hover:border-white/20 hover:bg-white/[0.07]'
+      }`}
+    >
+      {/* Top Label */}
+      <div className="flex justify-between items-start mb-4">
+        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">{label}</p>
+        {/* Simple decorative icon based on card state */}
+        <div className={`w-1.5 h-1.5 rounded-full ${highlight ? 'bg-green-400 shadow-[0_0_8px_#4ade80]' : 'bg-slate-600'}`}></div>
+      </div>
+
+      {/* Big Number */}
+      <div className="flex items-baseline gap-1">
+        <span className={`text-4xl lg:text-5xl font-bold tracking-tight ${highlight 
+          ? 'text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200' 
+          : 'text-white'
+        }`}>
+          {value}
+        </span>
+        <span className={`text-lg font-medium ${highlight ? 'text-blue-300' : 'text-slate-400'}`}>
+          {suffix}
+        </span>
+      </div>
+
+      {/* Visual Indicator (Chart/Bar) */}
+      <div className="py-2">
+        {chartVisual}
+      </div>
+
+      {/* Description */}
+      <p className="text-sm text-slate-400 leading-relaxed mt-2 border-t border-white/5 pt-3">
+        {subtext}
+      </p>
+
+      {/* Hover Glow Effect */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/0 via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+    </div>
+  );
+}
+
+function Card({ icon, title, description}) {
+  return (
+    <div className="group relative h-full">
+      {/* Hover Gradient Border Effect */}
+      <div className="absolute -inset-0.5 bg-gradient-to-br from-blue-500/20 to-slate-800/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
+      
+      <div className="relative h-full bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 rounded-2xl transition-all duration-300 hover:border-blue-500/30 hover:bg-slate-900/80 hover:-translate-y-1">
+        {/* Icon Box */}
+        <div className="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:text-white group-hover:bg-blue-500 group-hover:border-blue-500 transition-colors duration-300">
+          {icon}
+        </div>
+        
+        <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-200 transition-colors">
+          {title}
+        </h3>
+        
+        <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+// --- Icons (SVGs) ---
+
+const ShieldIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+    <path d="m9 12 2 2 4-4" />
+  </svg>
+);
+
+const ComplianceIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+    <path d="m9 15 2 2 4-4" />
+  </svg>
+);
+
+const EyeIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+    <circle cx="12" cy="12" r="3" />
+  </svg>
+);
+
 export default function EmailSecurityGateway() {
 
       const [isClient, setIsClient] = useState(false);
@@ -564,130 +656,201 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
       </div>
     </section>
 
-        <section className="py-16 lg:py-20 bg-[#020617]">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <div className="max-w-3xl mb-8">
-              <p className="text-blue-300 text-xs font-semibold tracking-[0.25em] uppercase mb-3">DLP and compliance</p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-3">
-                Stop Data Leakage and Stay in Compliance Under Your Control
-              </h2>
-              <p className="text-gray-300">
-                SpamCloud's advanced Data Loss Prevention ensures sensitive information never leaves your business
-                unintentionally or maliciously, with dual-layer protection for real-world risks.
-              </p>
-            </div>
+      <section className="relative py-24 bg-[#020617] overflow-hidden">
+      {/* --- Background Effects --- */}
+      {/* 1. Subtle Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
+      
+      {/* 2. Blue Ambient Glow (Top Left) */}
+      <div className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="grid sm:grid-cols-3 gap-6 mb-10">
-              <div className="rounded-2xl bg-slate-900/60 border border-slate-700 p-6 flex flex-col gap-2">
-                <h3 className="font-semibold text-base">Insider threat prevention</h3>
-                <p className="text-gray-300 text-sm">
-                  Blocks unauthorized data sharing and risky attachments or forwarding by identifying intentional data
-                  extraction patterns.
-                </p>
-              </div>
-              <div className="rounded-2xl bg-white/5 border border-white/10 p-6 flex flex-col gap-2">
-                <h3 className="font-semibold text-base">Compliance enforcement</h3>
-                <p className="text-gray-300 text-sm">
-                  Ensure BFSI, Healthcare, Government and IT Services compliance with automated policy rules that maintain
-                  security without slowing work.
-                </p>
-              </div>
-              <div className="rounded-2xl bg-white/5 border border-white/10 p-6 flex flex-col gap-2">
-                <h3 className="font-semibold text-base">DLP built for modern IT teams</h3>
-                <p className="text-gray-300 text-sm">
-                  Real-time content and attachment scanning with Block, Quarantine or Manager Review, full audit logs and
-                  reporting for forensics.
-                </p>
-              </div>
-            </div>
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        
+        {/* --- Header Section --- */}
+        <div className="max-w-3xl mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/20 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+            DLP and Compliance
+          </div>
+          
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+            Stop Data Leakage and Stay <br className="hidden lg:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-300">
+              Compliant & Under Control
+            </span>
+          </h2>
+          
+          <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
+            SpamCloud's advanced Data Loss Prevention ensures sensitive information never 
+            leaves your business unintentionally or maliciously. We provide dual-layer 
+            protection designed for modern, real-world risks.
+          </p>
+        </div>
 
-            <div className="flex justify-center">
-              <Link
+        {/* --- Cards Grid --- */}
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16">
+          
+          {/* Card 1 */}
+          <Card 
+            icon={<ShieldIcon />}
+            title="Insider Threat Prevention"
+            description="Blocks unauthorized data sharing, risky attachments, and forwarding by identifying intentional data extraction patterns in real-time."
+          />
+
+          {/* Card 2 */}
+          <Card 
+            icon={<ComplianceIcon />}
+            title="Compliance Enforcement"
+            description="Ensure BFSI, Healthcare, and Government compliance with automated policy rules that maintain security standards without slowing down workflow."
+          />
+
+          {/* Card 3 */}
+          <Card 
+            icon={<EyeIcon />}
+            title="Modern IT Team DLP"
+            description="Real-time content and attachment scanning with Block, Quarantine, or Manager Review modes. Includes full audit logs for forensics."
+          />
+          
+        </div>
+
+        {/* --- CTA Section --- */}
+        <div className="flex flex-col sm:flex-row items-center gap-6 border-t border-slate-800 pt-10">
+          <div className="flex-1">
+            <p className="text-slate-400 text-sm">
+              Ready to secure your data? <span className="text-white">Get a demo configured in minutes.</span>
+            </p>
+          </div>
+          <Link
+            href="/contact"
+            className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-blue-600 px-8 font-medium text-white transition-all duration-300 hover:bg-blue-500 hover:shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+          >
+            <span className="mr-2">Enable Smart DLP Protection</span>
+            <svg
+              className="w-4 h-4 transition-transform group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
+          </Link>
+        </div>
+      </div>
+    </section>
+
+       <section className="relative py-20 lg:py-28 bg-[#020617] overflow-hidden">
+      {/* --- Background Ambience --- */}
+      {/* Grid Pattern (Consistent with previous section) */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
+      
+      {/* Bottom Right Glow */}
+      <div className="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/3 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        
+        {/* --- Header --- */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/20 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              Live Impact Results
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              Ransomware moves fast. <br />
+              <span className="text-slate-400">Your protection moves faster.</span>
+            </h2>
+          </div>
+
+          <div className="flex shrink-0">
+             <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center px-7 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-sm sm:text-base shadow-lg shadow-blue-900/40 hover:shadow-blue-950/50 transition-transform duration-200 hover:-translate-y-0.5"
+                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-blue-600 px-8 font-medium text-white transition-all duration-300 hover:bg-blue-500 hover:shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)]"
               >
-                <span>Enable Smart DLP Protection Today</span>
+                <span className="mr-2">Talk to a Solutions Consultant</span>
                 <svg
-                  className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-                  viewBox="0 0 24 24"
+                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <path
-                    d="M5 12H19M19 12L12 5M19 12L12 19"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-            </div>
           </div>
-        </section>
+        </div>
 
-        <section className="py-16 lg:py-20 bg-[#020826]">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10">
-              <div className="max-w-2xl">
-                <p className="text-blue-300 text-xs font-semibold tracking-[0.25em] uppercase mb-3">Results</p>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-3">
-                  Ransomware is getting faster. Your protection should too.
-                </h2>
-                <p className="text-gray-300">
-                  Organizations using SpamCloud's email security gateway see measurable drops in attack surface and faster
-                  investigation cycles.
-                </p>
+        {/* --- Stats Grid (Dashboard Style) --- */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          {/* Stat Card 1 */}
+          <StatCard 
+            label="Suspicious Traffic"
+            value="93%"
+            suffix="↓"
+            subtext="Drop in suspicious email traffic."
+            trend="positive" // Green/Blue indicator
+            chartVisual={
+              <div className="flex gap-1 h-8 items-end mt-4 opacity-50">
+                <div className="w-2 bg-blue-500 h-full rounded-sm"></div>
+                <div className="w-2 bg-blue-500 h-[80%] rounded-sm"></div>
+                <div className="w-2 bg-blue-500 h-[50%] rounded-sm"></div>
+                <div className="w-2 bg-blue-500 h-[20%] rounded-sm"></div>
+                <div className="w-2 bg-blue-400 h-[10%] rounded-sm animate-pulse"></div>
               </div>
+            }
+          />
 
-              <div className="flex justify-start lg:justify-end">
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center justify-center px-7 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-sm sm:text-base shadow-lg shadow-blue-900/40 hover:shadow-blue-950/50 transition-transform duration-200 hover:-translate-y-0.5"
-                >
-                  <span>Talk to a Solutions Consultant</span>
-                  <svg
-                    className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 12H19M19 12L12 5M19 12L12 19"
-                      stroke="currentColor"
-                      strokeWidth="2.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </Link>
+          {/* Stat Card 2 */}
+          <StatCard 
+            label="Ransomware Incidents"
+            value="0"
+            suffix=""
+            subtext="Reported email-delivered payloads."
+            trend="secure"
+            highlight={true} // Special styling for the '0'
+            chartVisual={
+              <div className="h-8 w-full mt-4 border-b border-white/10 flex items-center">
+                <div className="w-full h-[1px] bg-green-500/50 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div>
               </div>
-            </div>
+            }
+          />
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              <div className="rounded-2xl bg-slate-900/60 border border-slate-700 px-5 py-4">
-                <p className="text-xs text-gray-400 uppercase tracking-[0.18em]">Suspicious traffic</p>
-                <p className="text-2xl font-semibold mt-1">93% ↓</p>
-                <p className="text-xs text-gray-400 mt-1">Average drop in suspicious email traffic.</p>
+          {/* Stat Card 3 */}
+          <StatCard 
+            label="High-risk Intrusions"
+            value="56"
+            suffix="/mo"
+            subtext="Average blocked intrusions."
+            trend="warning" 
+            chartVisual={
+              // Abstract visualization of blocked dots
+              <div className="flex gap-2 mt-4">
+                 <span className="h-2 w-2 rounded-full bg-red-500/40"></span>
+                 <span className="h-2 w-2 rounded-full bg-red-500/40"></span>
+                 <span className="h-2 w-2 rounded-full bg-red-500"></span>
+                 <span className="h-2 w-2 rounded-full bg-red-500/40"></span>
               </div>
-              <div className="rounded-2xl bg-white/5 border border-white/10 px-5 py-4">
-                <p className="text-xs text-gray-400 uppercase tracking-[0.18em]">Ransomware incidents</p>
-                <p className="text-2xl font-semibold mt-1">0</p>
-                <p className="text-xs text-gray-400 mt-1">Reported email-delivered ransomware incidents.</p>
+            }
+          />
+
+           {/* Stat Card 4 */}
+           <StatCard 
+            label="Cloud Performance"
+            value="40%"
+            suffix="Faster"
+            subtext="Native stack keeps mail responsive."
+            trend="speed"
+            chartVisual={
+              <div className="mt-4 h-1 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div className="h-full bg-gradient-to-r from-blue-600 to-cyan-400 w-[85%] rounded-full shadow-[0_0_15px_rgba(34,211,238,0.5)]"></div>
               </div>
-              <div className="rounded-2xl bg-white/5 border border-white/10 px-5 py-4">
-                <p className="text-xs text-gray-400 uppercase tracking-[0.18em]">High-risk intrusions</p>
-                <p className="text-2xl font-semibold mt-1">56 / month</p>
-                <p className="text-xs text-gray-400 mt-1">Average blocked high-risk intrusions.</p>
-              </div>
-              <div className="rounded-2xl bg-white/5 border border-white/10 px-5 py-4">
-                <p className="text-xs text-gray-400 uppercase tracking-[0.18em]">Performance</p>
-                <p className="text-2xl font-semibold mt-1">40% faster</p>
-                <p className="text-xs text-gray-400 mt-1">Cloud-native stack keeps mail flow responsive.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+            }
+          />
+
+        </div>
+      </div>
+    </section>
       </main>
     </>
   );
