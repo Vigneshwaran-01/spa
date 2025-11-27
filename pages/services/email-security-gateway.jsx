@@ -8,6 +8,104 @@ import { Award, Target } from "lucide-react";
 import { Cloud, Zap, UploadCloud, FileSearch, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { AlertTriangle, Globe, Bug, ShieldAlert, AlertCircle } from "lucide-react";
 
+
+
+function FeatureCard({ icon, title, description, color, techLabel }) {
+  // Color maps for dynamic styling
+  const colorStyles = {
+    blue: {
+      bg: "bg-blue-500/10",
+      text: "text-blue-400",
+      border: "group-hover:border-blue-500/50",
+      glow: "group-hover:shadow-blue-500/20",
+      iconBg: "group-hover:bg-blue-500"
+    },
+    emerald: {
+      bg: "bg-emerald-500/10",
+      text: "text-emerald-400",
+      border: "group-hover:border-emerald-500/50",
+      glow: "group-hover:shadow-emerald-500/20",
+      iconBg: "group-hover:bg-emerald-500"
+    },
+    purple: {
+      bg: "bg-purple-500/10",
+      text: "text-purple-400",
+      border: "group-hover:border-purple-500/50",
+      glow: "group-hover:shadow-purple-500/20",
+      iconBg: "group-hover:bg-purple-500"
+    },
+    orange: {
+      bg: "bg-orange-500/10",
+      text: "text-orange-400",
+      border: "group-hover:border-orange-500/50",
+      glow: "group-hover:shadow-orange-500/20",
+      iconBg: "group-hover:bg-orange-500"
+    }
+  };
+
+  const styles = colorStyles[color];
+
+  return (
+    <div className={`group relative p-8 rounded-2xl bg-slate-900/40 border border-white/5 transition-all duration-300 hover:bg-slate-900/80 hover:-translate-y-1 shadow-lg ${styles.border} ${styles.glow}`}>
+      
+      {/* Decorative Tech Label (Top Right) */}
+      <div className="absolute top-6 right-6">
+        <span className="text-[10px] font-mono text-slate-600 uppercase tracking-widest border border-slate-800 px-2 py-1 rounded bg-slate-950/50">
+          {techLabel}
+        </span>
+      </div>
+
+      {/* Icon Container */}
+      <div className={`w-14 h-14 rounded-xl ${styles.bg} border border-white/5 flex items-center justify-center ${styles.text} mb-6 transition-all duration-300 ${styles.iconBg} group-hover:text-white`}>
+        {/* Clone element to force size if needed, or just render */}
+        <div className="w-7 h-7">
+            {icon}
+        </div>
+      </div>
+
+      {/* Content */}
+      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors">
+        {title}
+      </h3>
+      <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors">
+        {description}
+      </p>
+
+      {/* Decorative Corner Lines (Bottom Left) */}
+      <div className="absolute bottom-0 left-0 w-full h-full pointer-events-none overflow-hidden rounded-2xl">
+         <div className={`absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+      </div>
+    </div>
+  );
+}
+
+// --- Icons (Inline SVGs) ---
+
+
+
+const ActivityIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+  </svg>
+);
+
+const LockIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+  </svg>
+);
+
+const DashboardIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect width="7" height="9" x="3" y="3" rx="1" />
+    <rect width="7" height="5" x="14" y="3" rx="1" />
+    <rect width="7" height="9" x="14" y="12" rx="1" />
+    <rect width="7" height="5" x="3" y="16" rx="1" />
+  </svg>
+);
+
+
 function StatCard({ label, value, suffix, subtext, chartVisual, highlight = false } ) {
   return (
     <div className={`relative group p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-1 
@@ -591,66 +689,71 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
 
 
 
- <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+ <section className="relative py-24 bg-[#020617] overflow-hidden">
+      {/* --- Background Effects (Seamless transition) --- */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
+      
+      {/* Center ambient glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         
-        {/* Header Section */}
-        <div className="mb-12">
-          <p className="text-blue-300 text-xs font-bold tracking-[0.25em] uppercase mb-4">Capabilities</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 tracking-tight">
-            Trusted by India's Fast-Growing Businesses
+        {/* --- Header --- */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-blue-400 text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
+            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+            Core Capabilities
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+            Trusted by India's <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+              Fast-Growing Businesses
+            </span>
           </h2>
-          <p className="text-slate-300 text-lg max-w-2xl leading-relaxed">
-            Built for organizations that cannot afford downtime, data loss, or reputational damage from email-based threats.
+          <p className="text-lg text-slate-400 leading-relaxed">
+            Built for organizations that cannot afford downtime. Our stack replaces generic protection 
+            with a region-aware, high-performance security engine.
           </p>
         </div>
 
-        {/* Grid Section */}
-        <div className="grid md:grid-cols-2 gap-6">
+        {/* --- Grid Section --- */}
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           
-          {/* Card 1 */}
-          <div className="group p-8 rounded-2xl bg-slate-900/40 border border-white/10 hover:bg-slate-800/60 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-blue-900/20 backdrop-blur-sm">
-            <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4 group-hover:scale-110 transition-transform">
-                <Shield className="w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-300 transition-colors">Spam filtering engine</h3>
-            <p className="text-slate-400 leading-relaxed text-sm">
-              Multi-layer heuristic scanning and language-based filtering specifically tuned for Indian spam patterns and regional campaigns.
-            </p>
-          </div>
+          {/* Card 1: Blue - Spam Filtering */}
+          <FeatureCard 
+            icon={<ShieldIcon />}
+            title="Spam Filtering Engine"
+            description="Multi-layer heuristic scanning and language-based filtering specifically tuned for Indian spam patterns and regional campaigns."
+            color="blue"
+            techLabel="MOD-01 // HEURISTIC SCAN"
+          />
 
-          {/* Card 2 */}
-          <div className="group p-8 rounded-2xl bg-slate-900/40 border border-white/10 hover:bg-slate-800/60 hover:border-emerald-500/50 transition-all duration-300 shadow-lg hover:shadow-emerald-900/20 backdrop-blur-sm">
-            <div className="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-4 group-hover:scale-110 transition-transform">
-                <Activity className="w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-white group-hover:text-emerald-300 transition-colors">Anti-malware & ransomware</h3>
-            <p className="text-slate-400 leading-relaxed text-sm">
-              Advanced AV engines with suspicious behaviour detection in attachments and links to proactively block ransomware.
-            </p>
-          </div>
+          {/* Card 2: Emerald - Malware */}
+          <FeatureCard 
+            icon={<ActivityIcon />}
+            title="Anti-Malware & Ransomware"
+            description="Advanced AV engines with suspicious behavior detection in attachments and links to proactively block zero-day ransomware."
+            color="emerald"
+            techLabel="MOD-02 // BEHAVIOR ANALYSIS"
+          />
 
-          {/* Card 3 */}
-          <div className="group p-8 rounded-2xl bg-slate-900/40 border border-white/10 hover:bg-slate-800/60 hover:border-purple-500/50 transition-all duration-300 shadow-lg hover:shadow-purple-900/20 backdrop-blur-sm">
-            <div className="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4 group-hover:scale-110 transition-transform">
-                <Lock className="w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-white group-hover:text-purple-300 transition-colors">Authentication & compliance</h3>
-            <p className="text-slate-400 leading-relaxed text-sm">
-              DKIM, DMARC and SPF enforcement with TLS encryption for mail transport and strict policy-based outbound controls.
-            </p>
-          </div>
+          {/* Card 3: Purple - Auth */}
+          <FeatureCard 
+            icon={<LockIcon />}
+            title="Authentication & Compliance"
+            description="Full DKIM, DMARC, and SPF enforcement with TLS encryption for mail transport and strict policy-based outbound controls."
+            color="purple"
+            techLabel="MOD-03 // PROTOCOL ENFORCE"
+          />
 
-          {/* Card 4 */}
-          <div className="group p-8 rounded-2xl bg-slate-900/40 border border-white/10 hover:bg-slate-800/60 hover:border-orange-500/50 transition-all duration-300 shadow-lg hover:shadow-orange-900/20 backdrop-blur-sm">
-            <div className="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-400 mb-4 group-hover:scale-110 transition-transform">
-                <LayoutDashboard className="w-6 h-6" />
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-300 transition-colors">Quarantine & reporting</h3>
-            <p className="text-slate-400 leading-relaxed text-sm">
-              Full admin control over user policies, self-service release for quarantined mails, and clear, actionable reporting.
-            </p>
-          </div>
+          {/* Card 4: Orange - Reporting */}
+          <FeatureCard 
+            icon={<DashboardIcon />}
+            title="Quarantine & Reporting"
+            description="Granular admin control over user policies, self-service release for quarantined mails, and clear, actionable forensics reporting."
+            color="orange"
+            techLabel="MOD-04 // ADMIN CONTROLS"
+          />
 
         </div>
       </div>
