@@ -115,7 +115,7 @@ export default function Header() {
               {/* Contact Us Button - Always visible */}
               <Link 
                 href="/contact" 
-                className="bg-[#46e874] hover:bg-emerald-400 active:bg-emerald-500 text-black px-2 py-[5px] sm:px-5 sm:py-2.5 lg:px-6 lg:py-3 rounded-full font-semibold text-xs sm:text-sm lg:text-md transition-all duration-200 hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 active:scale-95 flex items-center gap-1.5 sm:gap-2"
+                className="bg-blue-600 hover:bg-blue-500  active:bg-blue-600 text-white px-2 py-[5px] sm:px-5 sm:py-2.5 lg:px-6 lg:py-3 rounded-full font-semibold text-xs sm:text-sm lg:text-md transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 flex items-center gap-1.5 sm:gap-2"
                 onClick={() => {
                   setIsContactClicked(true);
                   setTimeout(() => setIsContactClicked(false), 300);

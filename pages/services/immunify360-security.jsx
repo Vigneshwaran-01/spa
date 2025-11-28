@@ -7,10 +7,14 @@ import {
   AlertTriangle,
   Activity,
   Server,
+  Check,
+  CheckCircle ,
   Lock,
   Terminal,
   ShieldAlert,
   CheckCircle2,
+  FileText,
+  AlertOctagon
 } from "lucide-react";
 import { 
   Search,
@@ -127,149 +131,171 @@ export default function Immunify360Security() {
 
       <main className="min-h-screen bg-slate-950 text-white">
         {/* HERO SECTION */}
-      <section className="relative w-full min-h-[800px] overflow-hidden flex items-center py-24 bg-[#020617] text-white selection:bg-blue-500/30">
+<section className="relative w-full min-h-screen overflow-hidden bg-[#020617] text-white selection:bg-blue-500/30 font-sans flex items-center justify-center">
       
-      {/* --- Background Layers --- */}
+      {/* --- Background Elements --- */}
+      {/* Deep Violet Glow */}
+      <div className="absolute top-[-20%] left-[20%] w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none" />
       
-      {/* 1. Base Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-[#020617]" />
-      
-      {/* 2. Cyber Grid with Perspective */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
-      
-      {/* 3. Ambient Glow (Spotlight effect) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-blue-600/20 rounded-[100%] blur-[100px] pointer-events-none mix-blend-screen" />
-      
-      {/* 4. Meteors Animation */}
-      <Meteors number={20} />
-
-      {/* --- Main Content --- */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-12 gap-16 items-center">
+      {/* Grid Texture */}
+   <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:40px_40px] lg:bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-30 pointer-events-none" />
+      {/* --- Main Container --- */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center h-full py-20 lg:py-0">
         
-        {/* LEFT COLUMN: Typography & CTAs */}
-        <div className="lg:col-span-7 flex flex-col justify-center">
+        {/* ==========================================
+            LEFT COLUMN: Text & Messaging
+            Aligned left on desktop, center on mobile
+           ========================================== */}
+        <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left z-20">
           
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-medium w-fit mb-6 backdrop-blur-md shadow-[0_0_15px_rgba(59,130,246,0.3)] animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-500/30 bg-blue-900/20 text-blue-200 text-xs font-medium tracking-wide w-fit mb-8 backdrop-blur-md shadow-[0_0_15px_rgba(37,99,235,0.2)]">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            System Operational • Threat Level Zero
+            Immunify360 Active • Email Gateway
           </div>
 
-          {/* Heading */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
+          <h1 className="text-5xl lg:text-left  sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6 text-white">
             Stop Ransomware <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-white to-blue-200 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 via-white to-blue-100 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]">
               At The Door.
             </span>
           </h1>
 
-          {/* Subheading */}
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed mb-8">
-            Your network deserves military-grade defense powered by <span className="text-white font-semibold">SpamCloud + Immunify360</span>. 
-            We intercept 99.9% of intrusion vectors before they touch your infrastructure.
+          <p className="text-lg text-slate-400 max-w-xl leading-relaxed mb-10 lg:border-l-2 lg:border-slate-800 lg:pl-6">
+            Your inbox is the front door. We install a <span className="text-white font-semibold">military-grade prism</span> that filters malicious payloads before they ever reach your employees.
           </p>
 
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="group relative px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold transition-all shadow-[0_0_40px_rgba(37,99,235,0.3)] hover:shadow-[0_0_60px_rgba(37,99,235,0.5)] overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
-              <span className="relative flex items-center gap-2">
-                Protect My Network <ArrowRight size={18} />
-              </span>
-            </button>
-            
-            <button className="px-8 py-4 text-slate-300 hover:text-white font-medium transition-all border border-slate-700 hover:border-slate-500 rounded-lg bg-slate-900/50 backdrop-blur-sm hover:bg-slate-800/50">
-              Talk to a Specialist
-            </button>
-          </div>
+          <div className="flex flex-col sm:flex-row gap-4 w-full ">
+  <button className="flex-1 group flex items-center justify-center gap-2 
+    text-white font-semibold text-sm bg-blue-600 hover:bg-blue-500 
+    px-6 py-4 h-14 rounded-full transition-all 
+    shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]">
+    Protect My Inbox
+    <ArrowRight className="w-4 h-5 transition-transform group-hover:translate-x-1" />
+  </button>
 
-          {/* Trust/Stats Footer */}
-          <div className="mt-12 flex items-center gap-8 text-sm font-medium text-slate-500 border-t border-slate-800/50 pt-6">
-            <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-emerald-500" /> 17+ Years Expertise
-            </div>
-            <div className="flex items-center gap-2">
-              <Zap className="w-4 h-4 text-yellow-500" /> &lt; 24h Deployment
-            </div>
-          </div>
+   <button className="flex-1 flex items-center justify-center 
+    h-14 px-6 text-slate-300 border border-slate-800 
+    hover:border-slate-600 rounded-full hover:bg-slate-900/50 
+    backdrop-blur-sm transition-all">
+    Live Demo
+  </button>
+</div>
+
         </div>
 
-        {/* RIGHT COLUMN: The "HUD" Visual */}
-        {/* Designed to look like an active security dashboard/scanner */}
-        <div className="lg:col-span-5 relative perspective-[2000px]">
+        {/* ==========================================
+            RIGHT COLUMN: The Animation Stage
+            Strictly centered within the right column
+           ========================================== */}
+        <div className="relative h-[450px] lg:h-[600px] w-full flex items-center justify-center perspective-[1200px] mt-10 lg:mt-0">
           
-          {/* Decorative glowing orb behind the card */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-500/30 rounded-full blur-[80px] -z-10 animate-pulse" />
+          {/* THE STAGE: A defined width container centered in the column */}
+          <div className="relative w-[320px] sm:w-[500px] h-[500px] flex items-center justify-center">
 
-          {/* The Glass Card Container */}
-          <div className="relative bg-slate-900/40 border border-slate-700/50 backdrop-blur-xl rounded-3xl p-6 lg:p-8 shadow-2xl transform transition-transform hover:scale-[1.02] duration-500 hover:shadow-[0_0_50px_rgba(30,58,138,0.2)]">
-            
-            {/* Header of the fake UI */}
-            <div className="flex items-center justify-between mb-8 border-b border-slate-700/50 pb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center shadow-lg">
-                  <Shield className="w-5 h-5 text-white" />
+            {/* 1. SECURE INBOX (Left side of Stage) */}
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 z-20 animate-float-slow">
+              <div className="relative w-32 sm:w-40 h-40 sm:h-48 bg-gradient-to-br from-slate-900 to-[#0B0F1A] border border-slate-700/50 rounded-2xl flex flex-col items-center justify-center shadow-2xl backdrop-blur-xl group">
+                <div className="absolute top-[-1px] w-16 sm:w-20 h-1 bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.8)] rounded-b-lg" />
+                
+                <div className="p-3 sm:p-4 bg-slate-800/50 rounded-full border border-slate-700 mb-3">
+                  <ShieldCheck className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400" />
                 </div>
-                <div>
-                  <h3 className="text-white font-semibold text-sm">Real-time Protection</h3>
-                  <p className="text-xs text-emerald-400 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" /> Active Monitoring
-                  </p>
-                </div>
+                <h3 className="text-white font-semibold text-xs sm:text-sm">Inbox</h3>
+                <p className="text-emerald-400/60 text-[10px] mt-1 font-mono">SECURE</p>
+
+                {/* Papers Effect */}
+                <div className="absolute -z-10 bottom-2 w-[90%] h-full bg-slate-800/30 rounded-2xl rotate-3" />
               </div>
-              <Activity className="text-slate-500 w-5 h-5" />
             </div>
 
-            {/* Feature Grid inside the card */}
-            <div className="grid grid-cols-1 gap-4">
-              {[
-                { title: "Ransomware Blocked", desc: "99% entry vector elimination", icon: Lock, color: "text-rose-400" },
-                { title: "IPS Engine", desc: "Cloud-native heuristic scanning", icon: Cpu, color: "text-blue-400" },
-                { title: "Local Support", desc: "Dedicated Indian support team", icon: Server, color: "text-indigo-400" },
-              ].map((item, idx) => (
-                <div key={idx} className="group flex items-start gap-4 p-4 rounded-xl bg-slate-950/50 border border-slate-800/50 hover:border-blue-500/30 transition-all duration-300 hover:bg-slate-900/80">
-                  <div className={`mt-1 p-2 rounded-md bg-slate-900 border border-slate-800 group-hover:border-slate-700 transition-colors`}>
-                    <item.icon className={`w-5 h-5 ${item.color}`} />
-                  </div>
-                  <div>
-                    <h4 className="text-slate-200 font-medium text-sm">{item.title}</h4>
-                    <p className="text-slate-400 text-xs mt-1">{item.desc}</p>
-                  </div>
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 ml-auto opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-2 group-hover:translate-x-0" />
-                </div>
-              ))}
+            {/* 2. THE PRISM (Center of Stage) */}
+            <div className="absolute left-1/2 -translate-x-1/2 h-[400px] w-[4px] z-30 flex flex-col items-center justify-center">
+              {/* Beam */}
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500 to-transparent opacity-80 shadow-[0_0_50px_rgba(59,130,246,0.6)]" />
+              {/* Core Line */}
+              <div className="absolute w-[2px] h-full bg-white opacity-50" />
+              
+              {/* Scanner Node */}
+              <div className="absolute top-1/2 -translate-y-1/2 w-12 h-12 bg-[#020617] border border-blue-500 rounded-xl rotate-45 flex items-center justify-center shadow-[0_0_40px_rgba(59,130,246,0.5)] z-40">
+                <Shield className="w-5 h-5 text-white -rotate-45 fill-blue-900" />
+              </div>
+              
+              {/* Laser Scan */}
+              <div className="absolute w-[200px] sm:w-[300px] h-[2px] bg-blue-400/50  blur-sm animate-scan" />
             </div>
 
-            {/* Scanning Line Animation */}
-            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50 animate-scan pointer-events-none" />
-          </div>
-          
-          {/* Floating Elements for 3D effect */}
-          <div className="absolute -right-6 -bottom-6 p-4 bg-[#0f172a] border border-slate-700 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce-slow z-20">
-            <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-xs font-mono text-slate-300">Scanning... 24ms</span>
-          </div>
+            {/* 3. TRAFFIC (Right side of Stage) */}
+            
+            {/* Safe Email (Passing) */}
+            <div className="absolute top-[38%] right-0 animate-email-pass z-10 flex items-center">
+               <div className="relative w-10 h-10 bg-[#0f172a] border border-emerald-500/40 rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.2)] text-emerald-400">
+                 <Mail className="w-5 h-5" />
+               </div>
+            </div>
 
+            {/* Ransomware (Blocked) */}
+            <div className="absolute top-[28%] right-0 animate-threat-block z-40 flex items-center gap-2">
+               <div className="relative w-10 h-10 bg-[#1a0505] border border-rose-500 rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(244,63,94,0.5)] text-rose-500">
+                 <AlertOctagon className="w-5 h-5" />
+               </div>
+               <span className="hidden sm:block text-[10px] font-mono text-rose-500 bg-rose-950/80 px-1 rounded opacity-0 animate-fade-in-out">BLOCKED</span>
+            </div>
+
+            {/* Impact Flash */}
+            <div className="absolute left-1/2 top-[28%] -translate-x-1/2 w-16 h-16 bg-rose-500/30 rounded-full blur-xl animate-impact opacity-0 pointer-events-none" />
+
+          </div>
         </div>
       </div>
 
-      {/* CSS for custom animations if not in tailwind.config */}
+      {/* Styles */}
       <style>{`
         @keyframes scan {
-          0% { top: 0%; opacity: 0; }
+          0%, 100% { top: 10%; opacity: 0; }
+          50% { opacity: 1; }
+          100% { top: 90%; opacity: 0; }
+        }
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(-50%) translateY(0px); }
+          50% { transform: translateY(-50%) translateY(-10px); }
+        }
+        @keyframes threat-block {
+          0% { right: -10%; opacity: 0; transform: scale(0.9); }
           10% { opacity: 1; }
-          90% { opacity: 1; }
-          100% { top: 100%; opacity: 0; }
+          40% { right: 42%; opacity: 1; transform: scale(1); }
+          50% { right: 50%; opacity: 0; transform: scale(1.5); filter: blur(4px); }
+          100% { right: 50%; opacity: 0; }
         }
-        .animate-scan {
-          animation: scan 3s linear infinite;
+        @keyframes email-pass {
+          0% { right: -10%; opacity: 0; transform: scale(0.9); }
+          10% { opacity: 1; }
+          45% { right: 50%; transform: scale(1); filter: brightness(1.5); }
+          80% { right: 85%; opacity: 1; transform: scale(0.5) rotate(-10deg); }
+          85% { right: 88%; opacity: 0; }
+          100% { right: 88%; opacity: 0; }
         }
-        .animate-bounce-slow {
-          animation: bounce 4s infinite;
+        @keyframes impact {
+          0%, 45% { opacity: 0; transform: scale(0.2); }
+          50% { opacity: 1; transform: scale(1.2); }
+          100% { opacity: 0; transform: scale(1.5); }
         }
+        @keyframes fade-in-out {
+          0%, 40% { opacity: 0; }
+          45% { opacity: 1; }
+          55% { opacity: 0; }
+          100% { opacity: 0; }
+        }
+        .animate-scan { animation: scan 3s ease-in-out infinite; }
+        .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+        .animate-threat-block { animation: threat-block 4s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
+        .animate-email-pass { animation: email-pass 4s linear infinite 1s; }
+        .animate-impact { animation: impact 4s linear infinite; }
+        .animate-fade-in-out { animation: fade-in-out 4s linear infinite; }
       `}</style>
     </section>
 
@@ -277,7 +303,7 @@ export default function Immunify360Security() {
         <section className="relative w-full py-20 bg-[#020617]">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#020617_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none" />
 
-          <div className="relative max-w-6xl mx-auto px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-start">
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-xs font-bold tracking-[0.2em] uppercase mb-6">
                 <AlertTriangle size={14} />
@@ -341,34 +367,47 @@ export default function Immunify360Security() {
         </section>
 
         {/* HIGHLIGHT / TRUST SECTION */}
-        <section className="w-full bg-white py-20 lg:py-24">
-          <div className="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-10">
-            <div className="max-w-xl">
-              <p className="text-xs font-semibold tracking-[0.3em] uppercase text-blue-600 mb-4">
-                Trusted in India
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight mb-4">
-                Trusted by India's leading IT companies, hosting providers &
-                enterprises
-              </h2>
-              <p className="text-lg text-slate-600">
-                SpamCloud filters billions of emails every month, protecting
-                teams against evolving phishing kits, account compromise attempts
-                and compliance risks with low-latency Indian routing.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-start gap-6 w-full lg:w-auto">
-              <div className="px-5 py-3 rounded-full bg-slate-900 text-white text-sm font-semibold flex items-center gap-2 shadow-md">
-                Talk to a Cybersecurity Specialist
-                <ArrowRight className="w-4 h-4 text-emerald-400" />
-              </div>
-              <div className="text-xs text-slate-500 uppercase tracking-[0.25em]">
-                Indian data centers b7 MSP ready  b7 Enterprise support
-              </div>
-            </div>
+      <section className="w-full bg-white py-24 border-y border-slate-100">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+          
+          {/* Left Content */}
+          <div className="max-w-2xl flex flex-col items-start text-left">
+            {/* Badge */}
+            <span className="inline-block py-1 px-3 rounded bg-blue-50 text-blue-600 text-[11px] font-bold tracking-[0.2em] uppercase mb-6">
+              Trusted in India
+            </span>
+            
+            {/* Headline */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.2] mb-6 tracking-tight">
+              Trusted by India's leading <br className="hidden lg:block" />
+              IT companies & enterprises.
+            </h2>
+            
+            {/* Description */}
+            <p className="text-lg text-slate-500 leading-relaxed">
+              SpamCloud filters billions of emails every month, protecting
+              teams against evolving phishing kits, account compromise attempts
+              and compliance risks with <span className="font-medium text-slate-900">low-latency Indian routing.</span>
+            </p>
           </div>
-        </section>
+
+          {/* Right Action Area */}
+          <div className="flex flex-col items-start lg:items-end gap-6 w-full lg:w-auto min-w-max">
+            
+            {/* Primary Button */}
+            <button className="group px-8 py-4 rounded-full bg-[#0f172a] hover:bg-blue-600 text-white text-sm font-bold tracking-wide transition-all duration-300 shadow-xl hover:shadow-blue-600/20 flex items-center gap-3">
+              Talk to a Cybersecurity Specialist
+              <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+            </button>
+            
+          
+          </div>
+
+        </div>
+      </div>
+    </section>
 
         {/* SOLUTION SECTION */}
       <section className="relative w-full py-24 bg-[#020617] overflow-hidden">
@@ -408,9 +447,9 @@ export default function Immunify360Security() {
           {/* Glowing Badge */}
           <div className="group relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
-            <div className="relative px-5 py-2.5 bg-slate-900 rounded-full border border-slate-800 flex items-center gap-3 shadow-xl">
+            <div className="relative px-5  bg-slate-900 rounded-full border border-slate-800 flex items-center gap-3 shadow-xl">
               <Shield className="w-5 h-5 text-emerald-400 fill-emerald-400/10" />
-              <div>
+              <div className="flex flex-col justify-center items-start ">
                 <p className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Powered By</p>
                 <p className="text-xs font-bold text-white tracking-wide">Immunify360™ Partner</p>
               </div>
@@ -648,40 +687,92 @@ export default function Immunify360Security() {
         </section>
 
         {/* IMMUNIFY360 SECTION */}
-        <section className="w-full py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-start">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                More protection with Immunify360
-              </h2>
-              <p className="text-slate-600 mb-4">
-                Because we&apos;re Immunify360 partners, your network gets an
-                extra security brain that never sleeps.
-              </p>
+ <section className="w-full py-24 bg-white relative">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+          
+          {/* =========================================
+              LEFT COLUMN: Sticky Content
+              (Stays fixed while you scroll the features)
+             ========================================= */}
+          <div className="lg:sticky lg:top-24">
+            
+            {/* Partner Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 rounded-full bg-blue-50 text-blue-700 text-xs font-bold tracking-widest uppercase">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              Official Partner
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50 text-sm text-slate-700">
-                Proactive malware blocking
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.1] mb-6">
+              More protection with <br />
+              <span className="text-blue-600">Immunify360.</span>
+            </h2>
+
+            <p className="text-lg text-slate-500 mb-8 leading-relaxed">
+              Your network gets an extra security brain that never sleeps. 
+              We leverage Immunify360's AI-driven defense to predict and block attacks instantly.
+            </p>
+
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3 text-sm font-semibold text-slate-700">
+                <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center">
+                   <Check className="w-3.5 h-3.5 text-emerald-600" />
+                </div>
+                Zero-latency integration
               </div>
-              <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50 text-sm text-slate-700">
-                Kernel-level protection
-              </div>
-              <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50 text-sm text-slate-700">
-                Reputation management
-              </div>
-              <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50 text-sm text-slate-700">
-                Advanced WAF
-              </div>
-              <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50 text-sm text-slate-700">
-                Global threat intelligence feeds
-              </div>
-              <div className="p-4 rounded-2xl border border-slate-200 bg-slate-50 text-sm text-slate-700">
-                OS-level attack prevention
+              <div className="flex items-center gap-3 text-sm font-semibold text-slate-700">
+                <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center">
+                   <Check className="w-3.5 h-3.5 text-emerald-600" />
+                </div>
+                Automated incident response
               </div>
             </div>
+            
+            {/* Decorative "Brain" Graphic behind text */}
+            <div className="absolute -left-20 top-20 w-64 h-64 bg-blue-100 rounded-full blur-[100px] opacity-50 -z-10" />
           </div>
-        </section>
+
+          {/* =========================================
+              RIGHT COLUMN: The "Neural Spine" List
+              (No boxes, just connected flow)
+             ========================================= */}
+          <div className="relative pt-4">
+            
+            {/* The Vertical Connecting Line */}
+            <div className="absolute left-[27px] top-4 bottom-12 w-[2px] bg-slate-100" />
+
+            <div className="flex flex-col gap-10">
+              {features.map((feature, idx) => (
+                <div key={idx} className="group relative flex gap-6 items-start">
+                  
+                  {/* Icon Node */}
+                  <div className="relative z-10 shrink-0 w-14 h-14 rounded-full bg-white border border-slate-100 group-hover:border-blue-500 group-hover:bg-blue-50 transition-all duration-300 flex items-center justify-center shadow-sm">
+                    <feature.icon className="w-6 h-6 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                  </div>
+
+                  {/* Text Content */}
+                  <div className="pt-2">
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-slate-500 leading-relaxed">
+                      {feature.desc}
+                    </p>
+                  </div>
+
+                  {/* Hover Decoration (Subtle flash on hover) */}
+                  <div className="absolute inset-y-0 -left-4 -right-4 bg-slate-50 rounded-xl opacity-0 group-hover:opacity-100 -z-10 transition-opacity duration-300" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
         {/* RESULTS + CTA SECTION */}
         <section className="relative w-full py-20 bg-slate-950 overflow-hidden">
