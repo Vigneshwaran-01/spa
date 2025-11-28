@@ -209,7 +209,7 @@ export default function Immunify360Security() {
                 <p className="text-emerald-400/60 text-[10px] mt-1 font-mono">SECURE</p>
 
                 {/* Papers Effect */}
-                <div className="absolute -z-10 bottom-2 w-[90%] h-full bg-slate-800/30 rounded-2xl rotate-3" />
+                <div className="absolute -z-10 bottom-2 w-[90%] h-full bg-slate-800/30 rounded-2xl " />
               </div>
             </div>
 
