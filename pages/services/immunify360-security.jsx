@@ -121,7 +121,7 @@ export default function Immunify360Security() {
         </title>
         <meta
           name="description"
-          content="Strengthen your network security stack with SpamClouds Advanced Intrusion Prevention System and stop Ransomware mail attacks with our advanced intrusion protection"
+          content="Strengthen your network security stack with SpamCloud's Advanced Intrusion Prevention System and stop Ransomware mail attacks with our advanced intrusion protection"
         />
         <link
           rel="canonical"
@@ -169,7 +169,7 @@ export default function Immunify360Security() {
             Your inbox is the front door. We install a <span className="text-white font-semibold">military-grade prism</span> that filters malicious payloads before they ever reach your employees.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full ">
+          <div className="flex flex-col sm:flex-row gap-4 w-full space-y-2 ">
   <button className="flex-1 group flex items-center justify-center gap-2 
     text-white font-semibold text-sm bg-blue-600 hover:bg-blue-500 
     px-6 py-4 h-14 rounded-full transition-all 
@@ -178,7 +178,7 @@ export default function Immunify360Security() {
     <ArrowRight className="w-4 h-5 transition-transform group-hover:translate-x-1" />
   </button>
 
-   <button className="flex-1 flex items-center justify-center 
+   <button className="flex-2 flex items-center justify-center 
     h-14 px-6 text-slate-300 border border-slate-800 
     hover:border-slate-600 rounded-full hover:bg-slate-900/50 
     backdrop-blur-sm transition-all">
