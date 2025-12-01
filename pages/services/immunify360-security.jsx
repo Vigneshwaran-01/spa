@@ -524,15 +524,7 @@ export default function Immunify360Security() {
 
               {/* Scanning Animation Line */}
               <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="w-full h-32 mt-4 relative overflow-hidden rounded border border-slate-800 bg-slate-900/50">
-                 {/* Fake Matrix/Code Scan Effect */}
-                 <div className="absolute inset-0 opacity-20 flex flex-col text-[10px] font-mono text-blue-400 leading-tight p-2">
-                    <span>Searching pattern... 0x4F</span>
-                    <span>Analyzing heuristics...</span>
-                    <span>Threat level: 0%</span>
-                 </div>
-                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-blue-500/10 to-transparent translate-y-[-100%] group-hover:translate-y-[100%] transition-transform duration-[2s] ease-linear infinite" />
-              </div>
+              
             </div>
           </div>
 
@@ -573,10 +565,7 @@ export default function Immunify360Security() {
               </p>
             </div>
             
-            <button className="h-fit px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold rounded border border-slate-700 hover:border-blue-500 transition-all flex items-center gap-2 group">
-              View Technical Specs
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+           
           </div>
         </div>
 

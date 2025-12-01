@@ -500,7 +500,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
     {benefits.map((benefit, index) => (
       <div 
         key={index} 
-        className="relative bg-white rounded-2xl p-6 border border-slate-200 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] overflow-hidden"
+        className="relative bg-slate-100 rounded-2xl p-6 border border-slate-200 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] overflow-hidden"
       >
         {/* Permanent Design Element: Subtle blue gradient curve in top right */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-50 via-blue-50/50 to-transparent rounded-bl-full -mr-8 -mt-8 pointer-events-none" />
@@ -539,76 +539,81 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
     </section>
 
         {/* Section 3: Included Features for Windows */}
- <section className="py-24 bg-slate-50 relative">
-      <div className="container mx-auto px-4 lg:px-8">
+ <section className="py-24 bg-[#020617] relative overflow-hidden">
+      
+      {/* Background Decor (Subtle Glows) */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-            Included Features for <span className="text-blue-600">Windows</span>
+        <div className="text-center mb-20 max-w-3xl mx-auto">
+          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+            Included Features for <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Windows</span>
           </h2>
-          <p className="text-slate-500 text-lg">
+          <p className="text-slate-400 text-lg">
             See exactly how Seqrite neutralizes the specific risks targeting your infrastructure.
           </p>
         </div>
 
         {/* --- COMPARISON TABLE HEADER (Desktop) --- */}
-        <div className="hidden md:grid grid-cols-2 gap-8 mb-8 max-w-5xl mx-auto relative">
+        <div className="hidden md:grid grid-cols-2 gap-8 mb-10 max-w-5xl mx-auto relative">
           
-          {/* Left Header: The Threat/Protection Need */}
-          <div className="bg-red-50/50 border border-red-100 p-4 rounded-xl flex items-center justify-center gap-3">
-            <div className="p-1.5 bg-red-100 rounded-full text-red-500">
+          {/* Left Header: The Threat */}
+          <div className="bg-red-950/20 border border-red-500/20 p-4 rounded-xl flex items-center justify-center gap-3 shadow-[0_0_15px_-5px_rgba(239,68,68,0.1)]">
+            <div className="p-1.5 bg-red-500/10 rounded-full text-red-400">
               <AlertTriangle className="w-5 h-5" />
             </div>
-            <span className="font-bold text-red-900 tracking-wide uppercase">What it Protects You From</span>
+            <span className="font-bold text-red-400 tracking-wide uppercase text-sm">What it Protects You From</span>
           </div>
 
           {/* Center VS Badge */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-sm border border-slate-100">
-            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-white text-xs font-bold">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 bg-[#020617] p-2 rounded-full border border-slate-800">
+            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-800 text-white text-[10px] font-extrabold tracking-widest border border-slate-700">
               VS
             </span>
           </div>
 
           {/* Right Header: The Capability */}
-          <div className="bg-blue-50/50 border border-blue-100 p-4 rounded-xl flex items-center justify-center gap-3">
-            <div className="p-1.5 bg-blue-100 rounded-full text-blue-600">
+          <div className="bg-blue-950/20 border border-blue-500/20 p-4 rounded-xl flex items-center justify-center gap-3 shadow-[0_0_15px_-5px_rgba(59,130,246,0.1)]">
+            <div className="p-1.5 bg-blue-500/10 rounded-full text-blue-400">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <span className="font-bold text-blue-900 tracking-wide uppercase">Security Capability</span>
+            <span className="font-bold text-blue-400 tracking-wide uppercase text-sm">Security Capability</span>
           </div>
         </div>
 
 
         {/* --- COMPARISON ROWS --- */}
-        <div className="flex flex-col gap-6 max-w-5xl mx-auto">
+        <div className="flex flex-col gap-4 max-w-5xl mx-auto">
           {featuresData.map((item, index) => (
             <div key={index} className="relative grid md:grid-cols-2 group">
               
               {/* Central Connector Line (The Spine) */}
-              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 -translate-x-1/2 group-hover:bg-blue-200 transition-colors"></div>
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-800 -translate-x-1/2 group-hover:bg-blue-500/50 transition-colors duration-500"></div>
               
               {/* Central Icon Bubble */}
-              <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-slate-200 rounded-full items-center justify-center text-slate-400 group-hover:border-blue-500 group-hover:text-blue-500 transition-all shadow-sm">
+              <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-[#020617] border border-slate-700 rounded-full items-center justify-center text-slate-500 group-hover:border-blue-500 group-hover:text-blue-400 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300">
                 <item.icon className="w-5 h-5" />
               </div>
 
-              {/* LEFT SIDE: The Threat (Red Side) */}
-              <div className="bg-white border-l-4 border-l-red-400/50 md:border-l-0 md:border-r md:border-r-red-100 md:bg-gradient-to-l md:from-red-50/10 md:to-transparent p-6 md:p-8 rounded-l-2xl border-y border-slate-100 md:text-right hover:bg-red-50/20 transition-colors flex flex-col justify-center">
-                <div className="flex md:hidden items-center gap-2 mb-2 text-red-500 font-bold text-xs uppercase tracking-widest">
-                  <AlertTriangle className="w-4 h-4" /> Protects Against
+              {/* LEFT SIDE: The Threat (Dark Red Mode) */}
+              <div className="bg-slate-900/40 backdrop-blur-sm border-l-4 border-l-red-500 md:border-l-0 md:border-r md:border-r-red-900/30 p-6 md:p-8 rounded-l-2xl border-y border-white/5 md:text-right hover:bg-red-500/5 transition-colors duration-300 flex flex-col justify-center min-h-[100px]">
+                <div className="flex md:hidden items-center gap-2 mb-2 text-red-400 font-bold text-xs uppercase tracking-widest">
+                  <AlertTriangle className="w-4 h-4" /> Risk
                 </div>
-                <h3 className="text-lg font-medium text-slate-700 leading-tight">
+                <h3 className="text-lg font-medium text-slate-300 leading-tight group-hover:text-red-300 transition-colors">
                   {item.threat}
                 </h3>
               </div>
 
-              {/* RIGHT SIDE: The Capability (Blue Side) */}
-              <div className="bg-white border-l-4 border-l-blue-500 md:border-l md:border-l-blue-100 md:bg-gradient-to-r md:from-blue-50/10 md:to-transparent p-6 md:p-8 rounded-r-2xl border-y border-slate-100 border-r border-slate-100 shadow-sm md:shadow-none md:group-hover:shadow-[10px_0_30px_-10px_rgba(37,99,235,0.1)] transition-all flex flex-col justify-center">
-                 <div className="flex md:hidden items-center gap-2 mb-2 text-blue-600 font-bold text-xs uppercase tracking-widest">
-                  <ShieldCheck className="w-4 h-4" /> Capability
+              {/* RIGHT SIDE: The Capability (Dark Blue Mode) */}
+              <div className="bg-slate-900/80 backdrop-blur-sm border-l-4 border-l-blue-500 md:border-l md:border-l-blue-900/30 p-6 md:p-8 rounded-r-2xl border-y border-white/5 border-r border-white/5 md:group-hover:bg-blue-500/5 transition-all duration-300 flex flex-col justify-center min-h-[100px]">
+                 <div className="flex md:hidden items-center gap-2 mb-2 text-blue-400 font-bold text-xs uppercase tracking-widest">
+                  <ShieldCheck className="w-4 h-4" /> Solution
                 </div>
-                <h3 className="text-lg font-bold text-blue-900 leading-tight">
+                <h3 className="text-xl font-bold text-white leading-tight group-hover:text-blue-400 transition-colors">
                   {item.capability}
                 </h3>
               </div>
@@ -1003,76 +1008,86 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
     </section>
 
         {/* Lead Generation Section */}
-  <section className="relative w-full py-24 bg-white overflow-hidden" id="contact">
+  <section className="relative w-full py-16 lg:py-20 bg-slate-50 overflow-hidden" id="contact">
       
-      {/* Background Decor (Subtle Grid) */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f8fafc_1px,transparent_1px),linear-gradient(to_bottom,#f8fafc_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-60 pointer-events-none" />
+      {/* Background Decor */}
+      <div className="absolute inset-0 bg-white" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-60 pointer-events-none" />
+      
+      {/* Blue Blur Blob */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-16 items-start">
+      <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* =========================================
               LEFT COLUMN: Copy & Testimonial
              ========================================= */}
-          <div className="lg:col-span-5 flex flex-col h-full justify-between">
+          <div className="flex flex-col justify-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold tracking-widest uppercase mb-6">
+              <span className="inline-block py-1 px-3 rounded-md bg-blue-100/50 text-blue-700 text-xs font-bold tracking-wider uppercase mb-5">
                 Contact Sales
-              </div>
+              </span>
               
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.1] mb-6">
-                Get an endpoint security solution tailored for <br/>
-                <span className="text-blue-600">Your IT needs.</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
+                Tailored security for <br/>
+                <span className=" text-blue-600">
+                  your specific needs.
+                </span>
               </h2>
               
-              <p className="text-lg text-slate-500 mb-8 leading-relaxed border-l-4 border-blue-100 pl-4">
-                Pricing varies based on endpoints count & security add-ons. 
-                Let's build the perfect package for your infrastructure.
+              <p className="text-base text-slate-500 mb-8 leading-relaxed max-w-md">
+                Pricing varies based on endpoints & add-ons. Let's build the perfect package for your infrastructure together.
               </p>
             </div>
 
-            {/* Bottom Review / Testimonial */}
-            <div className="mt-12 lg:mt-auto bg-slate-50 rounded-2xl p-8 border border-slate-100 relative">
-              <Quote className="absolute top-6 right-6 w-8 h-8 text-blue-200" />
-              <div className="flex gap-1 mb-4">
+            {/* Compact Testimonial */}
+            <div className="mt-8 bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm relative max-w-md">
+              <Quote className="absolute top-4 right-4 w-6 h-6 text-blue-100" />
+              <div className="flex gap-0.5 mb-3">
                 {[1,2,3,4,5].map((star) => (
-                  <div key={star} className="w-4 h-4 bg-amber-400 rounded-sm" />
+                  <div key={star} className="w-3.5 h-3.5 text-amber-400 fill-amber-400">★</div>
                 ))}
               </div>
-              <p className="text-slate-700 italic font-medium mb-6 relative z-10">
-                “Received Email gateway security with Seamless support, and Experts Advised exactly what we needed for scale.”
+              <p className="text-slate-700 text-sm font-medium mb-4 italic">
+                “Experts advised exactly what we needed for scale. Seamless support.”
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-white font-bold text-xs">
                   C
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-slate-900">CTO</p>
-                  <p className="text-xs text-slate-500 uppercase tracking-wide">SaaS Firm, Chennai</p>
+                  <p className="text-xs font-bold text-slate-900">CTO</p>
+                  <p className="text-[10px] text-slate-500 uppercase tracking-wide">SaaS Firm, Chennai</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* =========================================
-              RIGHT COLUMN: The Form
+              RIGHT COLUMN: The Compact Form
              ========================================= */}
-          <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl shadow-2xl shadow-blue-900/5 border border-slate-200 p-8 md:p-10">
+          <div className="relative">
+            <div className="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-6 md:p-8">
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-slate-900">Get a Quote</h3>
+                <p className="text-sm text-slate-500">Fill out the form and we'll get back to you.</p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Name */}
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">Full Name</label>
-                    <div className="relative">
-                      <User className="absolute left-3.5 top-3.5 w-5 h-5 text-slate-400" />
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Name</label>
+                    <div className="relative group">
+                      <User className="absolute left-3 top-2.5 w-4 h-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
                       <input 
                         type="text" 
                         name="name"
                         required
-                        className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-800 placeholder:text-slate-400"
+                        className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={handleChange}
@@ -1081,16 +1096,16 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
                   </div>
 
                   {/* Company */}
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">Company Name</label>
-                    <div className="relative">
-                      <Building2 className="absolute left-3.5 top-3.5 w-5 h-5 text-slate-400" />
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Company</label>
+                    <div className="relative group">
+                      <Building2 className="absolute left-3 top-2.5 w-4 h-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
                       <input 
                         type="text" 
                         name="company"
                         required
-                        className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-800 placeholder:text-slate-400"
-                        placeholder="Tech Solutions Ltd"
+                        className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
+                        placeholder="Tech Ltd"
                         value={formData.company}
                         onChange={handleChange}
                       />
@@ -1098,18 +1113,18 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Email */}
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">Work Email</label>
-                    <div className="relative">
-                      <Mail className="absolute left-3.5 top-3.5 w-5 h-5 text-slate-400" />
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Email</label>
+                    <div className="relative group">
+                      <Mail className="absolute left-3 top-2.5 w-4 h-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
                       <input 
                         type="email" 
                         name="email"
                         required
-                        className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-800 placeholder:text-slate-400"
-                        placeholder="john@company.com"
+                        className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
+                        placeholder="you@work.com"
                         value={formData.email}
                         onChange={handleChange}
                       />
@@ -1117,16 +1132,16 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
                   </div>
 
                   {/* Phone */}
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-slate-700">Contact Number</label>
-                    <div className="relative">
-                      <Phone className="absolute left-3.5 top-3.5 w-5 h-5 text-slate-400" />
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Phone</label>
+                    <div className="relative group">
+                      <Phone className="absolute left-3 top-2.5 w-4 h-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
                       <input 
                         type="tel" 
                         name="phone"
                         required
-                        className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-800 placeholder:text-slate-400"
-                        placeholder="+91 98765 43210"
+                        className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
+                        placeholder="+91 987..."
                         value={formData.phone}
                         onChange={handleChange}
                       />
@@ -1135,35 +1150,35 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
                 </div>
 
                 {/* Service Selection */}
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-slate-700">Select Service</label>
-                  <div className="relative">
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Service</label>
+                  <div className="relative group">
                     <select 
                       name="service"
                       required
-                      className="w-full pl-4 pr-10 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-800 appearance-none bg-white"
+                      className="w-full pl-3 pr-10 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all appearance-none cursor-pointer"
                       value={formData.service}
                       onChange={handleChange}
                     >
-                      <option value="" disabled>Choose a security solution...</option>
+                      <option value="" disabled>Select a solution...</option>
                       {services.map((svc, i) => (
                         <option key={i} value={svc}>{svc}</option>
                       ))}
                     </select>
-                    <ChevronDown className="absolute right-3.5 top-3.5 w-5 h-5 text-slate-400 pointer-events-none" />
+                    <ChevronDown className="absolute right-3 top-3 w-4 h-4 text-slate-400 pointer-events-none group-focus-within:text-blue-500" />
                   </div>
                 </div>
 
                 {/* Message */}
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-slate-700">Message (Optional)</label>
-                  <div className="relative">
-                    <MessageSquare className="absolute left-3.5 top-3.5 w-5 h-5 text-slate-400" />
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Message</label>
+                  <div className="relative group">
+                    <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
                     <textarea 
                       name="message"
-                      rows={3}
-                      className="w-full pl-11 pr-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-slate-800 placeholder:text-slate-400 resize-none"
-                      placeholder="Tell us about your infrastructure..."
+                      rows={2}
+                      className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all resize-none"
+                      placeholder="Brief details..."
                       value={formData.message}
                       onChange={handleChange}
                     />
@@ -1173,9 +1188,9 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
                 {/* CTA Button */}
                 <button 
                   type="submit"
-                  className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg hover:shadow-blue-600/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                  className="w-full py-3 mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all transform active:scale-[0.98] flex items-center justify-center gap-2 text-sm"
                 >
-                  Submit Request <ArrowRight className="w-5 h-5" />
+                  Submit Request <ArrowRight className="w-4 h-4" />
                 </button>
 
               </form>
@@ -1190,35 +1205,27 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
          ========================================= */}
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
-          
-          {/* Backdrop */}
           <div 
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"
             onClick={() => setShowPopup(false)}
           />
-
-          {/* Modal Content */}
-          <div className="relative bg-white rounded-3xl p-8 max-w-sm w-full shadow-2xl transform transition-all animate-bounce-in text-center">
-            
+          <div className="relative bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl transform transition-all animate-bounce-in text-center">
             <button 
               onClick={() => setShowPopup(false)}
-              className="absolute top-4 right-4 p-2 rounded-full hover:bg-slate-100 transition-colors"
+              className="absolute top-4 right-4 p-1 rounded-full hover:bg-slate-100 transition-colors"
             >
-              <X className="w-5 h-5 text-slate-400" />
+              <X className="w-4 h-4 text-slate-400" />
             </button>
-
-            <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-10 h-10 text-emerald-600" />
+            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <CheckCircle2 className="w-8 h-8 text-emerald-600" />
             </div>
-
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">Request Received!</h3>
-            <p className="text-slate-500 mb-8">
-              Thank you for your interest. Our Solution Expert will contact you shortly to discuss your security needs.
+            <h3 className="text-xl font-bold text-slate-900 mb-1">Received!</h3>
+            <p className="text-slate-500 text-sm mb-6">
+              Our expert will contact you shortly.
             </p>
-
             <button 
               onClick={() => setShowPopup(false)}
-              className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-colors"
+              className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg text-sm transition-colors"
             >
               Close
             </button>
@@ -1226,14 +1233,13 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
         </div>
       )}
 
-      {/* Animation Style */}
       <style>{`
         @keyframes bounce-in {
-          0% { opacity: 0; transform: scale(0.9); }
+          0% { opacity: 0; transform: scale(0.95); }
           100% { opacity: 1; transform: scale(1); }
         }
         .animate-bounce-in {
-          animation: bounce-in 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          animation: bounce-in 0.15s ease-out forwards;
         }
       `}</style>
 

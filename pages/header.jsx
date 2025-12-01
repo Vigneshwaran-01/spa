@@ -95,6 +95,10 @@ export default function Header() {
                   <Link href="/services/seqrite-endpoint-security" className={dropdownLinkClasses}>
                     Seqrite Endpoint Security
                   </Link>
+                  
+                  <Link href="/services/firewall-network-security" className={dropdownLinkClasses}>
+                    Firewall-Network-Security
+                  </Link>
                   <Link href="https://sixthstartech.com/mail-services/carbonio-mail" className={dropdownLinkClasses}>
                     Carbonio Mail
                   </Link>

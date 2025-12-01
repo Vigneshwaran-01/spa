@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AdminLayout from '../../../components/AdminLayout';
+import { formatShortDate } from '../../../lib/utils';
 import { mysql } from 'mysql2/promise';
 
 function Users({ initialUsers }) {
@@ -145,7 +146,7 @@ function Users({ initialUsers }) {
                   <td className="px-6 py-4">{user.username}</td>
                   <td className="px-6 py-4">{user.email}</td>
                   <td className="px-6 py-4">
-                    {new Date(user.created_at).toLocaleDateString()}
+                    {formatShortDate(user.created_at)}
                   </td>
                   <td className="px-6 py-4">
                     <button
