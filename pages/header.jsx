@@ -92,6 +92,9 @@ export default function Header() {
                   <Link href="/services/immunify360-security" className={dropdownLinkClasses}>
                     Immunify360 Security
                   </Link>
+                  <Link href="/services/seqrite-endpoint-security" className={dropdownLinkClasses}>
+                    Seqrite Endpoint Security
+                  </Link>
                   <Link href="https://sixthstartech.com/mail-services/carbonio-mail" className={dropdownLinkClasses}>
                     Carbonio Mail
                   </Link>

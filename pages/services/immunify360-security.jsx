@@ -165,7 +165,7 @@ export default function Immunify360Security() {
             </span>
           </h1>
 
-          <p className="text-lg text-slate-400 max-w-xl leading-relaxed mb-10 lg:border-l-2 lg:border-slate-800 lg:pl-6">
+          <p className="text-lg text-slate-400 max-w-xl leading-relaxed mb-10 lg:border-l-2 lg:border-slate-800 ">
             Your inbox is the front door. We install a <span className="text-white font-semibold">military-grade prism</span> that filters malicious payloads before they ever reach your employees.
           </p>
 
@@ -178,7 +178,7 @@ export default function Immunify360Security() {
     <ArrowRight className="w-4 h-5 transition-transform group-hover:translate-x-1" />
   </button>
 
-   <button className="flex-2 flex items-center justify-center 
+   <button className=" flex-2 lg:flex-1 flex items-center justify-center 
     h-14 px-6 text-slate-300 border border-slate-800 
     hover:border-slate-600 rounded-full hover:bg-slate-900/50 
     backdrop-blur-sm transition-all">
@@ -739,36 +739,94 @@ export default function Immunify360Security() {
               RIGHT COLUMN: The "Neural Spine" List
               (No boxes, just connected flow)
              ========================================= */}
-          <div className="relative pt-4">
-            
-            {/* The Vertical Connecting Line */}
-            <div className="absolute left-[27px] top-4 bottom-12 w-[2px] bg-slate-100" />
+<div className="relative pt-4">
+  
+  {/* The Vertical Connecting Line */}
+  {/* Added a gradient to the line to match the flow */}
+  <div className="absolute left-[27px] top-4 bottom-12 w-[2px] bg-gradient-to-b from-slate-200 via-slate-200 to-transparent" />
 
-            <div className="flex flex-col gap-10">
-              {features.map((feature, idx) => (
-                <div key={idx} className="group relative flex gap-6 items-start">
-                  
-                  {/* Icon Node */}
-                  <div className="relative z-10 shrink-0 w-14 h-14 rounded-full bg-white border border-slate-100 group-hover:border-blue-500 group-hover:bg-blue-50 transition-all duration-300 flex items-center justify-center shadow-sm">
-                    <feature.icon className="w-6 h-6 text-slate-400 group-hover:text-blue-600 transition-colors" />
-                  </div>
+  <div className="flex flex-col gap-10">
+    {[
+      {
+        title: "Proactive Malware Blocking",
+        desc: "Stops malicious scripts and threats before execution.",
+        icon: ShieldCheck,
+        // Emerald Glow
+        iconColor: "text-emerald-600",
+        wrapperClass: "bg-emerald-50 border-emerald-200 shadow-[0_0_20px_rgba(16,185,129,0.3)]",
+        titleHover: "group-hover:text-emerald-700"
+      },
+      {
+        title: "Kernel-Level Protection",
+        desc: "Deep server layer defense without performance drag.",
+        icon: Cpu,
+        // Violet Glow
+        iconColor: "text-violet-600",
+        wrapperClass: "bg-violet-50 border-violet-200 shadow-[0_0_20px_rgba(139,92,246,0.3)]",
+        titleHover: "group-hover:text-violet-700"
+      },
+      {
+        title: "Reputation Management",
+        desc: "Prevents IP blacklisting with smart traffic filtering.",
+        icon: Activity,
+        // Blue Glow
+        iconColor: "text-blue-600",
+        wrapperClass: "bg-blue-50 border-blue-200 shadow-[0_0_20px_rgba(37,99,235,0.3)]",
+        titleHover: "group-hover:text-blue-700"
+      },
+      {
+        title: "Advanced WAF",
+        desc: "Web Application Firewall filtering injection attacks.",
+        icon: Globe,
+        // Indigo Glow
+        iconColor: "text-indigo-600",
+        wrapperClass: "bg-indigo-50 border-indigo-200 shadow-[0_0_20px_rgba(79,70,229,0.3)]",
+        titleHover: "group-hover:text-indigo-700"
+      },
+      {
+        title: "Global Threat Intelligence",
+        desc: "Real-time attack data shared across the network.",
+        icon: Lock,
+        // Rose Glow
+        iconColor: "text-rose-600",
+        wrapperClass: "bg-rose-50 border-rose-200 shadow-[0_0_20px_rgba(225,29,72,0.3)]",
+        titleHover: "group-hover:text-rose-700"
+      },
+      {
+        title: "OS-Level Prevention",
+        desc: "Hardened operating system against zero-day exploits.",
+        icon: Terminal,
+        // Slate Glow
+        iconColor: "text-slate-700",
+        wrapperClass: "bg-slate-100 border-slate-300 shadow-[0_0_20px_rgba(100,116,139,0.3)]",
+        titleHover: "group-hover:text-slate-900"
+      }
+    ].map((feature, idx) => (
+      <div key={idx} className="group relative flex gap-6 items-start">
+        
+        {/* Icon Node with GLOW */}
+        {/* 
+            Added z-10 to stay above line
+            Used specific wrapperClass for bg, border, and shadow-glow
+        */}
+        <div className={`relative z-10 shrink-0 w-14 h-14 rounded-full border ${feature.wrapperClass} flex items-center justify-center transition-transform duration-300 group-hover:scale-110`}>
+          <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
+        </div>
 
-                  {/* Text Content */}
-                  <div className="pt-2">
-                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {feature.title}
-                    </h3>
-                    <p className="text-slate-500 leading-relaxed">
-                      {feature.desc}
-                    </p>
-                  </div>
+        {/* Text Content */}
+        <div className="pt-2">
+          <h3 className={`text-xl font-bold text-slate-900 mb-2 transition-colors duration-300 ${feature.titleHover}`}>
+            {feature.title}
+          </h3>
+          <p className="text-slate-500 leading-relaxed">
+            {feature.desc}
+          </p>
+        </div>
 
-                  {/* Hover Decoration (Subtle flash on hover) */}
-                  <div className="absolute inset-y-0 -left-4 -right-4 bg-slate-50 rounded-xl opacity-0 group-hover:opacity-100 -z-10 transition-opacity duration-300" />
-                </div>
-              ))}
-            </div>
-          </div>
+      </div>
+    ))}
+  </div>
+</div>
 
         </div>
       </div>
