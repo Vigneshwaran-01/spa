@@ -211,7 +211,7 @@ export default function EmailSecurityGateway() {
         />
         <link rel="canonical" href="https://spamcloud/services/email-security-gateway" />
       </Head>
-    <section className="relative w-full min-h-[600px] bg-slate-950 text-white overflow-hidden flex flex-col justify-center">
+    <section className="relative w-full min-h-[100vh] md:min-h-[600px] bg-slate-950 text-white overflow-hidden flex flex-col justify-center pt-20 md:pt-0">
       
       {/* --- BACKGROUND LAYERS --- */}
       
@@ -228,7 +228,7 @@ export default function EmailSecurityGateway() {
       <Meteors number={20} />
 
       {/* --- MAIN CONTENT --- */}
-      <div className="relative z-10 w-full max-w-[1300px]  mx-auto px-6 lg:px-8">
+      <div className="relative z-10 w-full max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-0">
         
         {/* ALIGNMENT FIX: 'items-center' aligns the Headline (Left) and Content (Right) perfectly */}
         <div className="grid lg:grid-cols-12 gap-12 w-full lg:gap-8 items-center ">
@@ -239,13 +239,11 @@ export default function EmailSecurityGateway() {
             {/* The Floating Shield Icon (Behind text) */}
             <Shield className="absolute -top-10 -left-10 w-32 h-32 text-blue-500/10 rotate-12 -z-10" strokeWidth={1} />
             
-            <h1 className="text-4xl md:text-6xl font-bold text-left tracking-tighter leading-[0.9] text-white">
-              Secure Your Email Gateway With SpamCloud’s <br />
-              {/* Metallic/White Gradient for first word */}
-              <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400">
-               Email Security Solutions
-              </span>{" "}
-              
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-left tracking-tight leading-tight text-white">
+              Secure Your Email Gateway 
+              <span className="block mt-2 md:mt-4 text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400">
+                With SpamCloud's{' '}Email Security Solutions
+              </span>
             </h1>
 
             {/* "Designed for..." Line with Blue Accent */}
@@ -258,17 +256,17 @@ export default function EmailSecurityGateway() {
           </div>
 
           {/* RIGHT COLUMN: Description, Buttons, Stats */}
-          <div className="lg:col-span-5 flex flex-col ml-18 ">
-            <p className="text-lg text-slate-300 leading-relaxed mb-8 font-light">
+          <div className="lg:col-span-5 flex flex-col lg:ml-8 mt-8 lg:mt-0">
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-light">
               Your mail server deserves real-time defense to block spam, phishing, spoofing, malware & targeted attacks before they reach your inbox.
             </p>
             
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 mb-10">
-               <button className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10">
+               <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-6 sm:px-8 py-3 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] flex items-center justify-center gap-2">
                  Get Protected <ArrowRight size={18} />
                </button>
-               <button className="text-slate-300 hover:text-white px-6 py-3 font-medium transition-colors">
+               <button className="w-full sm:w-auto text-slate-300 hover:text-white px-6 py-3 font-medium transition-colors text-center">
                  Talk to Sales
                </button>
             </div>
@@ -294,10 +292,10 @@ export default function EmailSecurityGateway() {
           <div className="absolute -bottom-[800px] left-1/2 -translate-x-1/2 w-[2000px] h-[1000px] border-t border-blue-400/50 rounded-[100%] bg-gradient-to-b from-blue-600/10 to-transparent shadow-[0_-10px_50px_rgba(37,99,235,0.3)]"></div>
 
           {/* Bottom Labels */}
-          <div className="absolute bottom-6 w-full max-w-7xl mx-auto left-0 right-0 px-8 flex justify-between items-end text-[10px] md:text-xs font-bold tracking-[0.2em] text-blue-300/40 uppercase">
-             <span className="flex items-center gap-2"><Activity size={12} /> Malware Detection</span>
-             <span className="hidden md:flex items-center gap-2"><Server size={12} /> Server Integrity</span>
-             <span className="flex items-center gap-2"><Lock size={12} /> End-To-End Encryption</span>
+          <div className="absolute bottom-4 sm:bottom-6 w-full max-w-7xl mx-auto left-0 right-0 px-4 sm:px-8 flex flex-wrap justify-center sm:justify-between items-center gap-4 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-blue-300/40 uppercase">
+             <span className="flex items-center gap-1 sm:gap-2"><Activity size={10} className="w-3 h-3 sm:w-auto sm:h-auto" /> <span className="whitespace-nowrap">Malware Detection</span></span>
+             <span className="hidden sm:flex items-center gap-1 sm:gap-2"><Server size={10} className="w-3 h-3 sm:w-auto sm:h-auto" /> <span className="whitespace-nowrap">Server Integrity</span></span>
+             <span className="flex items-center gap-1 sm:gap-2"><Lock size={10} className="w-3 h-3 sm:w-auto sm:h-auto" /> <span className="whitespace-nowrap">End-To-End Encryption</span></span>
           </div>
       </div>
 
