@@ -79,7 +79,7 @@ import Image from "next/image";
 export default function FirewallNetworkSecurity() {
   const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
+    name: '',     
     company: '',
     email: '',
     service: '',
@@ -248,11 +248,11 @@ export default function FirewallNetworkSecurity() {
           
           <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
 
-          <div className="container mx-auto px-6 lg:px-12 relative z-10 h-full flex flex-col justify-center">
+          <div className="container mx-auto px-6 lg:px-12 relative z-10 h-full flex flex-col justify-center py-16 lg:py-0">
             
-            <div className="flex flex-col lg:flex-row items-end lg:items-end justify-between gap-12 lg:gap-24 pb-16">
+            <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-24 pb-6 lg:pb-16">
               
-              <div className="lg:w-1/2">
+              <div className="lg:w-1/2 text-left lg:text-left">
                  <div className="flex items-center gap-3 mb-6">
                     <div className="h-px w-8 bg-blue-500"></div>
                     <span className="text-blue-400 font-mono text-xs uppercase tracking-[0.2em]">
@@ -260,7 +260,7 @@ export default function FirewallNetworkSecurity() {
                     </span>
                  </div>
                  
-                 <h1 className="text-5xl lg:text-5xl font-bold tracking-tight text-left text-white leading-[1.05]">
+                 <h1 className="text-3xl text-left sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.05]">
                   Protect your network with Cloud Managed  
                    <span className="text-transparent ml-2 bg-clip-text bg-gradient-to-r from-blue-400 to-white">
                       Firewall services
@@ -268,18 +268,18 @@ export default function FirewallNetworkSecurity() {
                  </h1>
               </div>
 
-              <div className="lg:w-1/2 pb-2">
-                <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
+              <div className="lg:w-1/2 pb-2 text-left lg:text-left">
+                <p className="text-base sm:text-lg text-slate-400 leading-relaxed mb-8   lg:mx-0">
 SpamCloud delivers firewall solutions as part of its network security offerings designed for schools, IT companies, banks, SaaS providers, and SMEs. Fully managed by certified security experts
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
+                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
+                  <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
                     Protect My Network
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </button>
                   
-                  <button className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700 rounded-lg hover:text-white hover:border-slate-500">
+                  <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700 rounded-lg hover:text-white hover:border-slate-500">
                     Talk to a Cybersecurity Specialist
                   </button>
                 </div>
@@ -288,7 +288,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
 
           </div>
 
-          <div className="absolute bottom-0 w-full bg-white/[0.02] border-t border-white/5 backdrop-blur-sm">
+          <div className="w-full bg-white/[0.02] border-t border-white/5 backdrop-blur-sm md:absolute md:bottom-0">
             <div className="container mx-auto px-6 lg:px-12">
               <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
                 
@@ -545,7 +545,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
           </div>
         </section>
 
-<section className="relative py-28 bg-[#081326] overflow-hidden">
+<section className="relative py-20 lg:py-28 bg-[#081326] overflow-hidden">
 
   {/* Background Grid Lines */}
   <div className="absolute inset-0 bg-[url('/grid-lines.svg')] opacity-[0.07] pointer-events-none"></div>
@@ -556,18 +556,18 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
   <div className="container relative z-10 mx-auto px-6 lg:px-12">
 
     {/* Header */}
-    <div className="max-w-3xl mb-16">
-      <span className="uppercase text-xs tracking-widest font-semibold text-blue-400">
+    <div className="max-w-3xl mb-12 lg:mb-16 text-center lg:text-left mx-auto lg:mx-0">
+      <span className="uppercase text-[11px] tracking-widest font-semibold text-blue-400">
         Pricing
       </span>
 
-      <h2 className="text-4xl lg:text-5xl font-extrabold text-white leading-tight mt-3">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mt-3">
         Flexible Pricing Built for  
         <br />
         <span className="text-blue-400">Indian Businesses</span>
       </h2>
 
-      <p className="text-slate-300 text-lg mt-4 max-w-xl">
+      <p className="text-slate-300 text-base sm:text-lg mt-4 max-w-xl mx-auto lg:mx-0">
         Simple, predictable pricing designed for SMEs, IT offices, and enterprise teams.
       </p>
     </div>
@@ -575,7 +575,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
     <div className="grid lg:grid-cols-2 gap-16">
 
       {/* Left Column – Features */}
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
 
         {/* Feature */}
         <div className="flex gap-4 p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-xl hover:border-blue-500/40 transition-all">
@@ -613,13 +613,13 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
       </div>
 
       {/* Right Column – CTA */}
-      <div>
-        <div className="p-10 border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl shadow-xl relative overflow-hidden">
+      <div className="w-full max-w-xl mx-auto lg:mx-0">
+        <div className="p-8 sm:p-10 border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl shadow-xl relative overflow-hidden">
 
           {/* Top border highlight */}
           <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-blue-400 to-blue-600"></div>
 
-          <div className="flex flex-col items-center text-center mb-10">
+          <div className="flex flex-col items-center text-center mb-8 sm:mb-10">
             <div className="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6">
               <Clock className="w-8 h-8 text-blue-400" />
             </div>
@@ -631,7 +631,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
             </span>
           </div>
 
-          <button className="w-full py-4 flex items-center justify-center font-bold uppercase tracking-wide text-white rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-400 hover:to-blue-600 transition-all">
+          <button className="w-full py-4 flex items-center justify-center font-bold uppercase tracking-wide text-white rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-400 hover:to-blue-600 transition-all text-xs sm:text-sm">
             Request a Custom Pricing Proposal
             <ArrowRight className="w-4 h-4 ml-2" />
           </button>

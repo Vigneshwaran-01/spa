@@ -373,13 +373,13 @@ const riskPoints = [
       <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
 
       {/* --- CONTENT CONTAINER --- */}
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 h-full flex flex-col justify-center">
+      <div className="container mx-auto px-6 lg:px-12 relative z-10 h-full flex flex-col justify-center py-16 lg:py-0">
         
         {/* Main Split Layout */}
-        <div className="flex flex-col lg:flex-row items-end lg:items-end justify-between gap-12 lg:gap-24 pb-16">
+        <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-24 pb-6 lg:pb-16">
           
           {/* LEFT: Massive Headline */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 text-center lg:text-left">
              <div className="flex items-center gap-3 mb-6">
                 <div className="h-px w-8 bg-blue-500"></div>
                 <span className="text-blue-400 font-mono text-xs uppercase tracking-[0.2em]">
@@ -387,7 +387,7 @@ const riskPoints = [
                 </span>
              </div>
              
-             <h1 className="text-5xl lg:text-5xl font-bold tracking-tight text-left text-white leading-[1.05]">
+             <h1 className="text-3xl text-left sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.05]">
               Seqrite Endpoint Security with Enterprise-Grade Protection 
                <span className="text-transparent ml-2 bg-clip-text bg-gradient-to-r from-blue-400 to-white">
                 Built for Indian Businesses
@@ -396,18 +396,18 @@ const riskPoints = [
           </div>
 
           {/* RIGHT: Description & CTA (Aligned to bottom) */}
-          <div className="lg:w-1/2 pb-2">
-            <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
+          <div className="lg:w-1/2 pb-2 text-left  lg:text-left">
+            <p className="text-base sm:text-lg text-slate-400 leading-relaxed mb-8 max-w-lg  lg:mx-0">
 Modern security without global pricing barriers. Fully managed by SpamCloud security experts
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
+            <div className="flex flex-col  sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
+              <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
                 Protect My Network
                 <ArrowRight className="ml-2 w-4 h-4" />
               </button>
               
-              <button className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700 rounded-lg hover:text-white hover:border-slate-500">
+              <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700 rounded-lg hover:text-white hover:border-slate-500">
                 Talk to a Cybersecurity Specialist
               </button>
             </div>
@@ -417,7 +417,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
       </div>
 
       {/* --- FOOTER / BADGES (Below the horizon line) --- */}
-      <div className="absolute bottom-0 w-full bg-white/[0.02] border-t border-white/5 backdrop-blur-sm">
+      <div className="w-full bg-white/[0.02] border-t border-white/5 backdrop-blur-sm md:absolute md:bottom-0">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
             

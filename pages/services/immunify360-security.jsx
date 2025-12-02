@@ -447,7 +447,7 @@ export default function Immunify360Security() {
           {/* Glowing Badge */}
           <div className="group relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
-            <div className="relative px-5  bg-slate-900 rounded-full border border-slate-800 flex items-center gap-3 shadow-xl">
+            <div className="relative px-6 py-2 bg-slate-900 rounded-full border border-slate-800 flex items-center gap-3 shadow-xl">
               <Shield className="w-5 h-5 text-emerald-400 fill-emerald-400/10" />
               <div className="flex flex-col justify-center items-start ">
                 <p className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Powered By</p>
