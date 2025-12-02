@@ -389,8 +389,8 @@ const riskPoints = [
              
              <h1 className="text-5xl lg:text-5xl font-bold tracking-tight text-left text-white leading-[1.05]">
               Seqrite Endpoint Security with Enterprise-Grade Protection 
-               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
-                 Built for Indian Businesses
+               <span className="text-transparent ml-2 bg-clip-text bg-gradient-to-r from-blue-400 to-white">
+                Built for Indian Businesses
                </span>
              </h1>
           </div>

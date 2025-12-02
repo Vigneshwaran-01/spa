@@ -200,24 +200,24 @@ export default function FirewallNetworkSecurity() {
   ];
 
 
-  const testimonials = [
+ const testimonials = [
     {
+      rating: 5,
       content: "SpamCloud helped us stop ransomware attempts and ensured our online operations never halt.",
       author: "IT Manager",
       company: "Chennai Fintech Firm",
-      rating: 5
     },
     {
+      rating: 5,
       content: "We switched from expensive hardware firewalls. Better security, lower cost perfect smart move for us.",
       author: "Principal",
       company: "Top Educational Institution in Tamil Nadu",
-      rating: 5
     },
     {
+      rating: 5,
       content: "The managed support is the best part. They monitor everything and i had no worries.",
       author: "CIO",
       company: "Growing IT Company (OMR, Chennai)",
-      rating: 5
     }
   ];
 
@@ -261,9 +261,9 @@ export default function FirewallNetworkSecurity() {
                  </div>
                  
                  <h1 className="text-5xl lg:text-5xl font-bold tracking-tight text-left text-white leading-[1.05]">
-                  Protect your network with Cloud Managed Firewall services
-                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
-                     Built for Indian Businesses
+                  Protect your network with Cloud Managed  
+                   <span className="text-transparent ml-2 bg-clip-text bg-gradient-to-r from-blue-400 to-white">
+                      Firewall services
                    </span>
                  </h1>
               </div>
@@ -346,11 +346,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
                     Cyber attacks happen by entering your network silently. Without strong firewall protection, an Unknown intrusion can spread malware to steal Data from unsecured access points, leading to Downtime and business disruption. Always protect your network with a Firewall to save your business
                   </p>
 
-                  <div className="relative pl-6 border-l-2 border-red-600">
-                    <p className="text-slate-800 font-medium">
-                      SpamCloud's advanced firewall solutions provide the critical first line of defense, ensuring your business stays protected from evolving cyber threats.
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
 
@@ -399,7 +395,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
             Let SpamCloud handle the firewall.<br/> 
-            So you can <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">focus on your business.</span>
+            So you can <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-slate-400">focus on your business.</span>
           </h2>
         </div>
 
@@ -515,7 +511,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
             
             <div className="text-center mb-20 max-w-3xl mx-auto">
               <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-                What's Included in <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">SpamCloud Firewall Services</span>
+                What's Included in <span className="bg-gradient-to-r from-blue-400 to-slate-400 bg-clip-text text-transparent">SpamCloud Firewall Services</span>
               </h2>
               <p className="text-slate-400 text-lg">
                 Comprehensive security features managed by our expert team
@@ -549,116 +545,182 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-6 lg:px-12">
-            
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-                Pricing made for <span className="text-blue-600">Indian users</span>
-              </h2>
+<section className="relative py-28 bg-[#081326] overflow-hidden">
+
+  {/* Background Grid Lines */}
+  <div className="absolute inset-0 bg-[url('/grid-lines.svg')] opacity-[0.07] pointer-events-none"></div>
+
+  {/* Soft Blue Glow */}
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent blur-3xl"></div>
+
+  <div className="container relative z-10 mx-auto px-6 lg:px-12">
+
+    {/* Header */}
+    <div className="max-w-3xl mb-16">
+      <span className="uppercase text-xs tracking-widest font-semibold text-blue-400">
+        Pricing
+      </span>
+
+      <h2 className="text-4xl lg:text-5xl font-extrabold text-white leading-tight mt-3">
+        Flexible Pricing Built for  
+        <br />
+        <span className="text-blue-400">Indian Businesses</span>
+      </h2>
+
+      <p className="text-slate-300 text-lg mt-4 max-w-xl">
+        Simple, predictable pricing designed for SMEs, IT offices, and enterprise teams.
+      </p>
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-16">
+
+      {/* Left Column – Features */}
+      <div className="space-y-6">
+
+        {/* Feature */}
+        <div className="flex gap-4 p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-xl hover:border-blue-500/40 transition-all">
+          <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
+            <Users className="w-6 h-6 text-blue-400" />
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-white">Per-ID Security Plan</h3>
+            <p className="text-slate-400 text-sm mt-1">Ideal for SMEs & IT offices</p>
+          </div>
+        </div>
+
+        {/* Feature */}
+        <div className="flex gap-4 p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-xl hover:border-blue-500/40 transition-all">
+          <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
+            <IndianRupee className="w-6 h-6 text-blue-400" />
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-white">Cost Effective</h3>
+            <p className="text-slate-400 text-sm mt-1">Affordable month-on-month pricing</p>
+          </div>
+        </div>
+
+        {/* Feature */}
+        <div className="flex gap-4 p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-xl hover:border-blue-500/40 transition-all">
+          <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
+            <TrendingUp className="w-6 h-6 text-blue-400" />
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-white">Bulk Discounts</h3>
+            <p className="text-slate-400 text-sm mt-1">Special pricing for 100+ users</p>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Right Column – CTA */}
+      <div>
+        <div className="p-10 border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl shadow-xl relative overflow-hidden">
+
+          {/* Top border highlight */}
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-blue-400 to-blue-600"></div>
+
+          <div className="flex flex-col items-center text-center mb-10">
+            <div className="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6">
+              <Clock className="w-8 h-8 text-blue-400" />
             </div>
 
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <Users className="w-6 h-6 text-blue-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-slate-900">Per-ID Security Plan</h3>
-                        <p className="text-sm text-slate-600">Best For SMEs & IT offices</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                        <IndianRupee className="w-6 h-6 text-green-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-slate-900">Cost Effective</h3>
-                        <p className="text-sm text-slate-600">Affordable monthly pricing</p>
-                      </div>
-                    </div>
+            <h3 className="text-2xl font-bold text-white">Annual Subscription</h3>
+
+            <span className="mt-3 inline-flex items-center px-3 py-1 text-xs font-semibold text-blue-300 border border-blue-500/30 bg-blue-500/10 rounded-full">
+              <ShieldCheck className="w-3 h-3 mr-1" /> Recommended
+            </span>
+          </div>
+
+          <button className="w-full py-4 flex items-center justify-center font-bold uppercase tracking-wide text-white rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-400 hover:to-blue-600 transition-all">
+            Request a Custom Pricing Proposal
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+        {/* Testimonial Section */}
+      <section className="relative py-24 bg-slate-950 overflow-hidden">
+      {/* Background Grid Decoration */}
+      <div className="absolute inset-0 opacity-[0.03]" 
+           style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
+      </div>
+      
+      {/* Glow Effect Top Center */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl -z-10"></div>
+
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        
+        {/* Header Section */}
+        <div className="text-center mb-20 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-800 text-blue-300 text-xs font-medium mb-6">
+            <ShieldCheck className="w-3 h-3 fill-blue-300" />
+            <span>Enterprise Grade Security</span>
+          </div>
+          
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+            Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700">industry leaders</span>.
+          </h2>
+          <p className="text-slate-400 text-lg">
+            See how organizations across Tamil Nadu are securing their infrastructure with SpamCloud.
+          </p>
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <div 
+              key={index} 
+              className="group relative bg-slate-900/50 backdrop-blur-sm border border-slate-800 p-8 rounded-2xl transition-all duration-300 hover:border-blue-500/30 hover:bg-slate-900/80 hover:-translate-y-1"
+            >
+              {/* Gradient Border Glow on Hover */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative z-10">
+                {/* Icon & Rating */}
+                <div className="flex justify-between items-start mb-6">
+                  <div className="p-3 bg-slate-950 rounded-lg border border-slate-800 group-hover:border-blue-500/30 transition-colors">
+                    <Quote className="w-5 h-5 text-blue-400" />
                   </div>
-                  
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                        <TrendingUp className="w-6 h-6 text-purple-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-slate-900">Bulk Discounts</h3>
-                        <p className="text-sm text-slate-600">Special pricing for 100+ IDs</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                        <Clock className="w-6 h-6 text-orange-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-slate-900">Annual Subscription</h3>
-                        <p className="text-sm text-slate-600">Save with yearly plans</p>
-                      </div>
-                    </div>
+                  <div className="flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-emerald-400 fill-emerald-400" />
+                    ))}
                   </div>
                 </div>
                 
-                <div className="mt-8 text-center">
-                  <button className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
-                    Request a Custom Pricing Proposal
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </button>
+                {/* Content */}
+                <p className="text-slate-300 leading-relaxed mb-8 text-lg font-light">
+                  "{testimonial.content}"
+                </p>
+                
+                {/* Author Info */}
+                <div className="flex items-center gap-4 pt-4 border-t border-slate-800/50">
+                  <div className="w-10 h-10 shrink-0 rounded-full bg-gradient-to-tr from-blue-600 to-emerald-500 p-[1px]">
+                    <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-sm font-bold text-white">
+                      {testimonial.author.charAt(0)}
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white text-sm">{testimonial.author}</h4>
+                    <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">
+                      {testimonial.company}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-
-          </div>
-        </section>
-
-        {/* Testimonial Section */}
-        <section className="py-24 bg-slate-50">
-          <div className="container mx-auto px-6 lg:px-12">
-            
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-                Our trusted <span className="text-blue-600">customers</span>
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
-                  <div className="flex gap-0.5 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                    ))}
-                  </div>
-                  
-                  <Quote className="w-8 h-8 text-blue-100 mb-4" />
-                  
-                  <p className="text-slate-700 mb-6 italic">
-                    "{testimonial.content}"
-                  </p>
-                  
-                  <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
-                    <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-600">
-                      {testimonial.author.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="font-semibold text-slate-900">{testimonial.author}</p>
-                      <p className="text-sm text-slate-500">{testimonial.company}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </div>
-        </section>
+          ))}
+        </div>
+      </div>
+    </section>
 
         {/* Final CTA Section */}
         <section className="py-24 bg-[#020817] text-white relative overflow-hidden">
@@ -685,224 +747,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
           </div>
         </section>
 
-        {/* Lead Generation Section */}
-        <section className="relative w-full py-16 lg:py-20 bg-slate-50 overflow-hidden" id="contact">
-          
-          <div className="absolute inset-0 bg-white" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-60 pointer-events-none" />
-          
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
-
-          <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-              
-              <div className="flex flex-col justify-center">
-                <div>
-                  <span className="inline-block py-1 px-3 rounded-md bg-blue-100/50 text-blue-700 text-xs font-bold tracking-wider uppercase mb-5">
-                    Contact Sales
-                  </span>
-                  
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
-                    Tailored security for <br/>
-                    <span className="text-blue-600">
-                      your specific needs.
-                    </span>
-                  </h2>
-                  
-                  <p className="text-base text-slate-500 mb-8 leading-relaxed max-w-md">
-                    Pricing varies based on endpoints & add-ons. Let's build the perfect package for your infrastructure together.
-                  </p>
-                </div>
-
-                <div className="mt-8 bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-slate-200 shadow-sm relative max-w-md">
-                  <Quote className="absolute top-4 right-4 w-6 h-6 text-blue-100" />
-                  <div className="flex gap-0.5 mb-3">
-                    {[1,2,3,4,5].map((star) => (
-                      <div key={star} className="w-3.5 h-3.5 text-amber-400 fill-amber-400">★</div>
-                    ))}
-                  </div>
-                  <p className="text-slate-700 text-sm font-medium mb-4 italic">
-                    "Experts advised exactly what we needed for scale. Seamless support."
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center text-white font-bold text-xs">
-                      C
-                    </div>
-                    <div>
-                      <p className="text-xs font-bold text-slate-900">CTO</p>
-                      <p className="text-[10px] text-slate-500 uppercase tracking-wide">SaaS Firm, Chennai</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="bg-white rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 p-6 md:p-8">
-                  
-                  <div className="mb-6">
-                    <h3 className="text-xl font-bold text-slate-900">Get a Quote</h3>
-                    <p className="text-sm text-slate-500">Fill out the form and we'll get back to you.</p>
-                  </div>
-
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Name</label>
-                        <div className="relative group">
-                          <User className="absolute left-3 top-2.5 w-4 h-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
-                          <input 
-                            type="text" 
-                            name="name"
-                            required
-                            className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
-                            placeholder="John Doe"
-                            value={formData.name}
-                            onChange={handleChange}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Company</label>
-                        <div className="relative group">
-                          <Building2 className="absolute left-3 top-2.5 w-4 h-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
-                          <input 
-                            type="text" 
-                            name="company"
-                            required
-                            className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
-                            placeholder="Tech Ltd"
-                            value={formData.company}
-                            onChange={handleChange}
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Email</label>
-                        <div className="relative group">
-                          <Mail className="absolute left-3 top-2.5 w-4 h-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
-                          <input 
-                            type="email" 
-                            name="email"
-                            required
-                            className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
-                            placeholder="you@work.com"
-                            value={formData.email}
-                            onChange={handleChange}
-                          />
-                        </div>
-                      </div>
-
-                      <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Phone</label>
-                        <div className="relative group">
-                          <Phone className="absolute left-3 top-2.5 w-4 h-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
-                          <input 
-                            type="tel" 
-                            name="phone"
-                            required
-                            className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
-                            placeholder="+91 987..."
-                            value={formData.phone}
-                            onChange={handleChange}
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Service</label>
-                      <div className="relative group">
-                        <select 
-                          name="service"
-                          required
-                          className="w-full pl-3 pr-10 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all appearance-none cursor-pointer"
-                          value={formData.service}
-                          onChange={handleChange}
-                        >
-                          <option value="" disabled>Select a solution...</option>
-                          {services.map((svc, i) => (
-                            <option key={i} value={svc}>{svc}</option>
-                          ))}
-                        </select>
-                        <ChevronDown className="absolute right-3 top-3 w-4 h-4 text-slate-400 pointer-events-none group-focus-within:text-blue-500" />
-                      </div>
-                    </div>
-
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">Message</label>
-                      <div className="relative group">
-                        <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-slate-400 group-focus-within:text-blue-500 transition-colors" />
-                        <textarea 
-                          name="message"
-                          rows={2}
-                          className="w-full pl-9 pr-3 py-2.5 rounded-lg bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all resize-none"
-                          placeholder="Brief details..."
-                          value={formData.message}
-                          onChange={handleChange}
-                        />
-                      </div>
-                    </div>
-
-                    <button 
-                      type="submit"
-                      className="w-full py-3 mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all transform active:scale-[0.98] flex items-center justify-center gap-2 text-sm"
-                    >
-                      Submit Request <ArrowRight className="w-4 h-4" />
-                    </button>
-
-                  </form>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          {showPopup && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
-              <div 
-                className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"
-                onClick={() => setShowPopup(false)}
-              />
-              <div className="relative bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl transform transition-all animate-bounce-in text-center">
-                <button 
-                  onClick={() => setShowPopup(false)}
-                  className="absolute top-4 right-4 p-1 rounded-full hover:bg-slate-100 transition-colors"
-                >
-                  <X className="w-4 h-4 text-slate-400" />
-                </button>
-                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle2 className="w-8 h-8 text-emerald-600" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-1">Received!</h3>
-                <p className="text-slate-500 text-sm mb-6">
-                  Our expert will contact you shortly.
-                </p>
-                <button 
-                  onClick={() => setShowPopup(false)}
-                  className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg text-sm transition-colors"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          )}
-
-          <style>{`
-            @keyframes bounce-in {
-              0% { opacity: 0; transform: scale(0.95); }
-              100% { opacity: 1; transform: scale(1); }
-            }
-            .animate-bounce-in {
-              animation: bounce-in 0.15s ease-out forwards;
-            }
-          `}</style>
-
-        </section>
+    
            
       </div>
     </>
