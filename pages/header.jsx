@@ -204,14 +204,42 @@ export default function Header() {
                     Outgoing Spam Filter
                   </Link>
                   <Link 
-                    href="https://sixthstartech.com/mail-services/carbonio-mail" 
+                    href="/services/email-security-gateway" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
+                  >
+                    Email Security Gateway
+                  </Link>
+                  <Link 
+                    href="/services/immunify360-security" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
+                  >
+                    Immunify360 Security
+                  </Link>
+                  <Link 
+                    href="/services/seqrite-endpoint-security" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
+                  >
+                    Seqrite Endpoint Security
+                  </Link>
+                  <Link 
+                    href="/services/firewall-network-security" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
+                  >
+                    Firewall Network Security
+                  </Link>
+                  <Link 
+                    href="https://sixthstartech.com/mail-services/carbonio-solution-provider" 
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
                   >
                     Carbonio Mail
                   </Link>
                   <Link 
-                    href="https://sixthstartech.com/high-availability" 
+                    href="https://sixthstartech.com/high-availability-service-in-chennai" 
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
                   >
