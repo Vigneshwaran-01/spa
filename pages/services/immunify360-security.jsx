@@ -169,7 +169,7 @@ export default function Immunify360Security() {
             Your inbox is the front door. We install a <span className="text-white font-semibold">military-grade prism</span> that filters malicious payloads before they ever reach your employees.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 w-full space-y-2 ">
+          <div className="flex flex-col justify-center sm:flex-row gap-4 item-center w-full space-y-2 ">  
   <button className="flex-1 group flex items-center justify-center gap-2 
     text-white font-semibold text-sm bg-blue-600 hover:bg-blue-500 
     px-6 py-4 h-14 rounded-full transition-all 
@@ -178,7 +178,7 @@ export default function Immunify360Security() {
     <ArrowRight className="w-4 h-5 transition-transform group-hover:translate-x-1" />
   </button>
 
-   <button className=" flex-2 lg:flex-1 flex items-center justify-center 
+   <button className=" flex-2 lg:flex-1 mt-0 flex items-center justify-center 
     h-14 px-6 text-slate-300 border border-slate-800 
     hover:border-slate-600 rounded-full hover:bg-slate-900/50 
     backdrop-blur-sm transition-all">
@@ -303,7 +303,7 @@ export default function Immunify360Security() {
         <section className="relative w-full py-20 bg-[#020617]">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#020617_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none" />
 
-          <div className="relative max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-start">
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-8 grid place-items-center lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-300 text-xs font-bold tracking-[0.2em] uppercase mb-6">
                 <AlertTriangle size={14} />
@@ -317,25 +317,20 @@ export default function Immunify360Security() {
                 It enters quietly through blind spots firewalls ignore.
               </p>
 
-              <ul className="space-y-4 text-slate-300 text-sm">
-                <li className="flex gap-3">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-500" />
+              <ul className="space-y-4 pl-0 text-slate-300 ml-0 list-none text-sm">
+                <li className="">
                   <span>Traditional firewalls miss zero-day attacks</span>
                 </li>
-                <li className="flex gap-3">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-500" />
+                <li className="">
                   <span>Basic antivirus can&apos;t stop AI-generated malware</span>
                 </li>
-                <li className="flex gap-3">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-500" />
+                <li className="">
                   <span>Email gateways fail against phishing-triggered payloads</span>
                 </li>
-                <li className="flex gap-3">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-500" />
+                <li className="">
                   <span>No visibility into SQL injections, brute force, botnets</span>
                 </li>
-                <li className="flex gap-3">
-                  <span className="mt-1 h-1.5 w-1.5 rounded-full bg-slate-500" />
+                <li className="">
                   <span>
                     Slow response leads to data loss, downtime, and extortion
                   </span>
@@ -343,7 +338,7 @@ export default function Immunify360Security() {
               </ul>
             </div>
 
-            <div className="lg:col-span-5 mt-6 lg:mt-0">
+            <div className="lg:col-span-5 mt-6 lg:mt-8  place-self-center  ">
               <div className="relative p-8 rounded-3xl bg-slate-900/70 border border-slate-700 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-blue-500/5 to-transparent opacity-80" />
                 <div className="relative z-10">
@@ -446,13 +441,12 @@ export default function Immunify360Security() {
 
           {/* Glowing Badge */}
           <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
-            <div className="relative px-6 py-2 bg-slate-900 rounded-full border border-slate-800 flex items-center gap-3 shadow-xl">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000 "></div>
+            <div className="relative px-6 py-3 bg-slate-900 rounded-full border border-slate-800 flex justify-center items-center gap-3 shadow-xl">
               <Shield className="w-5 h-5 text-emerald-400 fill-emerald-400/10" />
-              <div className="flex flex-col justify-center items-start ">
-                <p className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Powered By</p>
-                <p className="text-xs font-bold text-white tracking-wide">Immunify360™ Partner</p>
-              </div>
+
+                <p className="text-xs font-bold text-white tracking-wide  my-0">Immunify360™ Partner</p>
+             
             </div>
           </div>
         </div>
@@ -846,7 +840,7 @@ export default function Immunify360Security() {
                   Drop
                 </p>
                 <p className="text-sm text-slate-300">
-                  in suspicious traffic
+                  In Suspicious Traffic
                 </p>
               </div>
               <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 text-center">
@@ -857,7 +851,7 @@ export default function Immunify360Security() {
                   Incidents
                 </p>
                 <p className="text-sm text-slate-300">
-                  ransomware incidents reported
+                  Ransomware Incidents Reported
                 </p>
               </div>
               <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 text-center">
@@ -865,10 +859,10 @@ export default function Immunify360Security() {
                   56
                 </div>
                 <p className="text-xs uppercase tracking-[0.25em] text-slate-400 mb-2">
-                  Per Month
+                  high-risk
                 </p>
                 <p className="text-sm text-slate-300">
-                  average high-risk intrusions blocked
+                  Intrusions Blocked Per Month
                 </p>
               </div>
               <div className="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 text-center">
@@ -879,7 +873,7 @@ export default function Immunify360Security() {
                   Faster
                 </p>
                 <p className="text-sm text-slate-300">
-                  performance due to cloud-native stack
+                  Performance Due to Cloud-native Stack
                 </p>
               </div>
             </div>

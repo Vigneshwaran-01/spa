@@ -250,17 +250,17 @@ export default function FirewallNetworkSecurity() {
 
           <div className="container mx-auto px-6 lg:px-12 relative z-10 h-full flex flex-col justify-center py-16 lg:py-0">
             
-            <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-24 pb-6 lg:pb-16">
+            <div className="flex flex-col lg:flex-row items-start lg:items-end  justify-between gap-10 lg:gap-24 pb-6 lg:pb-16">
               
               <div className="lg:w-1/2 text-left lg:text-left">
-                 <div className="flex items-center gap-3 mb-6">
+                 <div className="flex items-center gap-3 ">
                     <div className="h-px w-8 bg-blue-500"></div>
                     <span className="text-blue-400 font-mono text-xs uppercase tracking-[0.2em]">
                       Firewall Network Security
                     </span>
                  </div>
                  
-                 <h1 className="text-3xl text-left sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.05]">
+                 <h1 className="text-3xl text-left pt-0  sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.05]">
                   Protect your network with Cloud Managed  
                    <span className="text-transparent ml-2 bg-clip-text bg-gradient-to-r from-blue-400 to-white">
                       Firewall services
@@ -268,18 +268,18 @@ export default function FirewallNetworkSecurity() {
                  </h1>
               </div>
 
-              <div className="lg:w-1/2 pb-2 text-left lg:text-left">
+              <div className="lg:w-1/2 pb-2 text-left lg:text-left ">
                 <p className="text-base sm:text-lg text-slate-400 leading-relaxed mb-8   lg:mx-0">
 SpamCloud delivers firewall solutions as part of its network security offerings designed for schools, IT companies, banks, SaaS providers, and SMEs. Fully managed by certified security experts
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
-                  <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
+                <div className="flex flex-col sm:flex-row gap-4 w-full rounded-full sm:w-auto justify-center lg:justify-start">
+                  <button className="inline-flex items-center rounded-full justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600  hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
                     Protect My Network
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </button>
                   
-                  <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700 rounded-lg hover:text-white hover:border-slate-500">
+                  <button className="inline-flex items-center rounded-full justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700  hover:text-white hover:border-slate-500">
                     Talk to a Cybersecurity Specialist
                   </button>
                 </div>
@@ -459,7 +459,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
                   <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[80px] rounded-full pointer-events-none" />
                   
                   {/* Content Top: After SpamCloud */}
-                  <div className="relative z-10">
+                  <div className="relative z-10 ">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-6">
                       <Shield className="w-3 h-3" /> After SpamCloud
                     </div>
@@ -734,12 +734,12 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
             </h2>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <button className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
+              <button className="inline-flex  rounded-full items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-blue-600  hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
                 Protect My Network
                 <ArrowRight className="ml-2 w-4 h-4" />
               </button>
               
-              <button className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700 rounded-lg hover:text-white hover:border-slate-500">
+              <button className="inline-flex rounded-full items-center justify-center px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700  hover:text-white hover:border-slate-500">
                 Talk to a Cybersecurity Specialist
               </button>
             </div>

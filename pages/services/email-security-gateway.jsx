@@ -234,7 +234,7 @@ export default function EmailSecurityGateway() {
         <div className="grid lg:grid-cols-12 gap-12 w-full lg:gap-8 items-center ">
           
           {/* LEFT COLUMN: Headline & Shield */}
-          <div className="lg:col-span-7 flex flex-col relative">
+          <div className="lg:col-span-7 flex flex-col mt-0  relative">
             
             {/* The Floating Shield Icon (Behind text) */}
             <Shield className="absolute -top-10 -left-10 w-32 h-32 text-blue-500/10 rotate-12 -z-10" strokeWidth={1} />
@@ -256,7 +256,7 @@ export default function EmailSecurityGateway() {
           </div>
 
           {/* RIGHT COLUMN: Description, Buttons, Stats */}
-          <div className="lg:col-span-5 flex flex-col lg:ml-8 mt-8 lg:mt-0">
+          <div className="lg:col-span-5  mb-1 flex flex-col lg:ml-8 mt-8 lg:mt-4">
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-6 sm:mb-8 font-light">
               Your mail server deserves real-time defense to block spam, phishing, spoofing, malware & targeted attacks before they reach your inbox.
             </p>
@@ -609,7 +609,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
             </div>
             
             <div className="text-5xl font-bold text-white mb-2 tracking-tight">
-              99.99<span className="text-emerald-500 text-3xl align-top">%</span>
+              98<span className="text-emerald-500 text-3xl align-top">%</span>
             </div>
             <p className="text-lg font-semibold text-emerald-100">Filter Accuracy</p>
             <p className="text-sm text-slate-500 mt-2">Industry-leading precision</p>

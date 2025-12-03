@@ -376,7 +376,7 @@ const riskPoints = [
       <div className="container mx-auto px-6 lg:px-12 relative z-10 h-full flex flex-col justify-center py-16 lg:py-0">
         
         {/* Main Split Layout */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-10 lg:gap-24 pb-6 lg:pb-16">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 lg:gap-24 pb-6 lg:pb-16">
           
           {/* LEFT: Massive Headline */}
           <div className="lg:w-1/2 text-center lg:text-left">
@@ -396,18 +396,18 @@ const riskPoints = [
           </div>
 
           {/* RIGHT: Description & CTA (Aligned to bottom) */}
-          <div className="lg:w-1/2 pb-2 text-left  lg:text-left">
+          <div className="lg:w-1/2 pb-2 text-left flex flex-col justify-center lg:text-left">
             <p className="text-base sm:text-lg text-slate-400 leading-relaxed mb-8 max-w-lg  lg:mx-0">
 Modern security without global pricing barriers. Fully managed by SpamCloud security experts
             </p>
 
             <div className="flex flex-col  sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
-              <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
+              <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-full  hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
                 Protect My Network
                 <ArrowRight className="ml-2 w-4 h-4" />
               </button>
               
-              <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700 rounded-lg hover:text-white hover:border-slate-500">
+              <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700 rounded-full  hover:text-white hover:border-slate-500">
                 Talk to a Cybersecurity Specialist
               </button>
             </div>
@@ -609,7 +609,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
               </div>
 
               {/* RIGHT SIDE: The Capability (Dark Blue Mode) */}
-              <div className="bg-slate-900/80 backdrop-blur-sm border-l-4 border-l-blue-500 md:border-l md:border-l-blue-900/30 p-6 md:p-8 rounded-r-2xl border-y border-white/5 border-r border-white/5 md:group-hover:bg-blue-500/5 transition-all duration-300 flex flex-col justify-center min-h-[100px]">
+              <div className="bg-slate-900/80 backdrop-blur-sm border-l-4 border-l-blue-500 md:border-l md:border-l-blue-900/30 p-6 md:p-8 rounded-r-2xl border-y border-white/5 border-r border-white/5 md:group-hover:bg-emerald-700/60 transition-all duration-300 flex flex-col justify-center min-h-[100px]">
                  <div className="flex md:hidden items-center gap-2 mb-2 text-blue-400 font-bold text-xs uppercase tracking-widest">
                   <ShieldCheck className="w-4 h-4" /> Solution
                 </div>
@@ -628,216 +628,102 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
  
 
         {/* Section 5: Managed By Experts */}
-  <section className="relative py-24 bg-[#020817] text-white overflow-hidden">
-      
-      {/* --- BACKGROUND AMBIENCE (Matching your Site) --- */}
-      {/* Deep Blue Gradient Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none" />
-      
-      {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-[0.15]"></div>
+<section className="relative py-12 md:py-16 lg:py-24 bg-white overflow-hidden">
+  {/* Decorative Background Blob - Adjusted for mobile */}
+  <div className="absolute top-0 right-0 w-full sm:w-[500px] h-[400px] sm:h-[600px] bg-blue-50 rounded-full blur-3xl opacity-60 sm:translate-x-1/3 -translate-y-1/4 pointer-events-none"></div>
 
-
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        
-        {/* --- HEADER --- */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold tracking-wider uppercase mb-6">
-            <Shield className="w-3 h-3" /> Data Loss Prevention
+  <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+    <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12 xl:gap-24">
+      {/* LEFT: Visual (The "Expert" Representation) */}
+      <div className="w-full lg:w-1/2 relative mt-8 lg:mt-0">
+       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">
+          Managed By Experts, <br className="hidden sm:block" />
+          <span className="text-blue-600">Trusted By Businesses</span>
+        </h2>
+        {/* Main Image Container */}
+        <div className="relative rounded-xl lg:rounded-2xl overflow-hidden shadow-xl lg:shadow-2xl border border-slate-100 bg-slate-900">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 opacity-90"></div>
+          
+          {/* Mock UI/Dashboard Elements */}
+          <div className="relative p-4 sm:p-6 md:p-8 min-h-[300px] sm:min-h-[350px] md:min-h-[400px] flex flex-col justify-center items-center text-center">
+            <Image 
+              src={'https://res.cloudinary.com/daggx9p24/image/upload/v1764570317/115347_alyoe6.jpg'} 
+              width={700} 
+              height={550} 
+              alt="SpamCloud SOC Dashboard"
+              className="w-full h-auto object-cover transform transition-transform duration-700 hover:scale-[1.02]"
+              priority
+            />              
           </div>
-
-          <h2 className="text-3xl lg:text-5xl font-bold tracking-tight mb-6">
-            Stop Data Leakage <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-              Before It Happens.
-            </span>
-          </h2>
-
-          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
-            Your data stays inside your business, where it belongs, and SpamCloud’s DLP stops risky actions automatically without disrupting workflow.
-          </p>
         </div>
 
-        {/* --- THE CARDS (Glassmorphism Style) --- */}
-        <div className="grid md:grid-cols-3 gap-6 relative">
-          
-          {riskPoints.map((point, index) => (
-            <div 
-              key={index} 
-              className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.08] hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-1"
-            >
-              {/* Top Accent Line */}
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-              {/* Icon */}
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600/20 to-cyan-500/20 rounded-xl flex items-center justify-center border border-white/10 mb-6 group-hover:scale-110 transition-transform duration-300">
-                <point.icon className="w-6 h-6 text-blue-400" />
-              </div>
-
-              {/* Content */}
-              <h3 className="text-xl font-semibold text-white mb-3">
-                {point.title}
-              </h3>
-              
-              <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                "{point.desc}"
-              </p>
-
-              {/* Bottom "Protection" Tag */}
-              <div className="flex items-center gap-2 pt-6 border-t border-white/5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                <span className="text-xs font-medium text-slate-300 group-hover:text-white transition-colors">
-                  {point.protection}
-                </span>
-              </div>
-            </div>
-          ))}
-
-        </div>
-
-      
-
-      </div>
-    </section>
-
-        {/* Section 6: Competitor Comparison */}
-        {/* <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-12 text-center">
-                Why SpamCloud outperforms international brands
-              </h2>
-              
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead className="bg-gray-800 text-white">
-                      <tr>
-                        <th className="px-6 py-4 text-left font-semibold">Feature</th>
-                        <th className="px-6 py-4 text-center font-semibold">SpamCloud Managed Seqrite</th>
-                        <th className="px-6 py-4 text-center font-semibold">Sophos</th>
-                        <th className="px-6 py-4 text-center font-semibold">CrowdStrike</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-200">
-                      {comparisonData.map((row, index) => (
-                        <tr key={index} className="hover:bg-gray-50 transition-colors">
-                          <td className="px-6 py-4 font-medium text-gray-900">{row.feature}</td>
-                          <td className="px-6 py-4 text-center text-green-600 font-semibold">{row.spamcloud}</td>
-                          <td className="px-6 py-4 text-center text-gray-600">{row.sophos}</td>
-                          <td className="px-6 py-4 text-center text-gray-600">{row.crowdstrike}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+        {/* Floating Badge - Adjusted for mobile */}
+        <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-6 bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl border border-slate-100 flex items-center gap-3 sm:gap-4 animate-bounce-slow">
+          <div className="flex -space-x-2 sm:-space-x-3">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center text-xs font-bold text-slate-600">JD</div>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-100 border-2 border-white flex items-center justify-center text-xs font-bold text-blue-600">AS</div>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-800 border-2 border-white flex items-center justify-center text-xs text-white">+5</div>
           </div>
-        </section> */}
- <section className="relative py-24 bg-white overflow-hidden">
-      
-      {/* Decorative Background Blob */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl opacity-60 translate-x-1/3 -translate-y-1/4 pointer-events-none"></div>
-
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-          
-          {/* LEFT: Visual (The "Expert" Representation) */}
-          <div className="lg:w-1/2 relative">
-            {/* Main Image Container */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-900">
-               {/* Abstract representation of a SOC dashboard or Expert */}
-               <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 opacity-90"></div>
-               
-               {/* Mock UI/Dashboard Elements to represent monitoring */}
-               <div className="relative p-8 min-h-[400px] flex flex-col justify-center items-center text-center">
-<Image 
-          src={'https://res.cloudinary.com/daggx9p24/image/upload/v1764570317/115347_alyoe6.jpg'} 
-          width={700} 
-          height={550} 
-          alt="SpamCloud SOC Dashboard"
-          className="w-full h-auto object-cover transform transition-transform duration-700 hover:scale-[1.02]"
-        />               </div>
-            </div>
-
-            {/* Floating Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4 animate-bounce-slow">
-                <div className="flex -space-x-3">
-                    <div className="w-10 h-10 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center text-xs font-bold text-slate-600">JD</div>
-                    <div className="w-10 h-10 rounded-full bg-blue-100 border-2 border-white flex items-center justify-center text-xs font-bold text-blue-600">AS</div>
-                    <div className="w-10 h-10 rounded-full bg-slate-800 border-2 border-white flex items-center justify-center text-xs text-white">+5</div>
-                </div>
-                <div>
-                    <p className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Security Team</p>
-                    <p className="text-sm font-bold text-slate-900">24/7 Response</p>
-                </div>
-            </div>
+          <div>
+            <p className="text-[10px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider">Security Team</p>
+            <p className="text-xs sm:text-sm font-bold text-slate-900">24/7 Response</p>
           </div>
-
-          {/* RIGHT: Content */}
-          <div className="lg:w-1/2">
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Managed By Experts, <br />
-              <span className="text-blue-600">Trusted By Businesses</span>
-            </h2>
-            
-            <p className="text-lg text-slate-500 mb-10 leading-relaxed">
-              Security isn't a "set it and forget it" tool—it requires constant vigilance. 
-              Our team becomes an extension of yours, handling the complex security legwork so you can focus on growth.
-            </p>
-
-            {/* The Points List */}
-            <div className="space-y-6 mb-10">
-              
-              {/* Point 1 */}
-              <div className="flex items-start gap-4">
-                <div className="mt-1 flex-shrink-0 w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
-                  <Bell className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900">Monitors Alerts</h3>
-                  <p className="text-slate-500 text-sm">We filter the noise. Real-time monitoring means we catch anomalies before they become breaches.</p>
-                </div>
-              </div>
-
-              {/* Point 2 */}
-              <div className="flex items-start gap-4">
-                <div className="mt-1 flex-shrink-0 w-10 h-10 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
-                  <ShieldAlert className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900">Responds to Incidents</h3>
-                  <p className="text-slate-500 text-sm">Immediate containment and remediation actions are taken by experts the moment a threat is verified.</p>
-                </div>
-              </div>
-
-              {/* Point 3 */}
-              <div className="flex items-start gap-4">
-                <div className="mt-1 flex-shrink-0 w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600">
-                  <FileText className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900">Sends Monthly Reports</h3>
-                  <p className="text-slate-500 text-sm">Transparent executive summaries showing compliance status, threats blocked, and system health.</p>
-                </div>
-              </div>
-
-            </div>
-
-            {/* CTA */}
-            <div className="flex items-center gap-4">
-                <button className="group inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all duration-200 bg-slate-900 rounded-lg hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/30">
-                    Talk to a Cybersecurity Specialist
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-            </div>
-            
-          </div>
-
         </div>
       </div>
-    </section>
+
+      {/* RIGHT: Content */}
+      <div className="w-full lg:w-1/2 lg:mt-14  ">
+       
+
+        {/* The Points List */}
+        <div className="space-y-4 sm:space-y-6  mb-8 sm:mb-10">
+          {/* Point 1 */}
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="mt-0.5 sm:mt-1 flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+              <Bell className="w-4 h-4 sm:w-5 sm:h-5" />
+            </div>
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900">Monitors Alerts</h3>
+              <p className="text-sm text-slate-500">We filter the noise. Real-time monitoring means we catch anomalies before they become breaches.</p>
+            </div>
+          </div>
+
+          {/* Point 2 */}
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="mt-0.5 sm:mt-1 flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600">
+              <ShieldAlert className="w-4 h-4 sm:w-5 sm:h-5" />
+            </div>
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900">Responds to Incidents</h3>
+              <p className="text-sm text-slate-500">Immediate containment and remediation actions are taken by experts the moment a threat is verified.</p>
+            </div>
+          </div>
+
+          {/* Point 3 */}
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="mt-0.5 sm:mt-1 flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-emerald-50 rounded-lg flex items-center justify-center text-emerald-600">
+              <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
+            </div>
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900">Sends Monthly Reports</h3>
+              <p className="text-sm text-slate-500">Transparent executive summaries showing compliance status, threats blocked, and system health.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA - Made full width on mobile */}
+        <div className="w-full sm:w-auto">
+          <button className="w-full sm:w-auto rounded-full group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition-all duration-200 bg-slate-900  hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/30">
+            Talk to a Cybersecurity Specialist
+            <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
  <section className="py-24 bg-[#020817] text-white relative overflow-hidden">
       
@@ -861,10 +747,10 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
         </div>
 
         {/* --- COMPACT TABLE CONTAINER (Glassmorphism) --- */}
-        <div className="max-w-5xl mx-auto overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-[#0B1120]/50 backdrop-blur-sm">
-          
+        <div className="max-w-5xl mx-auto overflow-x-auto rounded-xl border border-white/10 shadow-2xl bg-[#0B1120]/50 backdrop-blur-sm scroll-smooth">
+          <div className="min-w-[900px]"> 
           {/* GRID HEADER */}
-          <div className="grid grid-cols-12 bg-white/5 border-b border-white/10">
+          <div className="grid grid-cols-12 min-w-[650px] bg-white/5 border-b border-white/10">
             
             {/* Empty Corner */}
             <div className="col-span-4 md:col-span-5 p-4 text-xs font-bold text-slate-500 uppercase tracking-widest flex items-end">
@@ -885,10 +771,10 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
             </div>
 
             {/* Competitors Header */}
-            <div className="hidden md:block col-span-2 p-4 text-center border-l border-white/5">
+            <div className=" md:block col-span-2 p-4 text-center border-l border-white/5">
                <h3 className="font-bold text-slate-500 text-sm mt-3">Sophos</h3>
             </div>
-            <div className="hidden md:block col-span-2 p-4 text-center border-l border-white/5">
+            <div className=" md:block col-span-2 p-4 text-center border-l border-white/5">
                <h3 className="font-bold text-slate-500 text-sm mt-3">CrowdStrike</h3>
             </div>
           </div>
@@ -905,13 +791,13 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
                </div>
             </div>
             {/* Competitors */}
-            <div className="hidden md:flex col-span-2 p-4 justify-center">
+            <div className=" md:flex col-span-2 p-4 justify-center">
                <div className="flex text-slate-600 gap-0.5">
                   {[1,2,3,4].map(i => <Star key={i} className="w-3.5 h-3.5 fill-amber-500/50 text-amber-500/50" />)}
                   <Star className="w-3.5 h-3.5" />
                </div>
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center border-l border-white/5">
+            <div className=" md:flex col-span-2 p-4 justify-center border-l border-white/5">
                <div className="flex text-slate-600 gap-0.5">
                   {[1,2,3,4].map(i => <Star key={i} className="w-3.5 h-3.5 fill-amber-500/50 text-amber-500/50" />)}
                   <Star className="w-3.5 h-3.5" />
@@ -927,10 +813,10 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
             <div className="col-span-4 md:col-span-3 p-4 bg-blue-500/10 border-x border-blue-500/20 flex justify-center shadow-[inset_0_0_20px_rgba(59,130,246,0.1)]">
                <Check className="w-5 h-5 text-emerald-400 bg-emerald-500/20 rounded-full p-1 border border-emerald-500/30" />
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center">
+            <div className=" md:flex col-span-2 p-4 justify-center">
                <X className="w-5 h-5 text-slate-700" />
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center border-l border-white/5">
+            <div className=" md:flex col-span-2 p-4 justify-center border-l border-white/5">
                <X className="w-5 h-5 text-slate-700" />
             </div>
           </div>
@@ -943,10 +829,10 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
             <div className="col-span-4 md:col-span-3 p-4 bg-blue-500/10 border-x border-blue-500/20 flex justify-center shadow-[inset_0_0_20px_rgba(59,130,246,0.1)]">
                <Check className="w-5 h-5 text-emerald-400 bg-emerald-500/20 rounded-full p-1 border border-emerald-500/30" />
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center">
+            <div className=" md:flex col-span-2 p-4 justify-center">
                <span className="text-[10px] font-bold text-slate-500 bg-white/5 px-2 py-1 rounded border border-white/5">ADD-ON</span>
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center border-l border-white/5">
+            <div className=" md:flex col-span-2 p-4 justify-center border-l border-white/5">
                <span className="text-[10px] font-bold text-slate-500 bg-white/5 px-2 py-1 rounded border border-white/5">ADD-ON</span>
             </div>
           </div>
@@ -961,10 +847,10 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
                  <MapPin className="w-3 h-3" /> INDIA
                </div>
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center">
+            <div className=" md:flex col-span-2 p-4 justify-center">
                <X className="w-5 h-5 text-slate-700" />
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center border-l border-white/5">
+            <div className=" md:flex col-span-2 p-4 justify-center border-l border-white/5">
                <X className="w-5 h-5 text-slate-700" />
             </div>
           </div>
@@ -977,10 +863,10 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
             <div className="col-span-4 md:col-span-3 p-4 bg-blue-500/10 border-x border-blue-500/20 flex justify-center shadow-[inset_0_0_20px_rgba(59,130,246,0.1)]">
                <Check className="w-5 h-5 text-emerald-400 bg-emerald-500/20 rounded-full p-1 border border-emerald-500/30" />
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center">
+            <div className=" md:flex col-span-2 p-4 justify-center">
                <Check className="w-5 h-5 text-slate-600" />
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center border-l border-white/5">
+            <div className=" md:flex col-span-2 p-4 justify-center border-l border-white/5">
                <Check className="w-5 h-5 text-slate-600" />
             </div>
           </div>
@@ -995,15 +881,16 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
                  <IndianRupee className="w-3 h-3" /> Best Value
                </div>
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center">
+            <div className=" md:flex col-span-2 p-4 justify-center">
                <X className="w-5 h-5 text-slate-700" />
             </div>
-            <div className="hidden md:flex col-span-2 p-4 justify-center border-l border-white/5">
+            <div className=" md:flex col-span-2 p-4 justify-center border-l border-white/5">
                <X className="w-5 h-5 text-slate-700" />
             </div>
           </div>
 
         </div>
+      </div>
       </div>
     </section>
 
