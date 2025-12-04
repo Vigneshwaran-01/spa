@@ -387,7 +387,7 @@ const riskPoints = [
                 </span>
              </div>
              
-             <h1 className="text-3xl text-left sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.05]">
+             <h1 className="text-3xl text-left sm:text-4xl md:text-4xl lg:text-4xl font-bold tracking-tight text-white leading-[1.05]">
               Seqrite Endpoint Security with Enterprise-Grade Protection 
                <span className="text-transparent ml-2 bg-clip-text bg-gradient-to-r from-blue-400 to-white">
                 Built for Indian Businesses
@@ -461,78 +461,98 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
     </section>
 
         {/* Section 2: Why Businesses Choose Managed Endpoint Security */}
-     <section className="py-24 bg-white border-b border-gray-100">
-      <div className="container mx-auto px-6 lg:px-12">
+ <section className="py-16 lg:py-24 bg-white border-b border-gray-100 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-16 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20">
           
-          {/* LEFT COLUMN: The Narrative (Perfectly Left Aligned) */}
-          <div className="lg:w-1/2 ">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6">
+          {/* LEFT COLUMN: The Narrative */}
+          <div className="w-full lg:w-1/2 flex flex-col justify-center">
+            
+            {/* Badge */}
+            <div className="inline-flex self-start items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6">
+              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"/>
               The Modern Approach
             </div>
             
-            <h2 className="text-4xl font-bold text-slate-900 mb-8 leading-tight">
-              Why Businesses Choose <br />
-              <span className="text-blue-600">Managed Endpoint Security</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+              Why Businesses Choose <br className="hidden sm:block" />
+              <span className="text-blue-600 relative inline-block">
+                Managed Endpoint Security
+                {/* Decorative underline */}
+                <svg className="absolute w-full h-3 -bottom-1 left-0 text-blue-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="none" />
+                </svg>
+              </span>
             </h2>
 
-            <div className="prose prose-lg text-slate-600 space-y-8">
-              {/* The "Problem" with Strikeout */}
-              <p className="leading-relaxed">
-                When cybercriminals innovate, <span className="text-red-500 font-semibold line-through decoration-2 decoration-red-500/50">traditional antivirus software</span> simply can't keep up. Today's businesses need a layered, proactive approach that continuously adapts to new attacks.
+            <div className="prose prose-lg text-slate-600 space-y-6 lg:space-y-8">
+              {/* The "Problem" */}
+              <p className="leading-relaxed text-base sm:text-lg">
+                When cybercriminals innovate, <span className="text-red-500 font-semibold line-through decoration-2 decoration-red-500/40">traditional antivirus software</span> simply can't keep up. Today's businesses need a layered, proactive approach that continuously adapts to new attacks.
               </p>
 
-              {/* The "Solution" - Aligned perfectly with text above */}
-              <div className="relative pl-6 border-l-2 border-blue-600">
-                <p className="text-slate-800 font-medium">
-                  SpamCloud removes the burden from your IT team. Instead of troubleshooting agents and reacting to tickets, you get a <span className="text-blue-600">fully managed protection stack</span> that keeps your business secure without slowing operations.
+              {/* The "Solution" Quote Block */}
+              <div className="relative pl-6 border-l-4 border-blue-600 bg-slate-50/50 py-2 rounded-r-lg">
+                <p className="text-slate-800 font-medium italic text-base sm:text-lg">
+                  "SpamCloud removes the burden from your IT team. Instead of troubleshooting agents, you get a <span className="text-blue-600 not-italic font-bold">fully managed protection stack</span> that keeps business moving."
                 </p>
               </div>
 
-           
+              {/* Call to Action (Optional) */}
+              <div className="pt-2">
+                <button className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-slate-900 rounded-lg hover:bg-slate-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
+                  Compare Features
+                  <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* RIGHT COLUMN: The Benefits Grid (2x2 Layout) */}
-<div className="lg:w-1/2 w-full pl-0 lg:pl-10">
-  <div className="grid sm:grid-cols-2 gap-5">
-    {benefits.map((benefit, index) => (
-      <div 
-        key={index} 
-        className="relative bg-slate-100 rounded-2xl p-6 border border-slate-200 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] overflow-hidden"
-      >
-        {/* Permanent Design Element: Subtle blue gradient curve in top right */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-50 via-blue-50/50 to-transparent rounded-bl-full -mr-8 -mt-8 pointer-events-none" />
-        
-        {/* Permanent Design Element: Technical Plus Icon in corner */}
-        <div className="absolute top-4 right-4 text-blue-200">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 1V11M1 6H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-        </div>
+          {/* RIGHT COLUMN: The Benefits Grid */}
+          <div className="w-full lg:w-1/2 pt-4 lg:pt-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {benefits.map((benefit, index) => (
+                <div 
+                  key={index} 
+                  className="group relative bg-slate-50 hover:bg-white rounded-2xl p-6 border border-slate-200 hover:border-blue-200 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+                >
+                  {/* Design Element: Gradient Curve */}
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-100/40 via-blue-50/20 to-transparent rounded-bl-full -mr-6 -mt-6 pointer-events-none transition-transform duration-500 group-hover:scale-150" />
+                  
+                  {/* Design Element: Tech Cross */}
+                  <div className="absolute top-4 right-4 text-slate-300 group-hover:text-blue-400 transition-colors">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                          <path d="M6 1V11M1 6H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                      </svg>
+                  </div>
 
-        <div className="relative z-10 flex flex-col h-full justify-between gap-6">
-          
-          {/* Icon Container: Designed to look like a floating widget */}
-          <div className="w-14 h-14 bg-white rounded-xl border border-blue-100 shadow-sm flex items-center justify-center text-blue-600">
-             <benefit.icon className="w-7 h-7" />
-          </div>
+                  <div className="relative z-10 flex flex-col h-full">
+                    
+                    {/* Icon Container */}
+                    <div className="w-12 h-12 mb-4 bg-white group-hover:bg-blue-600 rounded-xl border border-blue-100 group-hover:border-blue-600 shadow-sm flex items-center justify-center text-blue-600  transition-all duration-300">
+                       <benefit.icon className="w-6 h-6" />
+                    </div>
 
-          {/* Title Area */}
-          <div>
-            <h3 className="text-lg font-bold text-slate-900 leading-tight">
-              {benefit.title}
-            </h3>
-            {/* Visual Underline / Accent */}
-            <div className="mt-3 h-1 w-8 bg-blue-500 rounded-full" />
+                    {/* Content */}
+                    <div>
+                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-sm text-slate-500 leading-relaxed mb-4">
+                        {benefit.description}
+                      </p>
+                      {/* Visual Accent Line */}
+                      <div className="h-1 w-6 bg-slate-300 group-hover:w-12 group-hover:bg-blue-500 rounded-full transition-all duration-300" />
+                    </div>
+                  
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
 
         </div>
       </div>

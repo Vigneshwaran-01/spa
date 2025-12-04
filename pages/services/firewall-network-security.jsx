@@ -326,98 +326,178 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
         </section>
 
         {/* Why Section */}
-        <section className="py-24 bg-white border-b border-gray-100">
-          <div className="container mx-auto px-6 lg:px-12">
+       <section className="py-16 lg:py-24 bg-white border-b border-gray-100 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+          
+          {/* LEFT COLUMN: The Narrative */}
+          <div className="w-full h-[100%] my-0  p-0 lg:w-1/2">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100 text-red-700 text-xs font-bold uppercase tracking-wider mb-6">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+              </span>
+              The Modern Threat
+            </div>
             
-            <div className="flex flex-col lg:flex-row items-start justify-between gap-16 lg:gap-20">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+              Why Modern Businesses Need a <br className="hidden sm:block" />
+              <span className="text-red-600 relative inline-block">
+                Next-Gen Firewall
+                {/* Decorative Underline */}
+                <svg className="absolute w-full h-3 -bottom-1 left-0 text-red-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="none" />
+                </svg>
+              </span>
+            </h2>
+
+            <div className="prose prose-lg text-slate-600 space-y-6">
+              <p className="leading-relaxed text-base sm:text-lg">
+                Cyber attacks happen by entering your network silently. Without strong firewall protection, an <span className="font-semibold text-red-600">unknown intrusion</span> can spread malware to steal data from unsecured access points.
+              </p>
               
-              <div className="lg:w-1/2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-red-50 text-red-700 text-xs font-bold uppercase tracking-wider mb-6">
-                  The Modern Threat
+              <p className="leading-relaxed text-base sm:text-lg">
+                This often leads to severe downtime and business disruption. A robust firewall isn't just a tool; it's the barrier that keeps your business operational.
+              </p>
+
+              {/* Stats / Highlight Row */}
+              <div className="grid grid-cols-2 gap-4 mt-14 pt-10 border-t border-slate-100">
+                <div>
+                  <div className="text-3xl font-bold text-slate-900">24/7</div>
+                  <div className="text-sm text-slate-500 font-medium">Network Surveillance</div>
                 </div>
-                
-                <h2 className="text-4xl font-bold text-slate-900 mb-8 leading-tight">
-                  Why Modern Businesses Need a <br />
-                  <span className="text-red-600">Firewall</span>
-                </h2>
-
-                <div className="prose prose-lg text-slate-600 space-y-8">
-                  <p className="leading-relaxed">
-                    Cyber attacks happen by entering your network silently. Without strong firewall protection, an Unknown intrusion can spread malware to steal Data from unsecured access points, leading to Downtime and business disruption. Always protect your network with a Firewall to save your business
-                  </p>
-
-                  
+                <div>
+                  <div className="text-3xl font-bold text-slate-900">99.9%</div>
+                  <div className="text-sm text-slate-500 font-medium">Threat Block Rate</div>
                 </div>
               </div>
-
-              <div className="lg:w-1/2 w-full pl-0 lg:pl-10">
-                <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 border border-red-100 shadow-[0_4px_20px_-10px_rgba(239,68,68,0.1)]">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center">
-                      <Radar className="w-8 h-8 text-red-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-slate-900">Real-time Threat Detection</h3>
-                      <p className="text-slate-600">Advanced AI-powered monitoring</p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
-                      <span className="text-slate-700">Block unauthorized access attempts</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
-                      <span className="text-slate-700">Prevent data breaches</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
-                      <span className="text-slate-700">Maintain business continuity</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
-        </section>
 
-  <section className="py-24 bg-[#020617] relative overflow-hidden">
+          {/* RIGHT COLUMN: The Visual Card */}
+          <div className="w-full lg:w-1/2 pt-8 lg:pt-0 pl-0 lg:pl-10">
+            <div className="relative group">
+              {/* Background Glow Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-red-200 to-orange-100 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+              
+              {/* Main Card */}
+              <div className="relative bg-white rounded-2xl border border-red-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden">
+                
+                {/* Header Section of Card */}
+                <div className="bg-gradient-to-r from-red-50 to-orange-50/50 p-4 sm:p-8 border-b border-red-100">
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 bg-white rounded-xl shadow-sm border border-red-100 flex items-center justify-center">
+                        <Radar className="w-7 h-7 text-red-600 animate-pulse" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-slate-900">Threat Detection</h3>
+                        <div className="flex items-center gap-1.5 mt-1">
+                          <Activity className="w-4 h-4 text-green-500" />
+                          <p className="text-sm font-medium text-slate-600">System Active & Scanning</p>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Status Badge */}
+                    <div className="hidden sm:flex items-center gap-1 bg-white px-2 py-1 rounded border border-slate-200 text-xs font-bold text-slate-600 shadow-sm">
+                       <Lock className="w-3 h-3" /> SECURE
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Content Section of Card */}
+                <div className="p-4 sm:p-8  space-y-5">
+                   
+                   {/* List Item 1 */}
+                  <div className="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-50 transition-colors cursor-default">
+                    <div className="mt-1">
+                      <ShieldAlert className="w-5 h-5 text-red-500" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 text-sm">Blocks Unauthorized Access</h4>
+                      <p className="text-sm text-slate-500 mt-1">Automatically rejects unverified IP addresses attempting to connect.</p>
+                    </div>
+                  </div>
+
+                  {/* List Item 2 */}
+                  <div className="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-50 transition-colors cursor-default">
+                    <div className="mt-1">
+                      <CheckCircle className="w-5 h-5 text-red-500" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 text-sm">Prevents Data Leaks</h4>
+                      <p className="text-sm text-slate-500 mt-1">Deep packet inspection ensures sensitive data doesn't leave the network.</p>
+                    </div>
+                  </div>
+
+                  {/* List Item 3 */}
+                  <div className="flex items-start gap-4 pb-0 p-3 rounded-lg hover:bg-slate-50 transition-colors cursor-default">
+                    <div className="mt-1">
+                      <Activity className="w-5 h-5 text-red-500" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 text-sm">Business Continuity</h4>
+                      <p className="text-sm text-slate-500 mt-1">Reduces downtime risks by filtering out DDoS attacks instantly.</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Decorative Progress Bar at bottom */}
+                {/* <div className="h-1.5 w-full bg-slate-100">
+                    <div className="h-full bg-red-500 w-[92%] rounded-r-full" />
+                </div> */}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+ <section className="py-16 lg:py-24 bg-[#020617] relative overflow-hidden">
       
       {/* Background Grid & Glows */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/20 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] lg:w-[600px] h-[300px] bg-blue-600/20 blur-[80px] lg:blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
-            Let SpamCloud handle the firewall.<br/> 
+        <div className="text-center mb-12 lg:mb-16 max-w-4xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
+            Let SpamCloud handle the firewall.<br className="hidden sm:block"/> 
             So you can <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-slate-400">focus on your business.</span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
-          {/* LEFT COLUMN: INTERACTIVE MENU (Before SpamCloud) */}
+          {/* LEFT COLUMN: INTERACTIVE MENU */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 pl-2">Before SpamCloud</div>
+            
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-bold w-fit uppercase tracking-wider mb-2 lg:mb-6">
+              <Shield className="w-3 h-3" /> Before SpamCloud
+            </div>
+            
             {transformationData.map((item, index) => (
               <div 
                 key={index}
+                onClick={() => setActiveIndex(index)}
                 onMouseEnter={() => setActiveIndex(index)}
-                className={`cursor-pointer group relative p-6 rounded-xl border transition-all duration-300 ease-out ${
+                className={`cursor-pointer group relative p-4 lg:p-5 rounded-xl border transition-all duration-300 ease-out ${
                   activeIndex === index 
                     ? "bg-slate-800/50 border-blue-500/50 shadow-[0_0_30px_-10px_rgba(59,130,246,0.3)]" 
                     : "bg-slate-900/30 border-slate-800 hover:bg-slate-800/50 hover:border-slate-700"
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    {/* Icon Box */}
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${
+                  <div className="flex items-center gap-3 lg:gap-4">
+                    <div className={`w-10 h-10 shrink-0 rounded-lg flex items-center justify-center transition-colors ${
                       activeIndex === index ? "bg-blue-500 text-white" : "bg-slate-800 text-slate-500 group-hover:text-slate-300"
                     }`}>
                       <item.icon className="w-5 h-5" />
@@ -432,64 +512,74 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
                     </div>
                   </div>
 
-                  {/* Arrow Indicator */}
-                  <ArrowRight className={`w-5 h-5 transition-all duration-300 ${
-                    activeIndex === index ? "text-blue-400 opacity-100 translate-x-0" : "text-slate-600 opacity-0 -translate-x-4"
+                  <ArrowRight className={`w-5 h-5 shrink-0 transition-all duration-300 ${
+                    activeIndex === index ? "text-blue-400 opacity-100 translate-x-0" : "text-slate-600 opacity-0 -translate-x-4 hidden lg:block"
                   }`} />
                 </div>
               </div>
             ))}
           </div>
 
-          {/* RIGHT COLUMN: THE VIEWPORT (After SpamCloud & How We Make It Happen) */}
-          <div className="lg:col-span-7 relative h-full min-h-[420px]">
+          {/* RIGHT COLUMN: THE VIEWPORT */}
+          {/* 
+             MODIFICATION: 
+             lg:h-[450px] sets a fixed, reduced height for desktop only.
+             Mobile relies on h-auto (natural height).
+          */}
+          <div className="lg:col-span-7 relative w-full lg:h-[450px]">
+            
             {transformationData.map((item, index) => (
               <div 
                 key={index}
-                className={`absolute inset-0 transition-all duration-500 ease-in-out ${
-                  activeIndex === index 
-                    ? "opacity-100 translate-y-0 z-10" 
-                    : "opacity-0 translate-y-8 z-0 pointer-events-none"
-                }`}
-              >
-                {/* The "Card" Container */}
-                <div className="h-full bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 lg:p-12 relative overflow-hidden flex flex-col justify-between group shadow-2xl">
+                className={`
+                  transition-all duration-500 ease-in-out
+                  /* Mobile: Only show active, relative positioning */
+                  ${activeIndex === index ? 'block relative opacity-100 translate-y-0' : 'hidden opacity-0 translate-y-4'}
+                  /* Desktop: Absolute positioning to overlap */
+                  lg:block lg:absolute lg:inset-0 
+                  ${activeIndex === index ? 'lg:z-10 lg:opacity-100 lg:translate-y-0' : 'lg:z-0 lg:opacity-0 lg:translate-y-8 lg:pointer-events-none'}
+                `}
+              > 
+                 {/* Badge */}
+                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4 lg:mb-6">
+                      <Shield className="w-3 h-3" /> After SpamCloud
+                 </div>
+
+                {/* 
+                   Card Container 
+                   Mobile: h-auto (grows with text)
+                   Desktop: h-full (fills the 450px container)
+                */}
+                <div className="h-auto lg:h-[400px] bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 lg:p-10 relative overflow-hidden flex flex-col justify-between group shadow-2xl">
                   
                   {/* Decorative Glow inside card */}
                   <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[80px] rounded-full pointer-events-none" />
                   
-                  {/* Content Top: After SpamCloud */}
-                  <div className="relative z-10 ">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-6">
-                      <Shield className="w-3 h-3" /> After SpamCloud
-                    </div>
-                    
-                    <h3 className="text-3xl font-bold text-white mb-6 leading-tight">
+                  <div className="relative z-10">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6 leading-tight">
                       {item.solution}
                     </h3>
                     
                     {/* How We Make It Happen */}
-                    <div className="mt-4 p-5 rounded-xl bg-slate-800/50 border border-slate-700/50">
+                    <div className="mt-2 p-5 rounded-xl bg-slate-800/50 border border-slate-700/50">
                         <p className="text-xs text-blue-400 font-bold uppercase mb-2">How We Make It Happen</p>
-                        <p className="text-slate-200 text-xl font-medium leading-relaxed">
+                        <p className="text-slate-200 text-lg font-medium leading-relaxed">
                           {item.description}
                         </p>
                     </div>
                   </div>
 
-                  {/* Content Bottom / Visuals */}
-                  <div className="relative z-10 mt-8 pt-8 border-t border-slate-800/50 flex items-end justify-between">
+                  <div className="relative z-10 mt-8 pt-4 border-t border-slate-800/50 flex items-end justify-between">
                      <div>
                         <p className="text-slate-500 text-xs font-mono uppercase tracking-widest mb-1">Outcome</p>
-                        <p className="text-2xl font-bold text-white tracking-tight">{item.stat}</p>
+                        <p className="text-xl lg:text-2xl font-bold text-white tracking-tight">{item.stat}</p>
                      </div>
                      
-                     <div className="w-14 h-14 rounded-full bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 animate-pulse">
-                        <CheckCircle2 className="w-7 h-7 text-emerald-400" />
+                     <div className="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 animate-pulse">
+                        <CheckCircle2 className="w-6 h-6 text-emerald-400" />
                      </div>
                   </div>
 
-                  {/* Background Tech Pattern */}
                   <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-[linear-gradient(to_right,#10b98110_1px,transparent_1px),linear-gradient(to_bottom,#10b98110_1px,transparent_1px)] bg-[size:1rem_1rem] [mask-image:linear-gradient(to_top,black,transparent)] pointer-events-none"></div>
 
                 </div>
@@ -545,104 +635,109 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
           </div>
         </section>
 
-<section className="relative py-20 lg:py-28 bg-[#081326] overflow-hidden">
+ <section className="relative py-20 lg:py-28 bg-[#020617] overflow-hidden">
 
-  {/* Background Grid Lines */}
-  <div className="absolute inset-0 bg-[url('/grid-lines.svg')] opacity-[0.07] pointer-events-none"></div>
+      {/* Background Ambience (Subtle glow to match previous sections) */}
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-  {/* Soft Blue Glow */}
-  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent blur-3xl"></div>
+      <div className="container relative z-10 mx-auto px-6 lg:px-12">
 
-  <div className="container relative z-10 mx-auto px-6 lg:px-12">
+        {/* Header - Centered on Mobile, Left on Desktop */}
+        <div className="max-w-3xl mb-12 lg:mb-16 text-center lg:text-left mx-auto lg:mx-0">
+          <span className="inline-block py-1 px-3 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">
+            Pricing
+          </span>
 
-    {/* Header */}
-    <div className="max-w-3xl mb-12 lg:mb-16 text-center lg:text-left mx-auto lg:mx-0">
-      <span className="uppercase text-[11px] tracking-widest font-semibold text-blue-400">
-        Pricing
-      </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            Flexible Pricing Built for <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Indian Businesses</span>
+          </h2>
 
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mt-3">
-        Flexible Pricing Built for  
-        <br />
-        <span className="text-blue-400">Indian Businesses</span>
-      </h2>
-
-      <p className="text-slate-300 text-base sm:text-lg mt-4 max-w-xl mx-auto lg:mx-0">
-        Simple, predictable pricing designed for SMEs, IT offices, and enterprise teams.
-      </p>
-    </div>
-
-    <div className="grid lg:grid-cols-2 gap-16">
-
-      {/* Left Column – Features */}
-      <div className="space-y-4 sm:space-y-6">
-
-        {/* Feature */}
-        <div className="flex gap-4 p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-xl hover:border-blue-500/40 transition-all">
-          <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
-            <Users className="w-6 h-6 text-blue-400" />
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-white">Per-ID Security Plan</h3>
-            <p className="text-slate-400 text-sm mt-1">Ideal for SMEs & IT offices</p>
-          </div>
+          <p className="text-slate-400 text-base sm:text-lg mt-4 max-w-xl mx-auto lg:mx-0">
+            Simple, predictable pricing designed for SMEs, IT offices, and enterprise teams. No hidden fees.
+          </p>
         </div>
 
-        {/* Feature */}
-        <div className="flex gap-4 p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-xl hover:border-blue-500/40 transition-all">
-          <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
-            <IndianRupee className="w-6 h-6 text-blue-400" />
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-white">Cost Effective</h3>
-            <p className="text-slate-400 text-sm mt-1">Affordable month-on-month pricing</p>
-          </div>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
 
-        {/* Feature */}
-        <div className="flex gap-4 p-6 border border-white/10 bg-white/5 backdrop-blur-sm rounded-xl hover:border-blue-500/40 transition-all">
-          <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
-            <TrendingUp className="w-6 h-6 text-blue-400" />
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-white">Bulk Discounts</h3>
-            <p className="text-slate-400 text-sm mt-1">Special pricing for 100+ users</p>
-          </div>
-        </div>
+          {/* Left Column – Feature List */}
+          <div className="flex flex-col justify-center space-y-5">
 
-      </div>
-
-      {/* Right Column – CTA */}
-      <div className="w-full max-w-xl mx-auto lg:mx-0">
-        <div className="p-8 sm:p-10 border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl shadow-xl relative overflow-hidden">
-
-          {/* Top border highlight */}
-          <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-blue-400 to-blue-600"></div>
-
-          <div className="flex flex-col items-center text-center mb-8 sm:mb-10">
-            <div className="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6">
-              <Clock className="w-8 h-8 text-blue-400" />
+            {/* Feature Card 1 */}
+            <div className="group flex items-start sm:items-center gap-5 p-6 border border-slate-800 bg-slate-900/50 rounded-2xl hover:border-blue-500/50 hover:bg-slate-800/50 transition-all duration-300 cursor-default">
+              <div className="w-12 h-12 shrink-0 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 transition-colors duration-300">
+                <Users className="w-6 h-6 text-blue-400 group-hover:text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white group-hover:text-blue-100 transition-colors">Per-ID Security Plan</h3>
+                <p className="text-slate-400 text-sm mt-1">Ideal for SMEs & IT offices requiring granular control.</p>
+              </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-white">Annual Subscription</h3>
+            {/* Feature Card 2 */}
+            <div className="group flex items-start sm:items-center gap-5 p-6 border border-slate-800 bg-slate-900/50 rounded-2xl hover:border-blue-500/50 hover:bg-slate-800/50 transition-all duration-300 cursor-default">
+              <div className="w-12 h-12 shrink-0 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 transition-colors duration-300">
+                <IndianRupee className="w-6 h-6 text-blue-400 group-hover:text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white group-hover:text-blue-100 transition-colors">Cost Effective</h3>
+                <p className="text-slate-400 text-sm mt-1">Affordable month-on-month pricing structure.</p>
+              </div>
+            </div>
 
-            <span className="mt-3 inline-flex items-center px-3 py-1 text-xs font-semibold text-blue-300 border border-blue-500/30 bg-blue-500/10 rounded-full">
-              <ShieldCheck className="w-3 h-3 mr-1" /> Recommended
-            </span>
+            {/* Feature Card 3 */}
+            <div className="group flex items-start sm:items-center gap-5 p-6 border border-slate-800 bg-slate-900/50 rounded-2xl hover:border-blue-500/50 hover:bg-slate-800/50 transition-all duration-300 cursor-default">
+              <div className="w-12 h-12 shrink-0 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 transition-colors duration-300">
+                <TrendingUp className="w-6 h-6 text-blue-400 group-hover:text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white group-hover:text-blue-100 transition-colors">Bulk Discounts</h3>
+                <p className="text-slate-400 text-sm mt-1">Special volume pricing for organizations with 100+ users.</p>
+              </div>
+            </div>
+
           </div>
 
-          <button className="w-full py-4 flex items-center justify-center font-bold uppercase tracking-wide text-white rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-400 hover:to-blue-600 transition-all text-xs sm:text-sm">
-            Request a Custom Pricing Proposal
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </button>
+          {/* Right Column – CTA Card */}
+          <div className="w-full h-full flex">
+            <div className=" flex flex-col justify-between p-4 sm:p-12 border border-blue-500/30 bg-gradient-to-b from-slate-900 to-[#020617] rounded-3xl relative overflow-hidden shadow-2xl">
+
+              {/* Top Accent Line */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400"></div>
+              
+              <div className="flex flex-col items-center text-center">
+                {/* Icon Circle */}
+                <div className="w-16 h-16 rounded-full bg-slate-800/50 border border-slate-700 flex items-center justify-center mb-8 relative">
+                   <div className="absolute inset-0 rounded-full border border-blue-500/30 animate-ping opacity-20"></div>
+                   <Clock className="w-9 h-9 text-blue-400" />
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-6">Annual Subscription</h3>
+
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-400/30 bg-blue-500/10 text-blue-300 text-sm font-medium">
+                  <ShieldCheck className="w-4 h-4" /> 
+                  Recommended Choice
+                </div>
+                
+                <p className="text-slate-400 mt-8 mb-8 text-sm leading-relaxed max-w-xs mx-auto">
+                   Get complete peace of mind with our yearly plan. Includes priority support and free setup.
+                </p>
+              </div>
+
+              {/* Button */}
+              <button className="group w-full py-4 px-6 flex items-center justify-center gap-2 font-bold uppercase tracking-wider text-white text-sm rounded-xl bg-blue-600 hover:bg-blue-500 transition-all shadow-lg hover:shadow-blue-500/25 transform hover:-translate-y-0.5">
+                Request Custom Proposal
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+
+            </div>
+          </div>
 
         </div>
+
       </div>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
 
