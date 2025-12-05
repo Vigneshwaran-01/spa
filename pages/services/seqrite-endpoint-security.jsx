@@ -390,7 +390,7 @@ const riskPoints = [
              <h1 className="text-3xl text-left sm:text-4xl md:text-4xl lg:text-4xl font-bold tracking-tight text-white leading-[1.05]">
               Seqrite Endpoint Security with Enterprise-Grade Protection 
                <span className="text-transparent ml-2 bg-clip-text bg-gradient-to-r from-blue-400 to-white">
-                Built for Indian Businesses
+                Built for Every Businesses
                </span>
              </h1>
           </div>
@@ -398,7 +398,8 @@ const riskPoints = [
           {/* RIGHT: Description & CTA (Aligned to bottom) */}
           <div className="lg:w-1/2 pb-2 text-left flex flex-col justify-center lg:text-left">
             <p className="text-base sm:text-lg text-slate-400 leading-relaxed mb-8 max-w-lg  lg:mx-0">
-Modern security without global pricing barriers. Fully managed by SpamCloud security experts
+Modern security without global pricing barriers. Fully managed by Seqrite security experts
+
             </p>
 
             <div className="flex flex-col  sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
@@ -461,7 +462,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
     </section>
 
         {/* Section 2: Why Businesses Choose Managed Endpoint Security */}
- <section className="py-16 lg:py-24 bg-white border-b border-gray-100 overflow-hidden">
+ <section className="py-16 lg:py-14 bg-white border-b border-gray-100 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20">
@@ -495,7 +496,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
               {/* The "Solution" Quote Block */}
               <div className="relative pl-6 border-l-4 border-blue-600 bg-slate-50/50 py-2 rounded-r-lg">
                 <p className="text-slate-800 font-medium italic text-base sm:text-lg">
-                  "SpamCloud removes the burden from your IT team. Instead of troubleshooting agents, you get a <span className="text-blue-600 not-italic font-bold">fully managed protection stack</span> that keeps business moving."
+                  "Seqrite  removes the burden from your IT team. Instead of troubleshooting agents, you get a <span className="text-blue-600 not-italic font-bold">fully managed protection stack</span> that keeps business moving."
                 </p>
               </div>
 
@@ -559,7 +560,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
     </section>
 
         {/* Section 3: Included Features for Windows */}
- <section className="py-24 bg-[#020617] relative overflow-hidden">
+ <section className="py-14 bg-[#020617] relative overflow-hidden">
       
       {/* Background Decor (Subtle Glows) */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
@@ -648,7 +649,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
  
 
         {/* Section 5: Managed By Experts */}
-<section className="relative py-12 md:py-16 lg:py-24 bg-white overflow-hidden">
+<section className="relative py-12 md:py-16 lg:py-14 bg-white overflow-hidden">
   {/* Decorative Background Blob - Adjusted for mobile */}
   <div className="absolute top-0 right-0 w-full sm:w-[500px] h-[400px] sm:h-[600px] bg-blue-50 rounded-full blur-3xl opacity-60 sm:translate-x-1/3 -translate-y-1/4 pointer-events-none"></div>
 
@@ -745,7 +746,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
 
 
 
- <section className="py-24 bg-[#020817] text-white relative overflow-hidden">
+ <section className="py-14 bg-[#020817] text-white relative overflow-hidden">
       
       {/* --- BACKGROUND AMBIENCE --- */}
       {/* Blue Glow behind the table */}
@@ -759,7 +760,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold tracking-tight">
-            Why SpamCloud outperforms <br className="md:hidden" />
+            Why Seqrite  outperforms <br className="md:hidden" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
               international brands
             </span>
@@ -786,7 +787,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
                 <div className="flex justify-center mb-1">
                    <Zap className="w-5 h-5 text-white fill-white" />
                 </div>
-                <h3 className="text-white font-bold text-sm md:text-base leading-tight">SpamCloud</h3>
+                <h3 className="text-white font-bold text-sm md:text-base leading-tight">Seqrite </h3>
               </div>
             </div>
 
@@ -915,7 +916,7 @@ Modern security without global pricing barriers. Fully managed by SpamCloud secu
     </section>
 
         {/* Lead Generation Section */}
-  <section className="relative w-full py-16 lg:py-20 bg-slate-50 overflow-hidden" id="contact">
+  <section className="relative w-full py-16 lg:py-14 bg-slate-50 overflow-hidden" id="contact">
       
       {/* Background Decor */}
       <div className="absolute inset-0 bg-white" />

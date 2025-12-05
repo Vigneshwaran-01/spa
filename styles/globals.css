@@ -60,7 +60,7 @@ body {
   
   /* Modern Stats Section Fixes */
   .modern-stats-section {
-    @apply py-16 px-4 lg:px-8;
+    @apply py-4 px-4 lg:px-8;
   }
   
   .modern-stats-container {
@@ -223,7 +223,7 @@ body {
     /* Reduce container max-width */
     .modern-stats-container,
     .modern-features-container {
-      max-width: 1200px !important;
+      max-width: 1200px !important; 
     }
     
     /* Adjust grid gaps */

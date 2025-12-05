@@ -2633,10 +2633,10 @@ padding: 5px;
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #1e40af 0%, #2563eb 25%, #3b82f6 50%, #60a5fa 75%, #93c5fd 100%);
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  padding: 100px 0;
+  padding: 30px 0;
 }
 
 .modern-stats-container {
@@ -3031,10 +3031,10 @@ padding: 5px;
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #1e40af 0%, #2563eb 25%, #3b82f6 50%, #60a5fa 75%, #93c5fd 100%);
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  padding: 100px 0;
+  padding: 30px 0;
 }
 
 .modern-features-container {
@@ -3711,7 +3711,7 @@ padding: 5px;
 /* Modern Blog Section */
 .modern-blog-section {
   background: #f8fafc;
-  padding: 100px 0;
+  padding: 30px 0;
 }
 
 .modern-blog-container {

@@ -14,7 +14,9 @@ import {
   ShieldAlert,
   CheckCircle2,
   FileText,
-  AlertOctagon
+  AlertOctagon,
+  Globe2,
+  GlobeIcon
 } from "lucide-react";
 import { 
   Search,
@@ -159,14 +161,14 @@ export default function Immunify360Security() {
           </div>
 
           <h1 className="text-5xl lg:text-left  sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6 text-white">
-            Stop Ransomware <br />
+            Immunify360 Active <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 via-white to-blue-100 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]">
-              At The Door.
+              web security
             </span>
           </h1>
 
-          <p className="text-lg text-slate-400 max-w-xl leading-relaxed mb-10 lg:border-l-2 lg:border-slate-800 ">
-            Your inbox is the front door. We install a <span className="text-white font-semibold">military-grade prism</span> that filters malicious payloads before they ever reach your employees.
+          <p className="text-lg pl-2 text-slate-400 max-w-xl lg:text-left leading-relaxed mb-10 lg:border-l-2 lg:border-slate-800 ">
+            Our real-time <span className="text-white font-semibold">threat-filtering engine </span>, which acts as a defense prism identifying, isolating, and eliminating malicious payloads before they enter your environment.
           </p>
 
           <div className="flex flex-col justify-center sm:flex-row gap-4 item-center w-full space-y-2 ">  
@@ -203,9 +205,9 @@ export default function Immunify360Security() {
                 <div className="absolute top-[-1px] w-16 sm:w-20 h-1 bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.8)] rounded-b-lg" />
                 
                 <div className="p-3 sm:p-4 bg-slate-800/50 rounded-full border border-slate-700 mb-3">
-                  <ShieldCheck className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400" />
+                  <GlobeIcon className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400" />
                 </div>
-                <h3 className="text-white font-semibold text-xs sm:text-sm">Inbox</h3>
+                <h3 className="text-white font-semibold text-xs sm:text-sm">SERVER</h3>
                 <p className="text-emerald-400/60 text-[10px] mt-1 font-mono">SECURE</p>
 
                 {/* Papers Effect */}
@@ -300,7 +302,7 @@ export default function Immunify360Security() {
     </section>
 
         {/* PROBLEM SECTION */}
-        <section className="relative w-full py-20 bg-[#020617]">
+        <section className="relative w-full py-14 bg-[#020617]">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#020617_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none" />
 
           <div className="relative max-w-7xl mx-auto px-6 lg:px-8 grid place-items-center lg:grid-cols-12 gap-12 items-start">
@@ -362,7 +364,7 @@ export default function Immunify360Security() {
         </section>
 
         {/* HIGHLIGHT / TRUST SECTION */}
-      <section className="w-full bg-white py-24 border-y border-slate-100">
+      <section className="w-full bg-white py-14 border-y border-slate-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
@@ -405,7 +407,7 @@ export default function Immunify360Security() {
     </section>
 
         {/* SOLUTION SECTION */}
-      <section className="relative w-full py-24 bg-[#020617] overflow-hidden">
+      <section className="relative w-full py-14 bg-[#020617] overflow-hidden">
       
       {/* --- Global Background Effects --- */}
       {/* 1. Deep grid background */}
@@ -434,7 +436,7 @@ export default function Immunify360Security() {
             </h2>
             
             <p className="mt-6 text-lg text-slate-400 leading-relaxed border-l-2 border-slate-800 pl-4">
-              Stop modern mail attacks with SpamCloud's cloud-native IPS. We move from 
+              Stop modern mail attacks with Imunify360’s cloud-native IPS. We move from 
               reactive patching to <span className="text-blue-300">proactive packet-level inspection</span>.
             </p>
           </div>
@@ -527,7 +529,7 @@ export default function Immunify360Security() {
     </section>
 
         {/* SECURITY STACK SECTION */}
- <section className="relative w-full py-24 bg-[#0B0F19] overflow-hidden">
+ <section className="relative w-full py-14 bg-[#0B0F19] overflow-hidden">
       
       {/* --- Cyber Background Elements --- */}
       {/* 1. Grid Mesh */}
@@ -615,7 +617,7 @@ export default function Immunify360Security() {
     </section>
 
         {/* HOW WE PROTECT YOU SECTION */}
-        <section className="relative w-full py-20 bg-slate-950">
+        <section className="relative w-full py-14 bg-slate-950">
           <div className="absolute inset-0 opacity-[0.06] bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] pointer-events-none" />
           <div className="relative max-w-5xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-10">
@@ -670,7 +672,7 @@ export default function Immunify360Security() {
         </section>
 
         {/* IMMUNIFY360 SECTION */}
- <section className="w-full py-24 bg-white relative">
+ <section className="w-full py-14 bg-white relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           
@@ -816,7 +818,7 @@ export default function Immunify360Security() {
     </section>
 
         {/* RESULTS + CTA SECTION */}
-        <section className="relative w-full py-20 bg-slate-950 overflow-hidden">
+        <section className="relative w-full py-14 bg-slate-950 overflow-hidden">
           <div className="absolute inset-0 opacity-[0.06] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[260px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
 

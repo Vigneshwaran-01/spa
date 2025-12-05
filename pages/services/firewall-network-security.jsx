@@ -268,10 +268,9 @@ export default function FirewallNetworkSecurity() {
                  </h1>
               </div>
 
-              <div className="lg:w-1/2 pb-2 text-left lg:text-left ">
+              <div className="lg:w-1/2 lg:pb-8 text-left lg:text-left ">
                 <p className="text-base sm:text-lg text-slate-400 leading-relaxed mb-8   lg:mx-0">
-SpamCloud delivers firewall solutions as part of its network security offerings designed for schools, IT companies, banks, SaaS providers, and SMEs. Fully managed by certified security experts
-                </p>
+Next-generation firewall protection for schools, IT firms, banks, SaaS platforms, and SMEs, monitored and managed end-to-end by certified professionals                </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full rounded-full sm:w-auto justify-center lg:justify-start">
                   <button className="inline-flex items-center rounded-full justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600  hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
@@ -326,7 +325,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
         </section>
 
         {/* Why Section */}
-       <section className="py-16 lg:py-24 bg-white border-b border-gray-100 overflow-hidden">
+       <section className="py-16 lg:py-14 bg-white border-b border-gray-100 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
@@ -457,7 +456,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
       </div>
     </section>
 
- <section className="py-16 lg:py-24 bg-[#020617] relative overflow-hidden">
+ <section className="py-16 lg:py-14 bg-[#020617] relative overflow-hidden">
       
       {/* Background Grid & Glows */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
@@ -468,7 +467,8 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
         {/* Header */}
         <div className="text-center mb-12 lg:mb-16 max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
-            Let SpamCloud handle the firewall.<br className="hidden sm:block"/> 
+            Let us handle your firewall, 
+<br className="hidden sm:block"/> 
             So you can <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-slate-400">focus on your business.</span>
           </h2>
         </div>
@@ -481,7 +481,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
             
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-bold w-fit uppercase tracking-wider mb-2 lg:mb-6">
-              <Shield className="w-3 h-3" /> Before SpamCloud
+              <Shield className="w-3 h-3" /> Without firewall 
             </div>
             
             {transformationData.map((item, index) => (
@@ -542,7 +542,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
               > 
                  {/* Badge */}
                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4 lg:mb-6">
-                      <Shield className="w-3 h-3" /> After SpamCloud
+                      <Shield className="w-3 h-3" /> With firewall
                  </div>
 
                 {/* 
@@ -592,7 +592,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
       </div>
     </section>
         {/* Specification Section */}
-        <section className="py-24 bg-[#020817] text-white relative overflow-hidden">
+        <section className="py-14 bg-[#020817] text-white relative overflow-hidden">
           
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
@@ -601,7 +601,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
             
             <div className="text-center mb-20 max-w-3xl mx-auto">
               <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-                What's Included in <span className="bg-gradient-to-r from-blue-400 to-slate-400 bg-clip-text text-transparent">SpamCloud Firewall Services</span>
+                What's Included in <span className="bg-gradient-to-r from-blue-400 to-slate-400 bg-clip-text text-transparent">Firewall Services</span>
               </h2>
               <p className="text-slate-400 text-lg">
                 Comprehensive security features managed by our expert team
@@ -635,7 +635,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
           </div>
         </section>
 
- <section className="relative py-20 lg:py-28 bg-[#020617] overflow-hidden">
+ <section className="relative py-20 lg:py-14 bg-[#020617] overflow-hidden">
 
       {/* Background Ambience (Subtle glow to match previous sections) */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
@@ -742,7 +742,7 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
 
 
         {/* Testimonial Section */}
-      <section className="relative py-24 bg-slate-950 overflow-hidden">
+      <section className="relative py-14 bg-slate-950 overflow-hidden">
       {/* Background Grid Decoration */}
       <div className="absolute inset-0 opacity-[0.03]" 
            style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
@@ -818,14 +818,14 @@ SpamCloud delivers firewall solutions as part of its network security offerings 
     </section>
 
         {/* Final CTA Section */}
-        <section className="py-24 bg-[#020817] text-white relative overflow-hidden">
+        <section className="py-14 bg-[#020817] text-white relative overflow-hidden">
           
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none" />
           
           <div className="container mx-auto px-6 lg:px-12 relative z-10 text-center">
             
-            <h2 className="text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Protect every device, every user, every location with SpamCloud's enterprise-grade network security
+            <h2 className="text-4xl lg:text-3xl font-bold leading-2 mb-6">
+              Protect every device with SpamCloud's enterprise-grade network security
             </h2>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">

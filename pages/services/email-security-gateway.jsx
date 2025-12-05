@@ -312,7 +312,7 @@ export default function EmailSecurityGateway() {
               Email Security Built for {" "}
               {/* Highlighted Blue Text */}
               <span className="text-blue-600">
-                Modern Indian Businesses
+                Modern Businesses
               </span> 
               {" "}&ndash;{" "}
               {/* Continuing the bold flow like the image */}
@@ -336,7 +336,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
       <main className="min-h-screen bg-[#020617] text-white">
       
 
- <section className="relative w-full py-20 lg:py-28 bg-[#011333] overflow-hidden">
+ <section className="relative w-full py-20 lg:py-14 bg-[#011333] overflow-hidden">
       
       {/* --- BACKGROUND EFFECTS --- */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 pointer-events-none"></div>
@@ -447,6 +447,21 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
                     <p className="text-xl md:text-2xl text-white font-medium leading-snug">
                         mail attacks start with undetected small intrusions.
                     </p>
+
+                    <div className="mt-6 w-full">
+                      <div className="flex items-end gap-2 h-20 sm:h-24 md:h-28">
+                        <div className="flex-1 h-[35%] rounded-t-full bg-gradient-to-t from-blue-950/80 to-blue-500/80"></div>
+                        <div className="flex-1 h-[55%] rounded-t-full bg-gradient-to-t from-blue-950/80 to-blue-400/90"></div>
+                        <div className="flex-1 h-[82%] rounded-t-full bg-gradient-to-t from-blue-950/80 to-emerald-400 shadow-[0_0_25px_rgba(16,185,129,0.7)]"></div>
+                        <div className="flex-1 h-[45%] rounded-t-full bg-gradient-to-t from-blue-950/80 to-slate-300/80 opacity-70"></div>
+                      </div>
+                      <div className="mt-3 flex justify-between text-[10px] sm:text-xs text-slate-400">
+                        <span>Phishing</span>
+                        <span>Spoofed</span>
+                        <span className="text-emerald-400 font-semibold">Mail attacks</span>
+                        <span>Others</span>
+                      </div>
+                    </div>
                 </div>
               </div>
 
@@ -464,7 +479,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
         </div>
       </div>
     </section>
- <section className="w-full py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex justify-center items-center px-4 relative overflow-hidden">
+ <section className="w-full py-14 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex justify-center items-center px-4 relative overflow-hidden">
       
       {/* Background Ambience */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none"></div>
@@ -510,10 +525,10 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
         </div>
 
         {/* --- RIGHT PANEL (White Theme - Feature Grid) --- */}
-        <div className="w-full lg:w-[60%] bg-white grid grid-cols-1 sm:grid-cols-2">
+        <div className="w-full lg:w-[60%] bg-white grid grid-cols-1 sm:grid-cols-2 border border-slate-400">
           
           {/* Card 1: Cloud Filtering (Blue) */}
-          <div className="group relative h-[280px] p-8 border-b sm:border-r border-slate-100 hover:bg-slate-50 transition-colors flex flex-col justify-between">
+          <div className="group relative h-[220px] p-4 border-b sm:border-r border-slate-100 hover:bg-slate-50 transition-colors flex flex-col justify-between ">
              <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Cloud size={28} />
              </div>
@@ -524,7 +539,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
           </div>
 
           {/* Card 2: Real-time Updates (Emerald) */}
-          <div className="group relative h-[280px] p-8 border-b border-slate-100 hover:bg-slate-50 transition-colors flex flex-col justify-between">
+          <div className="group relative h-[220px] p-4 border-b border-slate-100 hover:bg-slate-50 transition-colors flex flex-col justify-between ">
              <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Zap size={28} />
              </div>
@@ -535,7 +550,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
           </div>
 
           {/* Card 3: Outbound Scanning (Purple) */}
-          <div className="group relative h-[280px] p-8 sm:border-r border-slate-100 hover:bg-slate-50 transition-colors flex flex-col justify-between">
+          <div className="group relative h-[180px] p-2 sm:border-r border-slate-100 transition-colors flex flex-col justify-between ">
              <div className="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <UploadCloud size={28} />
              </div>
@@ -546,7 +561,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
           </div>
 
           {/* Card 4: Deep Sandboxing (Orange) */}
-          <div className="group relative h-[280px] p-8 hover:bg-slate-50 transition-colors flex flex-col justify-between">
+          <div className="group relative h-[180px] p-2  transition-colors flex flex-col justify-between  ">
              <div className="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <FileSearch size={28} />
              </div>
@@ -560,7 +575,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
 
       </div>
     </section>
- <section className="relative w-full py-24 bg-slate-950 overflow-hidden">
+ <section className="relative w-full py-14 bg-slate-950 overflow-hidden">
       
       {/* --- BACKGROUND EFFECTS --- */}
       {/* 1. World Map / Network Texture (Abstract) */}
@@ -574,7 +589,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
         {/* --- HEADLINE --- */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
-            SpamCloud reduces email threat volume by up to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">98%</span>
+            Email Gateway Reduces Email Threat Volume By  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">98%</span>
           </h2>
           <p className="mt-6 text-lg text-slate-400">
             Stopping malicious attacks in the cloud before they ever reach your server infrastructure.
@@ -684,7 +699,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
 
 
 
- <section className="relative py-24 bg-[#020617] overflow-hidden">
+ <section className="relative py-12 bg-[#020617] overflow-hidden">
       {/* --- Background Effects (Seamless transition) --- */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
       
@@ -754,7 +769,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
       </div>
     </section>
 
-      <section className="relative py-24 bg-[#020617] overflow-hidden">
+      <section className="relative py-14 bg-[#020617] overflow-hidden">
       {/* --- Background Effects --- */}
       {/* 1. Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
@@ -837,7 +852,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
       </div>
     </section>
 
-       <section className="relative py-20 lg:py-28 bg-[#020617] overflow-hidden">
+       <section className="relative py-20 lg:py-14 bg-[#020617] overflow-hidden">
       {/* --- Background Ambience --- */}
       {/* Grid Pattern (Consistent with previous section) */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />

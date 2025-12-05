@@ -450,7 +450,7 @@ export default function New({ homeData, error }) {
       </section> */}
 
       {/* Modern Stats Section - Awwwards Inspired */}
-    <section className='modern-stats-section'>
+    <section className='modern-stats-section'> 
       <div className="modern-stats-container">
         {/* Left Content Area */}
         <div className="stats-content-area">

@@ -131,11 +131,11 @@ const ClientSlider = () => {
                     <Slider {...settingsRow1}>
                         {row1Logos.map((logo, index) => (
                             <div key={`row1-${index}`} className="px-4">
-                                <div className="flex items-center justify-center p-2 h-20 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden mx-2">
+                                <div className="flex items-center justify-center  h-28 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden mx-2">
                                     <img 
                                         src={logo} 
                                         alt={`Client logo ${index + 1}`}
-                                        className="max-h-18 max-w-38 object-cover filter  hover:grayscale-0 transition-all duration-300"
+                                        className="h-full w-full  object-cover filter  hover:grayscale-0 transition-all duration-300"
                                         loading="lazy"
                                     />
                                 </div>
@@ -149,11 +149,11 @@ const ClientSlider = () => {
                     <Slider {...settingsRow2}>
                         {row2Logos.map((logo, index) => (
                             <div key={`row2-${index}`} className="px-4">
-                                <div className="flex items-center justify-center h-20 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden p-2 duration-300 mx-2">
+                                <div className="flex items-center justify-center h-28 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden p-2 duration-300 mx-2">
                                     <img 
                                         src={logo} 
                                         alt={`Client logo ${index + 1}`}
-                                        className="max-h-18 max-w-38 object-cover filter  hover:grayscale-0 transition-all duration-300"
+                                        className="h-full w-full  object-cover filter  hover:grayscale-0 transition-all duration-300"
                                         loading="lazy"
                                     />
                                 </div>
