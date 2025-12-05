@@ -592,7 +592,7 @@ Next-generation firewall protection for schools, IT firms, banks, SaaS platforms
       </div>
     </section>
         {/* Specification Section */}
-        <section className="py-14 bg-[#020817] text-white relative overflow-hidden">
+        <section className="pt-10  pb-0 bg-[#020817] text-white relative overflow-hidden">
           
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
@@ -818,15 +818,18 @@ Next-generation firewall protection for schools, IT firms, banks, SaaS platforms
     </section>
 
         {/* Final CTA Section */}
-        <section className="py-14 bg-[#020817] text-white relative overflow-hidden">
+        {/* <section className="py-10 bg-[#020817] text-white relative overflow-hidden">
           
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[500px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none" />
           
-          <div className="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+          <div className="container space-y-4 mx-auto px-6 lg:px-12 relative z-10 text-center">
             
-            <h2 className="text-4xl lg:text-3xl font-bold leading-2 mb-6">
-              Protect every device with SpamCloud's enterprise-grade network security
-            </h2>
+            <div className="text-center mb-10 max-w-3xl mx-auto">
+              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+                Protect Your Devices with <span className="bg-gradient-to-r from-blue-400 to-slate-400 bg-clip-text text-transparent">Enterprices-Grade security</span>
+              </h2>
+              
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <button className="inline-flex  rounded-full items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-blue-600  hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
@@ -840,7 +843,7 @@ Next-generation firewall protection for schools, IT firms, banks, SaaS platforms
             </div>
 
           </div>
-        </section>
+        </section> */}
 
     
            

@@ -157,7 +157,7 @@ export default function Immunify360Security() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Immunify360 Active • Email Gateway
+            Immunify360 Active • Web security
           </div>
 
           <h1 className="text-5xl lg:text-left  sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6 text-white">
@@ -207,7 +207,7 @@ export default function Immunify360Security() {
                 <div className="p-3 sm:p-4 bg-slate-800/50 rounded-full border border-slate-700 mb-3">
                   <GlobeIcon className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400" />
                 </div>
-                <h3 className="text-white font-semibold text-xs sm:text-sm">SERVER</h3>
+                
                 <p className="text-emerald-400/60 text-[10px] mt-1 font-mono">SECURE</p>
 
                 {/* Papers Effect */}
@@ -384,7 +384,7 @@ export default function Immunify360Security() {
             
             {/* Description */}
             <p className="text-lg text-slate-500 leading-relaxed">
-              SpamCloud filters billions of emails every month, protecting
+              Imunify360   filters billions of emails every month, protecting
               teams against evolving phishing kits, account compromise attempts
               and compliance risks with <span className="font-medium text-slate-900">low-latency Indian routing.</span>
             </p>
@@ -447,7 +447,7 @@ export default function Immunify360Security() {
             <div className="relative px-6 py-3 bg-slate-900 rounded-full border border-slate-800 flex justify-center items-center gap-3 shadow-xl">
               <Shield className="w-5 h-5 text-emerald-400 fill-emerald-400/10" />
 
-                <p className="text-xs font-bold text-white tracking-wide  my-0">Immunify360™ Partner</p>
+                <p className="text-xs font-bold text-white tracking-wide  my-0">Immunify360™</p>
              
             </div>
           </div>

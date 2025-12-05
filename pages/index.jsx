@@ -838,7 +838,7 @@ export default function New({ homeData, error }) {
               id: 'faq-1',
               question: 'What happens to a spam-detected message?',
               answer: 'For inbound messages: This filtering will be done based on the IP address of the sender. As a default process, content-filter spam is sent to the junk folder of the recipient. All these actions can be controlled by you. For outbound messages: Here, the email delivery status can be easily known by the sender whether the email is bounced or not delivered through a message status.',
-              defaultOpen: true
+              defaultOpen: false
             },
             {
               id: 'faq-2',
@@ -867,7 +867,7 @@ export default function New({ homeData, error }) {
           ].map((faq, index) => (
             <div key={faq.id} className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300">
               <button
-                className="w-full px-5 py-4 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-2xl group"
+                className="w-full px-5 py-3 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-2xl group"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target={`#${faq.id}`}

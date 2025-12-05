@@ -50,7 +50,7 @@ function FeatureCard({ icon, title, description, color, techLabel }) {
       
       {/* Decorative Tech Label (Top Right) */}
       <div className="absolute top-6 right-6">
-        <span className="text-[10px] font-mono text-slate-600 uppercase tracking-widest border border-slate-800 px-2 py-1 rounded bg-slate-950/50">
+        <span className="text-[10px] font-mono text-white uppercase tracking-widest border border-slate-800 px-2 py-1 rounded bg-slate-950/50">
           {techLabel}
         </span>
       </div>
@@ -550,7 +550,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
           </div>
 
           {/* Card 3: Outbound Scanning (Purple) */}
-          <div className="group relative h-[180px] p-2 sm:border-r border-slate-100 transition-colors flex flex-col justify-between ">
+          <div className="group relative h-[180px] p-4 gap-6 sm:border-r border-slate-100 transition-colors flex flex-col justify-between ">
              <div className="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <UploadCloud size={28} />
              </div>
@@ -769,7 +769,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
       </div>
     </section>
 
-      <section className="relative py-14 bg-[#020617] overflow-hidden">
+      <section className="relative pt-6 pb-0 bg-[#020617] overflow-hidden">
       {/* --- Background Effects --- */}
       {/* 1. Subtle Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
@@ -826,29 +826,7 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
           
         </div>
 
-        {/* --- CTA Section --- */}
-        <div className="flex flex-col sm:flex-row items-center gap-6 border-t border-slate-800 pt-10">
-          <div className="flex-1">
-            <p className="text-slate-400 text-sm">
-              Ready to secure your data? <span className="text-white">Get a demo configured in minutes.</span>
-            </p>
-          </div>
-          <Link
-            href="/contact"
-            className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-blue-600 px-8 font-medium text-white transition-all duration-300 hover:bg-blue-500 hover:shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
-          >
-            <span className="mr-2">Enable Smart DLP Protection</span>
-            <svg
-              className="w-4 h-4 transition-transform group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
-          </Link>
-        </div>
+       
       </div>
     </section>
 
