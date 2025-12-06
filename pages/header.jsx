@@ -99,12 +99,8 @@ export default function Header() {
                   <Link href="/services/firewall-network-security" className={dropdownLinkClasses}>
                     Firewall-Network-Security
                   </Link>
-                  <Link href="https://sixthstartech.com/mail-services/carbonio-mail" className={dropdownLinkClasses}>
-                    Carbonio Mail
-                  </Link>
-                  <Link href="https://sixthstartech.com/high-availability" className={dropdownLinkClasses}>
-                    High Availability
-                  </Link>
+                
+                
                 </div>
               </div>
               
@@ -231,20 +227,8 @@ export default function Header() {
                   >
                     Firewall Network Security
                   </Link>
-                  <Link 
-                    href="https://sixthstartech.com/mail-services/carbonio-solution-provider" 
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
-                  >
-                    Carbonio Mail
-                  </Link>
-                  <Link 
-                    href="https://sixthstartech.com/high-availability-service-in-chennai" 
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
-                  >
-                    High Availability
-                  </Link>
+                 
+               
                 </div>
               </div>
               
