@@ -45,7 +45,7 @@ const Footer = () => {
               <div className="flex items-start gap-2 mt-2 mb-0 ">
                 
                 <div className='flex-1 ml-12'>
-                  <p className="text-slate-300 text-base leading-relaxed ">
+                  <p className="text-slate-200 text-base leading-relaxed ">
                     Sixth Star Technologies, Siri Towers,<br className='hidden sm:block'/>
                     1st Floor, No.3 & 4, Fourrts Avenue,<br className='hidden sm:block'/>
                     Annai Indira Nagar, Thoraipakkam,<br className='hidden sm:block'/>
@@ -78,16 +78,16 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h3 className='text-white font-semibold text-base mb-1 tracking-wide'>Services</h3>
             <ul className="space-y-3 text-sm ml-0  mt-3 lg:ml-[-30px]">
-              <li><AnchorLink className="text-white ml-0 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/incoming-spam-filter-service-provider-chennai">
+              <li><AnchorLink className="text-slate-200 ml-0 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/incoming-spam-filter-service-provider-chennai">
                 Incoming Spam Filter
               </AnchorLink></li>
-              <li><AnchorLink className="text-white text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/outgoing-spam-filter-service-provider-chennai">
+              <li><AnchorLink className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/outgoing-spam-filter-service-provider-chennai">
                 Outgoing Spam Filter
               </AnchorLink></li>
-              <li><AnchorLink className="text-white text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/mail-services/carbonio-mail">
+              <li><AnchorLink className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/mail-services/carbonio-mail">
                 Carbonio Mail
               </AnchorLink></li>
-              <li><AnchorLink className="text-white text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/high-availability">
+              <li><AnchorLink className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/high-availability">
                 High Availability
               </AnchorLink></li>
             </ul>
@@ -97,13 +97,13 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h3 className='text-white font-semibold text-base mb-1 tracking-wide'>Company</h3>
             <ul className="space-y-3 text-sm mt-3  ml-0 lg:ml-[-30px]">
-              <li><AnchorLink className="text-white text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/about">
+              <li><AnchorLink className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/about">
                 About Us
               </AnchorLink></li>
-              <li><AnchorLink className="text-white text-[16px]  hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/client">
+              <li><AnchorLink className="text-slate-200 text-[16px]  hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/client">
                 Clients
               </AnchorLink></li>
-              <li><AnchorLink className="text-white text-[16px]  hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/contact">
+              <li><AnchorLink className="text-slate-200 text-[16px]  hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/contact">
                 Contact
               </AnchorLink></li>
             </ul>
@@ -116,16 +116,16 @@ const Footer = () => {
               <li><AnchorLink className="text-white text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/ssl-certificate">
                 SSL Certificate
               </AnchorLink></li>
-              <li><AnchorLink className="text-white text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/servers/dedicated-server">
+              <li><AnchorLink className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/servers/dedicated-server">
                 Dedicated Hosting
               </AnchorLink></li>
-              <li><AnchorLink className="text-white text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/servers/vps-server-hosting">
+              <li><AnchorLink className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/servers/vps-server-hosting">
                 VPS Hosting
               </AnchorLink></li>
-              <li><AnchorLink className="text-white text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/servers/cloud-hosting-services">
+              <li><AnchorLink className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/servers/cloud-hosting-services">
                 Cloud Hosting
               </AnchorLink></li>
-              <li><AnchorLink className="text-white text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/servers/web-hosting">
+              <li><AnchorLink className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="https://sixthstartech.com/servers/web-hosting">
                 Web Hosting
               </AnchorLink></li>
             </ul>
