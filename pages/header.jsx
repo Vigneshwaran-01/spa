@@ -86,18 +86,19 @@ export default function Header() {
                   <Link href="/services/outgoing-spam-filter-service-provider-chennai" className={dropdownLinkClasses}>
                     Outgoing Spam Filter
                   </Link>
-                  <Link href="/services/email-security-gateway" className={dropdownLinkClasses}>
-                    Email Security Gateway
-                  </Link>
-                  <Link href="/services/immunify360-security" className={dropdownLinkClasses}>
-                    Immunify360 Security
-                  </Link>
                   <Link href="/services/seqrite-endpoint-security" className={dropdownLinkClasses}>
                     Seqrite Endpoint Security
                   </Link>
+                  <Link href="/services/email-security-gateway" className={dropdownLinkClasses}>
+                    Email Security
+                  </Link>
+                  <Link href="/services/immunify360-security" className={dropdownLinkClasses}>
+                    Immunify360 
+                  </Link>
+                  
                   
                   <Link href="/services/firewall-network-security" className={dropdownLinkClasses}>
-                    Firewall-Network-Security
+                    Firewall
                   </Link>
                 
                 

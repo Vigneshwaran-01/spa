@@ -80,25 +80,26 @@ const Footer = () => {
               <li><Link className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/outgoing-spam-filter-service-provider-chennai">
                 Outgoing Spam Filter
               </Link></li>
-              <li><Link className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/email-security-gateway">
-                 Email Security Gateway
-              </Link></li>  
-              <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/immunify360-security">
-               Immunify360 Security
-              </Link></li>
-               <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/seqrite-endpoint-security">
+              <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/seqrite-endpoint-security">
                Seqrite Endpoint Security
               </Link></li>
+              <li><Link className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/email-security-gateway">
+                 Email Security
+              </Link></li>  
+              <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/immunify360-security">
+               Immunify360
+              </Link></li>
+               
                <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/firewall-network-security">
-                Firewall-Network-Security
+                Firewall
               </Link></li>
             </ul>
           </div>
 
           {/* 3. Company Column */}
           <div className="lg:col-span-1">
-            <h3 className='text-white font-semibold text-base mb-1 tracking-wide'>Company</h3>
-            <ul className="space-y-3 text-sm mt-3  ml-0 lg:ml-[-30px]">
+            <h3 className='text-white font-semibold text-base mb-1 ml-4 tracking-wide'>Company</h3>
+            <ul className="space-y-3 text-sm mt-3  ml-0 lg:ml-[-10px]">
               <li><Link className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/about">
                 About Us
               </Link></li>
