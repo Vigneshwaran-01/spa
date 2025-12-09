@@ -3,7 +3,8 @@
 /* bannersection start */
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import 'bootstrap/dist/css/bootstrap.min.css';
-/* @import "@flaticon/flaticon-uicons/css/all/all"; */
+@import '@flaticon/flaticon-uicons/css/all/all.css';
+
 
 .text-wrap {
     white-space: normal;
