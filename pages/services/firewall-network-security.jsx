@@ -75,6 +75,7 @@ import {
   Radar
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FirewallNetworkSecurity() {
   const [showPopup, setShowPopup] = useState(false);
@@ -273,13 +274,15 @@ export default function FirewallNetworkSecurity() {
 Next-generation firewall protection for schools, IT firms, banks, SaaS platforms, and SMEs, monitored and managed end-to-end by certified professionals                </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full rounded-full sm:w-auto justify-center lg:justify-start">
-                  <button className="inline-flex items-center rounded-full justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600  hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
+                  <Link href={'/contact'} className="inline-flex items-center rounded-full justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600  hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
                     Protect My Network
                     <ArrowRight className="ml-2 w-4 h-4" />
-                  </button>
+                  </Link>
                   
                   <button className="inline-flex items-center rounded-full justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700  hover:text-white hover:border-slate-500">
+                   <Link href={'/contact'} className="text-white">
                     Talk to a Cybersecurity Specialist
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -641,7 +644,7 @@ Next-generation firewall protection for schools, IT firms, banks, SaaS platforms
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="container relative z-10 mx-auto px-6 lg:px-12">
+      <div className="container ml-6 relative z-10 mx-auto pl-8 lg:pl-16 md:pl-16">
 
         {/* Header - Centered on Mobile, Left on Desktop */}
         <div className="max-w-3xl mb-12 lg:mb-16 text-center lg:text-left mx-auto lg:mx-0">
@@ -659,7 +662,7 @@ Next-generation firewall protection for schools, IT firms, banks, SaaS platforms
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-8 md:ml-[10rem] lg:ml-[10rem] lg:gap-6 items-center">
 
           {/* Left Column – Feature List */}
           <div className="flex flex-col justify-center space-y-5">
@@ -726,10 +729,10 @@ Next-generation firewall protection for schools, IT firms, banks, SaaS platforms
               </div>
 
               {/* Button */}
-              <button className="group w-full py-4 px-6 flex items-center justify-center gap-2 font-bold uppercase tracking-wider text-white text-sm rounded-xl bg-blue-600 hover:bg-blue-500 transition-all shadow-lg hover:shadow-blue-500/25 transform hover:-translate-y-0.5">
+              <Link href={'/contact'} className="group w-full py-4 px-6 flex items-center justify-center gap-2 font-bold uppercase tracking-wider text-white text-sm rounded-xl bg-blue-600 hover:bg-blue-500 transition-all shadow-lg hover:shadow-blue-500/25 transform hover:-translate-y-0.5">
                 Request Custom Proposal
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
 
             </div>
           </div>

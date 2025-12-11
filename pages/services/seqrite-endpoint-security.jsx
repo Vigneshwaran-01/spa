@@ -53,6 +53,7 @@ import {
   TrendingUp
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SeqriteEndpointSecurity() {
  const [showPopup, setShowPopup] = useState(false);
@@ -380,7 +381,7 @@ const riskPoints = [
           
           {/* LEFT: Massive Headline */}
           <div className="lg:w-1/2 text-center lg:text-left">
-             <div className="flex items-center gap-3 mb-6">
+             <div className="flex items-center gap-3 mb-2">
                 <div className="h-px w-8 bg-blue-500"></div>
                 <span className="text-blue-400 font-mono text-xs uppercase tracking-[0.2em]">
                   Seqrite Endpoint Security
@@ -388,7 +389,7 @@ const riskPoints = [
              </div>
              
              <h1 className="text-3xl text-left sm:text-4xl md:text-4xl lg:text-4xl font-bold tracking-tight text-white leading-[1.05]">
-              Seqrite Endpoint Security with Enterprise-Grade Protection 
+               Endpoint Security with Enterprise-Grade Protection 
                <span className="text-transparent ml-2 bg-clip-text bg-gradient-to-r from-blue-400 to-white">
                 Built for Every Businesses
                </span>
@@ -403,13 +404,15 @@ Modern security without global pricing barriers. Fully managed by Seqrite securi
             </p>
 
             <div className="flex flex-col  sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
-              <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-full  hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
-                Protect My Network
+              <Link href={'/contact'} className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded-full  hover:bg-blue-500 transition-all shadow-[0_0_20px_-5px_rgba(37,99,235,0.4)]">
+                Protect My Devices
                 <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
+              </Link>
               
               <button className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 text-sm font-medium text-slate-300 transition-colors bg-transparent border border-slate-700 rounded-full  hover:text-white hover:border-slate-500">
+                <Link href={'/contact'} className="text-white">
                 Talk to a Cybersecurity Specialist
+                </Link>
               </button>
             </div>
           </div>
@@ -500,15 +503,7 @@ Modern security without global pricing barriers. Fully managed by Seqrite securi
                 </p>
               </div>
 
-              {/* Call to Action (Optional) */}
-              <div className="pt-2">
-                <button className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-slate-900 rounded-lg hover:bg-slate-800 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900">
-                  Compare Features
-                  <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </button>
-              </div>
+             
             </div>
           </div>
 
@@ -734,10 +729,10 @@ Modern security without global pricing barriers. Fully managed by Seqrite securi
 
         {/* CTA - Made full width on mobile */}
         <div className="w-full sm:w-auto">
-          <button className="w-full sm:w-auto rounded-full group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition-all duration-200 bg-slate-900  hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/30">
+          <Link href={'/contact'} className="w-full sm:w-auto rounded-full group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-semibold text-white transition-all duration-200 bg-slate-900  hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/30">
             Talk to a Cybersecurity Specialist
-            <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+            <ArrowRight className="ml-2 w-4 h-6 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </div>

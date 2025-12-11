@@ -263,12 +263,12 @@ export default function EmailSecurityGateway() {
             
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10">
-               <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-6 sm:px-8 py-3 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] flex items-center justify-center gap-2">
+               <Link href={'/contact'} className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-6 sm:px-8 py-3 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] flex items-center justify-center gap-2">
                  Get Protected <ArrowRight size={18} />
-               </button>
-               <button className="w-full sm:w-auto text-slate-300 hover:text-white px-6 py-3 font-medium transition-colors text-center">
-                 Talk to Sales
-               </button>
+               </Link>
+               <Link href={'/contact'} className="w-full sm:w-auto text-slate-300 hover:text-white px-6 py-3 font-medium transition-colors text-center">
+                 Talk to a solution Specialist
+               </Link>
             </div>
 
             {/* Stats Section: Matches the 4.9L / 20k+ look from image */}
@@ -314,7 +314,7 @@ export default function EmailSecurityGateway() {
               <span className="text-blue-600">
                 Modern Businesses
               </span> 
-              {" "}&ndash;{" "}
+              
               {/* Continuing the bold flow like the image */}
               
             </h2>
@@ -324,11 +324,12 @@ export default function EmailSecurityGateway() {
 Our multi-tenant platform is engineered for MSPs and enterprises that require scalability, policy control, and deep visibility            </p>
           </div>
 
-          {/* RIGHT SIDE: The Pill Button */}
-          <button className="group px-8 py-3 rounded-full bg-[#0f172a] hover:bg-blue-600 text-white text-sm font-bold tracking-wide transition-all duration-300 shadow-xl hover:shadow-blue-600/20 flex items-center gap-3">
-             Read now
-            <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
-          </button>
+        <Link href={'/contact'}>
+            <button className="group px-8 py-4 rounded-full bg-[#0f172a] hover:bg-blue-600 text-white text-sm font-bold tracking-wide transition-all duration-300 shadow-xl hover:shadow-blue-600/20 flex items-center gap-3">
+              Talk to a Cybersecurity Specialist
+              <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+            </button>
+            </Link>
 
         </div>
       </div>
@@ -517,10 +518,10 @@ Our multi-tenant platform is engineered for MSPs and enterprises that require sc
 
           {/* CTA Link */}
           <div className="relative z-10">
-            <button className="group flex items-center gap-2 text-white font-semibold text-sm bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-full w-fit transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]">
+            <Link href={'/contact'} className="group flex items-center gap-2 text-white font-semibold text-sm bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-full w-fit transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]">
               Get Protected Now 
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            </Link>
           </div>
         </div>
 

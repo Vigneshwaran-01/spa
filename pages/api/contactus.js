@@ -15,9 +15,21 @@ const pool = mysql.createPool({
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const data = req.body;
+  const token = data.recaptchaToken;   // 👈 received from frontend
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
 
     try {
       // First, store the data in the database
+
+      const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${token}`;
+
+    const captchaRes = await fetch(verifyURL, { method: 'POST' });
+    const captchaJson = await captchaRes.json();
+
+        if (!captchaJson.success) {
+      return res.status(400).json({ message: 'Failed reCAPTCHA verification' });
+    }
+
       const connection = await pool.getConnection();
       try {
         await connection.query(
@@ -47,12 +59,21 @@ export default async function handler(req, res) {
         html: `
             <h1>Contact Us Page Form</h1>
           <p>Name: ${data.name}</p>
-          <p>Email: ${data.email}</p>
+          <p>Email: ${data.email}</p> 
           <p>Phone: ${data.phone}</p>
           <p>service: ${data.service}</p>
           <p>Subject: ${data.subject}</p>
           <p>Company: ${data.company}</p>
           <p>Message: ${data.message}</p>
+           <hr />
+        <h2>Billing Details</h2>
+
+        <p><b>Number of Users:</b> ${data.numberOfUsers || '-'}</p>
+        <p><b>Number of Email IDs:</b> ${data.numberOfEmailIds || '-'}</p>
+        <p><b>Endpoint Billing Model:</b> ${data.endpointSecurityModel || '-'}</p>
+        <p><b>Number of Devices:</b> ${data.numberOfDevices || '-'}</p>
+        <p><b>WAF Billing Model:</b> ${data.wafModel || '-'}</p>
+        <p><b>Firewall Billing Model:</b> ${data.firewallModel || '-'}</p>
         `,
       });
 

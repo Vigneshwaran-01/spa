@@ -32,6 +32,7 @@ import {
   Headphones, 
   MapPin 
 } from 'lucide-react';
+import Link from "next/link";
   const features = [
     {
       id: "01",
@@ -161,7 +162,7 @@ export default function Immunify360Security() {
           </div>
 
           <h1 className="text-5xl lg:text-left  sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6 text-white">
-            Immunify360 Active <br />
+            More protection with our Active<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-100 via-white to-blue-100 drop-shadow-[0_0_25px_rgba(59,130,246,0.5)]">
               web security
             </span>
@@ -172,20 +173,23 @@ export default function Immunify360Security() {
           </p>
 
           <div className="flex flex-col justify-center sm:flex-row gap-4 item-center w-full space-y-2 ">  
-  <button className="flex-1 group flex items-center justify-center gap-2 
+            
+  <Link  href={'/contact'} className="flex-1 group flex items-center justify-center gap-2 
     text-white font-semibold text-sm bg-blue-600 hover:bg-blue-500 
     px-6 py-4 h-14 rounded-full transition-all 
     shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]">
-    Protect My Inbox
+    Protect My Site
     <ArrowRight className="w-4 h-5 transition-transform group-hover:translate-x-1" />
-  </button>
+  </Link>
+  
 
-   <button className=" flex-2 lg:flex-1 mt-0 flex items-center justify-center 
+   <Link href={'/contact'} className=" flex-2 lg:flex-1 mt-0 flex items-center justify-center 
     h-14 px-6 text-slate-300 border border-slate-800 
     hover:border-slate-600 rounded-full hover:bg-slate-900/50 
     backdrop-blur-sm transition-all">
-    Live Demo
-  </button>
+    Talk to Soultion Specialist
+  </Link>
+ 
 </div>
 
         </div>
@@ -197,7 +201,7 @@ export default function Immunify360Security() {
         <div className="relative h-[450px] lg:h-[600px] w-full flex items-center justify-center perspective-[1200px] mt-10 lg:mt-0">
           
           {/* THE STAGE: A defined width container centered in the column */}
-          <div className="relative w-[320px] sm:w-[500px] h-[500px] flex items-center justify-center">
+          <div className="relative w-[320px] sm:w-[500px] h-[500px] flex items-center lg:mt-28 justify-center">
 
             {/* 1. SECURE INBOX (Left side of Stage) */}
             <div className="absolute left-0 top-1/2 -translate-y-1/2 z-20 animate-float-slow">
@@ -394,11 +398,12 @@ export default function Immunify360Security() {
           <div className="flex flex-col items-start lg:items-end gap-6 w-full lg:w-auto min-w-max">
             
             {/* Primary Button */}
+            <Link href={'/contact'}>
             <button className="group px-8 py-4 rounded-full bg-[#0f172a] hover:bg-blue-600 text-white text-sm font-bold tracking-wide transition-all duration-300 shadow-xl hover:shadow-blue-600/20 flex items-center gap-3">
               Talk to a Cybersecurity Specialist
               <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
             </button>
-            
+            </Link>
           
           </div>
 
@@ -881,10 +886,12 @@ export default function Immunify360Security() {
             </div>
 
             <div className="flex justify-center">
+              <Link href={'/contact'}>
               <button className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-semibold transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] flex items-center gap-2">
                 Talk to a Solutions Consultant
                 <ArrowRight size={18} />
               </button>
+              </Link>
             </div>
           </div>
         </section>

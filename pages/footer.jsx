@@ -80,15 +80,16 @@ const Footer = () => {
               <li><Link className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/outgoing-spam-filter-service-provider-chennai">
                 Outgoing Spam Filter
               </Link></li>
+              <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/immunify360-security">
+                Web Application Firewall 
+              </Link></li>
               <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/seqrite-endpoint-security">
-               Seqrite Endpoint Security
+                Endpoint Security
               </Link></li>
               <li><Link className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/email-security-gateway">
                  Email Security
               </Link></li>  
-              <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/immunify360-security">
-               Immunify360
-              </Link></li>
+              
                
                <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/firewall-network-security">
                 Firewall
@@ -103,9 +104,7 @@ const Footer = () => {
               <li><Link className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/about">
                 About Us
               </Link></li>
-              <li><Link className="text-slate-200 text-[16px]  hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/client">
-                Clients
-              </Link></li>
+              
               <li><Link className="text-slate-200 text-[16px]  hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/contact">
                 Contact
               </Link></li>

@@ -86,15 +86,16 @@ export default function Header() {
                   <Link href="/services/outgoing-spam-filter-service-provider-chennai" className={dropdownLinkClasses}>
                     Outgoing Spam Filter
                   </Link>
+                   <Link href="/services/immunify360-security" className={dropdownLinkClasses}>
+                    Web Application Firewall 
+                  </Link>
                   <Link href="/services/seqrite-endpoint-security" className={dropdownLinkClasses}>
-                    Seqrite Endpoint Security
+                  Endpoint Security
                   </Link>
                   <Link href="/services/email-security-gateway" className={dropdownLinkClasses}>
                     Email Security
                   </Link>
-                  <Link href="/services/immunify360-security" className={dropdownLinkClasses}>
-                    Immunify360 
-                  </Link>
+                 
                   
                   
                   <Link href="/services/firewall-network-security" className={dropdownLinkClasses}>
@@ -105,9 +106,7 @@ export default function Header() {
                 </div>
               </div>
               
-              <Link href="/client" className={navLinkClasses}>
-                Clients
-              </Link>
+             
               
               <Link href="/blog" className={navLinkClasses}>
                 Blog
@@ -119,7 +118,7 @@ export default function Header() {
               {/* Contact Us Button - Always visible */}
               <Link 
                 href="/contact" 
-                className="bg-blue-600 hover:bg-blue-500  active:bg-blue-600 text-white px-2 py-[5px] sm:px-5 sm:py-2.5 lg:px-6 lg:py-3 rounded-full font-semibold text-xs sm:text-sm lg:text-md transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 flex items-center gap-1.5 sm:gap-2"
+                className="bg-blue-600 hover:bg-blue-500  active:bg-blue-600 text-white px-4 py-[5px] sm:px-5 sm:py-2.5 lg:px-6 lg:py-3 rounded-full font-semibold text-xs sm:text-sm lg:text-md transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 flex items-center gap-1.5 sm:gap-2"
                 onClick={() => {
                   setIsContactClicked(true);
                   setTimeout(() => setIsContactClicked(false), 300);
@@ -201,45 +200,40 @@ export default function Header() {
                     Outgoing Spam Filter
                   </Link>
                   <Link 
-                    href="/services/email-security-gateway" 
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
-                  >
-                    Email Security Gateway
-                  </Link>
-                  <Link 
                     href="/services/immunify360-security" 
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
                   >
-                    Immunify360 Security
+                    Web Application Firewall 
                   </Link>
+                  <Link 
+                    href="/services/email-security-gateway" 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
+                  >
+                    Email Security 
+                  </Link>
+                  
                   <Link 
                     href="/services/seqrite-endpoint-security" 
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
                   >
-                    Seqrite Endpoint Security
+                     Endpoint Security
                   </Link>
                   <Link 
                     href="/services/firewall-network-security" 
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
                   >
-                    Firewall Network Security
+                    Firewall
                   </Link>
                  
                
                 </div>
               </div>
               
-              <Link 
-                href="/client" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block text-white hover:text-emerald-400 py-2 font-medium transition-colors duration-200"
-              >
-                Clients
-              </Link>
+              
               <Link 
                 href="/blog" 
                 onClick={() => setIsMobileMenuOpen(false)}
