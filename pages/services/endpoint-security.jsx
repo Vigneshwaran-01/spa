@@ -346,10 +346,10 @@ const riskPoints = [
   return (
     <>
       <Head>
-        <title>Endpoint Security by spamCloud's email cybersecurity solution</title>
-        <meta name="description" content="Protect your devices from ransomware & data theft with fully managed Seqrite Endpoint Security. Hosted & supported by spamCloud's email cybersecurity solution" />
+        <title>Endpoint Security and cybersecurity solution by spamCloud</title>
+        <meta name="description" content="Protect your devices from ransomware attacks and data theft with fully managed Endpoint Security. Hosted and supported by spamCloud’s cybersecurity solution" />
         <meta name="keywords" content="endpoint security, email cybersecurity solution" />
-        <link rel="canonical" href="https://spamcloud/services/seqrite-endpoint-security/" />
+        <link rel="canonical" href="https://spamcloud/services/endpoint-security" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

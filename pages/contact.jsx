@@ -92,14 +92,14 @@ export default function contactNew({ contactData, error }) {
   return (
     <div>
       <Head>
-      <title>contact us today Secure Your Inbox - Spam cloud</title>
-        <meta name="description" content="Reach out to Spam Cloud today to secure your inbox effectively and protect it from spam emails and cyber threats. Contact us now for unparalleled email security" />
+      <title>Contact spamcloud for email security and cyber security solutions</title>
+        <meta name="description" content="Get in touch with spamcloud for email security and cyber security solutions to maintain your business trust and IP reputation with reliable email security" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://spamcloud.in/contact" />
         <meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content='contact us today Secure Your Inbox - Spam cloud' />
-	<meta property="og:description" content="Reach out to Spam Cloud today to secure your inbox effectively and protect it from spam emails and cyber threats. Contact us now for unparalleled email security" />
+	<meta property="og:description" content="Get in touch with spamcloud for email security and cyber security solutions to maintain your business trust and IP reputation with reliable email security" />
 	<meta property="og:url" content="https://spamcloud.in/contact" />
 	<meta property="og:site_name" content="Sixth Star Technologies" />
   <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />

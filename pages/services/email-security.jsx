@@ -204,12 +204,12 @@ export default function EmailSecurityGateway() {
   return (
     <>
       <Head>
-        <title>Advanced email security gateway by SpamCloud to stop Spam mail </title>
+        <title>Email security gateway with advanced email protection | Spamcloud</title>
         <meta
           name="description"
-          content="Strengthen your network security stack with SpamCloud's email security gateway System and stop Ransomware mail attacks with our email security solutions"
+          content="Improve your email security setup with SpamCloud’s email security gateway System and stop Ransomware mail attacks with our email security solutions"
         />
-        <link rel="canonical" href="https://spamcloud/services/email-security-gateway" />
+        <link rel="canonical" href="https://spamcloud/services/email-security" />
       </Head>
     <section className="relative w-full min-h-[100vh] md:min-h-[600px] bg-slate-950 text-white overflow-hidden flex flex-col justify-center pt-20 md:pt-0">
       

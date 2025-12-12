@@ -120,15 +120,15 @@ export default function Immunify360Security() {
     <>
       <Head>
         <title>
-          Advanced Intrusion Prevention System by SpamCloud to stop Ransomware mail
+          Web application firewall by SpamCloud with advanced web security
         </title>
         <meta
           name="description"
-          content="Strengthen your network security stack with SpamCloud's Advanced Intrusion Prevention System and stop Ransomware mail attacks with our advanced intrusion protection"
+          content="Strengthen your network security stack with SpamCloud’s web application firewall System and stop Ransomware mail attacks with our advanced web security"
         />
         <link
           rel="canonical"
-          href="https://spamcloud.in/services/immunify360-security"
+          href="https://spamcloud.in/services/web-application-firewall"
         />
       </Head>
 
@@ -158,7 +158,7 @@ export default function Immunify360Security() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Immunify360 Active • Web security
+            Imunify360 Active • Web security
           </div>
 
           <h1 className="text-5xl lg:text-left  sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] mb-6 text-white">
@@ -452,7 +452,7 @@ export default function Immunify360Security() {
             <div className="relative px-6 py-3 bg-slate-900 rounded-full border border-slate-800 flex justify-center items-center gap-3 shadow-xl">
               <Shield className="w-5 h-5 text-emerald-400 fill-emerald-400/10" />
 
-                <p className="text-xs font-bold text-white tracking-wide  my-0">Immunify360™</p>
+                <p className="text-xs font-bold text-white tracking-wide  my-0">Imunify360™</p>
              
             </div>
           </div>
@@ -497,7 +497,7 @@ export default function Immunify360Security() {
           <FeatureCard 
             icon={<Globe className="w-6 h-6 text-cyan-400" />}
             title="Global Threat Intel"
-            description="Crowdsourced threat intelligence from the Immunify360 network feeds directly into your rule sets."
+            description="Crowdsourced threat intelligence from the Imunify360 network feeds directly into your rule sets."
             delay={400}
           />
 
@@ -676,7 +676,7 @@ export default function Immunify360Security() {
           </div>
         </section>
 
-        {/* IMMUNIFY360 SECTION */}
+        {/* IMUNIFY360 SECTION */}
  <section className="w-full py-14 bg-white relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
@@ -698,12 +698,12 @@ export default function Immunify360Security() {
 
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-[1.1] mb-6">
               More protection with <br />
-              <span className="text-blue-600">Immunify360.</span>
+              <span className="text-blue-600">Imunify360.</span>
             </h2>
 
             <p className="text-lg text-slate-500 mb-8 leading-relaxed">
               Your network gets an extra security brain that never sleeps. 
-              We leverage Immunify360's AI-driven defense to predict and block attacks instantly.
+              We leverage Imunify360's AI-driven defense to predict and block attacks instantly.
             </p>
 
             <div className="flex flex-col gap-3">
@@ -834,7 +834,7 @@ export default function Immunify360Security() {
               </h2>
               <p className="text-slate-300">
                 See what happens when intrusion prevention, email security and
-                Immunify360 work as one stack.
+                Imunify360 work as one stack.
               </p>
             </div>
 

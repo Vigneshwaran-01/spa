@@ -225,10 +225,10 @@ export default function FirewallNetworkSecurity() {
   return (
     <>
       <Head>
-        <title>Firewall Network Security by spamcloud | Firewall services</title>
+        <title>Protect your network with SpamCloud Firewall in network security</title>
         <meta name="description" content="Get reliable firewall services from SpamCloud, providing firewall in network security for 18+ years. Protect your business with our advanced threat filtering system" />
         <meta name="keywords" content="Firewall services, Firewall in network security" />
-        <link rel="canonical" href="https://spamcloud/services/firewall-network-security/" />
+        <link rel="canonical" href="https://spamcloud/services/firewall" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

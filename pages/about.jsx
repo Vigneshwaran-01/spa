@@ -55,13 +55,13 @@ export default function AboutNew() {
     <div>
       <Head>
       <title>About SpamCloud | Trusted mail spam filter service provider</title>
-        <meta name="description" content="SpamCloud Chennai’s leading mail spam filter Services provider, with 18+ years of service and delivers an advanced email security tool and email protection" />
+        <meta name="description" content="SpamCloud | Chennai’s leading mail spam filter Services provider, with 18+ years of service, delivers an advanced email security tool and email protection" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://spamcloud.in/about" />
         <meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content='about us - Spam cloud' />
-	<meta property="og:description" content="SpamCloud Chennai’s leading mail spam filter Services provider, with 18+ years of service and delivers an advanced email security tool and email protection" />
+	<meta property="og:description" content="SpamCloud | Chennai’s leading mail spam filter Services provider, with 18+ years of service, delivers an advanced email security tool and email protection" />
 	<meta property="og:url" content="https://spamcloud.in/about" />
 	<meta property="og:site_name" content="Sixth Star Technologies" />
   <script

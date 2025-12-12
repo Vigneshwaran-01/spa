@@ -80,18 +80,18 @@ const Footer = () => {
               <li><Link className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/outgoing-spam-filter-service-provider-chennai">
                 Outgoing Spam Filter
               </Link></li>
-              <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/immunify360-security">
+              <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/web-application-firewall">
                 Web Application Firewall 
               </Link></li>
-              <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/seqrite-endpoint-security">
+              <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/endpoint-security">
                 Endpoint Security
               </Link></li>
-              <li><Link className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/email-security-gateway">
+              <li><Link className="text-slate-200 text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/email-security">
                  Email Security
               </Link></li>  
               
                
-               <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/firewall-network-security">
+               <li><Link className="text-slate-200  text-[16px] hover:text-blue-400 transition-all duration-200 flex items-center group hover:translate-x-0.5" href="/services/firewall">
                 Firewall
               </Link></li>
             </ul>

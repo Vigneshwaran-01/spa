@@ -86,19 +86,19 @@ export default function Header() {
                   <Link href="/services/outgoing-spam-filter-service-provider-chennai" className={dropdownLinkClasses}>
                     Outgoing Spam Filter
                   </Link>
-                   <Link href="/services/immunify360-security" className={dropdownLinkClasses}>
+                   <Link href="/services/web-application-firewall" className={dropdownLinkClasses}>
                     Web Application Firewall 
                   </Link>
-                  <Link href="/services/seqrite-endpoint-security" className={dropdownLinkClasses}>
+                  <Link href="/services/endpoint-security" className={dropdownLinkClasses}>
                   Endpoint Security
                   </Link>
-                  <Link href="/services/email-security-gateway" className={dropdownLinkClasses}>
+                  <Link href="/services/email-security" className={dropdownLinkClasses}>
                     Email Security
                   </Link>
                  
                   
                   
-                  <Link href="/services/firewall-network-security" className={dropdownLinkClasses}>
+                  <Link href="/services/firewall" className={dropdownLinkClasses}>
                     Firewall
                   </Link>
                 
@@ -200,14 +200,14 @@ export default function Header() {
                     Outgoing Spam Filter
                   </Link>
                   <Link 
-                    href="/services/immunify360-security" 
+                    href="/services/web-application-firewall" 
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
                   >
                     Web Application Firewall 
                   </Link>
                   <Link 
-                    href="/services/email-security-gateway" 
+                    href="/services/email-security" 
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
                   >
@@ -222,7 +222,7 @@ export default function Header() {
                      Endpoint Security
                   </Link>
                   <Link 
-                    href="/services/firewall-network-security" 
+                    href="/services/firewall" 
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block text-gray-300 hover:text-emerald-400 py-1 text-sm transition-colors duration-200"
                   >

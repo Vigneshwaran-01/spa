@@ -66,7 +66,7 @@ function BlogIndex({ initialData }) {
     <div className="min-h-screen bg-[#020617] text-slate-200 font-sans selection:bg-blue-600/30">
       <Head>
         <title>Spamcloud advice for Data protection and Web security</title>
-        <meta name="description" content="Stay updated with SpamCloud’s latest updates on Data protection." />
+        <meta name="description" content="Stay updated with SpamCloud’s latest updates on Data protection, web security, encryption, and this is how we protect businesses with reliable email protection" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       </Head>
 

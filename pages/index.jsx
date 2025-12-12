@@ -16,6 +16,7 @@ import ContactSec from './section/ContactSec';
 import Blogslider from './section/Blogslider';
 import { homeSchema } from '../lib/data/schema'
 import ProofpointCarousel from './section/ProofpointCarousel';
+import { MailCheck, MailOpen } from 'lucide-react';
 
 
 const styles = StyleSheet.create({
@@ -389,7 +390,7 @@ export default function New({ homeData, error }) {
             <div className="col-lg-3 col-md-6">
               <div className="proofpoint-service-card">
                 <div className="service-icon">
-                  <i className="fi fi-ts-envelope-download"></i>
+                  <MailOpen className='w-10 h-10' />
                 </div>
                 <h3 className='text-black'>Stop Incoming Threats</h3>
                 <p className='text-justify  text-justify'>Protect against inbound spam, phishing, and malware with advanced AI-based detection.</p>
@@ -402,7 +403,7 @@ export default function New({ homeData, error }) {
             <div className="col-lg-3 col-md-6">
               <div className="proofpoint-service-card">
                 <div className="service-icon">
-                  <i className="fi fi-ts-envelope-dot"></i>
+                  <MailCheck className='w-10 h-10' />
                 </div>
                 <h3 className='text-black'>Secure Outbound Communications</h3>
                 <p className='text-justify'>Monitor and protect outgoing emails to prevent data loss and ensure compliance.</p>
