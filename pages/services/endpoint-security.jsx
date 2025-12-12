@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import { Meteors } from "@/components/ui/meteors";
 import {
@@ -54,6 +54,16 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { endpointSecurityForm } from '../../lib/api';
+
+// Load reCAPTCHA script
+const loadReCaptcha = () => {
+  const script = document.createElement('script');
+  script.src = 'https://www.google.com/recaptcha/api.js';
+  script.async = true;
+  script.defer = true;
+  document.body.appendChild(script);
+};
 
 export default function SeqriteEndpointSecurity() {
  const [showPopup, setShowPopup] = useState(false);
@@ -65,6 +75,18 @@ export default function SeqriteEndpointSecurity() {
     phone: '',
     message: ''
   });
+  const [recaptchaToken, setRecaptchaToken] = useState('');
+
+  useEffect(() => {
+    loadReCaptcha();
+    // Make handleRecaptchaChange globally available for reCAPTCHA callback
+    window.handleRecaptchaChange = handleRecaptchaChange;
+    
+    return () => {
+      // Clean up global function
+      delete window.handleRecaptchaChange;
+    };
+  }, []);
 
   const services = [
     "Email Security",
@@ -75,27 +97,53 @@ export default function SeqriteEndpointSecurity() {
     "Others"
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Logic to send data to backend would go here
-    console.log("Form Submitted", formData);
     
-    // Show success popup
-    setShowPopup(true);
+    // Validate reCAPTCHA
+    if (!recaptchaToken) {
+      alert('Please complete the reCAPTCHA verification.');
+      return;
+    }
     
-    // Reset form (optional)
-    setFormData({
-      name: '',
-      company: '',
-      email: '',
-      service: '',
-      phone: '',
-      message: ''
-    });
+    try {
+      // Send data via API to email
+      const submissionData = { 
+        ...formData, 
+        recaptchaToken,
+        subject: `Endpoint Security Inquiry - ${formData.service}`
+      };
+      await endpointSecurityForm(submissionData);
+      
+      // Show success popup
+      setShowPopup(true);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        company: '',
+        email: '',
+        service: '',
+        phone: '',
+        message: ''
+      });
+      setRecaptchaToken('');
+      // Reset reCAPTCHA
+      if (window.grecaptcha) {
+        window.grecaptcha.reset();
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Failed to submit form. Please try again later.');
+    }
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
   };
 
 
@@ -1088,10 +1136,19 @@ Modern security without global pricing barriers. Fully managed by Seqrite securi
                   </div>
                 </div>
 
+                {/* reCAPTCHA */}
+                <div className="flex justify-center mt-4">
+                  <div
+                    className="g-recaptcha"
+                    data-sitekey="6LdZCCgsAAAAAFbAoWl5Z3W_bFiUVuyuDmmFM8Nv"
+                    data-callback="handleRecaptchaChange"
+                  ></div>
+                </div>
+
                 {/* CTA Button */}
                 <button 
                   type="submit"
-                  className="w-full py-3 mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all transform active:scale-[0.98] flex items-center justify-center gap-2 text-sm"
+                  className="w-full py-3 mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all transform active:scale-[0.98] flex items-center justify-center gap-2 text-sm"
                 >
                   Submit Request <ArrowRight className="w-4 h-4" />
                 </button>
