@@ -83,11 +83,24 @@ function BlogPost({ post, relatedPosts }) {
     return Math.max(1, Math.round(words / 200)); // ~200 wpm
   }, [post?.content]);
 
+  const seoTitle = post.seo_title || post.title;
+  const seoDescription = post.seo_description || post.excerpt || '';
+  const seoKeywords = post.seo_keywords || '';
+  const seoCanonical = post.seo_canonical_url || '';
+
   return (
     <>
       <Head>
-        <title>{post.title}</title>
-        <meta name="description" content={post.excerpt} />
+        <title>{seoTitle}</title>
+        {seoDescription && <meta name="description" content={seoDescription} />}
+        {seoKeywords && <meta name="keywords" content={seoKeywords} />}
+        {seoCanonical && <link rel="canonical" href={seoCanonical} />}
+        {post.schema_json && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: post.schema_json }}
+          />
+        )}
       </Head>
 
       {/* Hero - enterprise style */}

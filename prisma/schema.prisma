@@ -18,16 +18,26 @@ model Category {
 }
 
 model Post {
-  id         Int      @id @default(autoincrement())
-  title      String   @db.VarChar(255)
-  slug       String   @db.VarChar(255)
-  content    String   @db.Text
-  imageUrl   String?  @map("image_url") @db.VarChar(255)
-  createdAt  DateTime @default(now()) @map("created_at")
-  category   Category @relation(fields: [categoryId], references: [id])
-  categoryId Int      @map("category_id")
+  id                  Int      @id @default(autoincrement())
+  title               String   @db.VarChar(255)
+  slug                String   @db.VarChar(255)
+  content             String   @db.Text
+  excerpt             String?  @db.Text
+  author              String   @db.VarChar(255)
+  authorBio           String?  @map("author_bio") @db.Text
+  featuredImage       String?  @map("featured_image") @db.VarChar(255)
+  published           Boolean  @default(false)
+  scheduledFor        DateTime? @map("scheduled_for")
+  status              String   @default("draft") @db.VarChar(50)
+  seoDescription      String?  @map("seo_description") @db.Text
+  seoCanonicalUrl     String?  @map("seo_canonical_url") @db.VarChar(500)
+  schemaJson          String?  @map("schema_json") @db.Text
+  imageUrl            String?  @map("image_url") @db.VarChar(255)
+  createdAt           DateTime @default(now()) @map("created_at")
+  category            Category @relation(fields: [categoryId], references: [id])
+  categoryId          Int      @map("category_id")
 
-  @@map("posts")
+  @@map("blog_posts")
 }
 
 model User {

@@ -33,6 +33,9 @@ export default async function handler(req, res) {
       published,
       scheduled_for, // ISO 8601 format
       status,
+      seo_description,
+      seo_canonical_url,
+      schema_json,
     } = req.body;
 
     // Generate a slug from the title if not provided
@@ -45,16 +48,11 @@ export default async function handler(req, res) {
         return res.status(400).json({ message: 'Missing required fields' });
       }
 
-      // Convert ISO 8601 datetime to MySQL datetime format
-      const formattedScheduledFor = scheduled_for
-        ? new Date(scheduled_for).toISOString().slice(0, 19).replace('T', ' ')
-        : null;
-
       // Insert the post into the database
       const [result] = await connection.execute(
         `INSERT INTO blog_posts 
-         (title, slug, content, excerpt, category_id, author, author_bio, featured_image, published, scheduled_for, status) 
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? )`,
+         (title, slug, content, excerpt, category_id, author, author_bio, featured_image, published, scheduled_for, status, seo_description, seo_canonical_url, schema_json) 
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           title,
           generatedSlug,
@@ -65,8 +63,11 @@ export default async function handler(req, res) {
           author_bio,
           featured_image || null,
           published || false,
-          formattedScheduledFor,
+          scheduled_for,
           status || 'draft',
+          seo_description || null,
+          seo_canonical_url || null,
+          schema_json || null,
         ]
       );
 
@@ -84,15 +85,10 @@ export default async function handler(req, res) {
         return res.status(400).json({ message: 'Missing required fields' });
       }
 
-      // Convert ISO 8601 datetime to MySQL datetime format
-      const formattedScheduledFor = scheduled_for
-        ? new Date(scheduled_for).toISOString().slice(0, 19).replace('T', ' ')
-        : null;
-
       // Update the post in the database
       const [result] = await connection.execute(
         `UPDATE blog_posts 
-         SET title = ?, slug = ?, content = ?, excerpt = ?, category_id = ?, author = ?, featured_image = ?, published = ?, scheduled_for = ?, status = ? 
+         SET title = ?, slug = ?, content = ?, excerpt = ?, category_id = ?, author = ?, featured_image = ?, published = ?, scheduled_for = ?, status = ?, seo_description = ?, seo_canonical_url = ?, schema_json = ? 
          WHERE id = ?`,
         [
           title,
@@ -103,8 +99,11 @@ export default async function handler(req, res) {
           author,
           featured_image || null,
           published || false,
-          formattedScheduledFor,
+          scheduled_for,
           status || 'draft',
+          seo_description || null,
+          seo_canonical_url || null,
+          schema_json || null,
           id,
         ]
       );

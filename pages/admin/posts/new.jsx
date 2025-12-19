@@ -1,8 +1,17 @@
 // pages/admin/posts/new.js
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 import mysql from 'mysql2/promise';
 import AdminLayout from '../../../components/AdminLayout';
+
+const StableTiptapEditor = dynamic(
+  () => import('../../../components/StableTiptapEditor'),
+  {
+    ssr: false,
+    loading: () => <div className="min-h-[200px] px-4 py-3 text-sm text-slate-500">Loading editor...</div>,
+  }
+);
 
 function NewPost({ categories }) {
   const router = useRouter();
@@ -18,6 +27,9 @@ function NewPost({ categories }) {
     published: false,
     scheduled_for: '',
     status: 'draft',
+    seo_description: '',
+    seo_canonical_url: '',
+    schema_json: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -59,15 +71,18 @@ function NewPost({ categories }) {
         <div className="max-w-4xl mx-auto pt-[80px]">
           <h1 className="text-2xl font-bold mb-6 text-white">Create New Post</h1>
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Basic text fields (no content here) */}
             {[
               { label: 'Title', name: 'title', type: 'text', required: true },
               { label: 'Slug (optional)', name: 'slug', type: 'text' },
               { label: 'Discription', name: 'excerpt', type: 'textarea' },
-              { label: 'Content', name: 'content', type: 'textarea', required: true },
               { label: 'Featured Image URL', name: 'featured_image', type: 'text' },
               { label: 'Author', name: 'author', type: 'text', required: true },
               { label: 'Author Bio', name: 'author_bio', type: 'text', required: true },
               { label: 'Scheduled For', name: 'scheduled_for', type: 'datetime-local' },
+              { label: 'SEO Description', name: 'seo_description', type: 'textarea' },
+              { label: 'Canonical URL', name: 'seo_canonical_url', type: 'text' },
+              { label: 'Schema JSON-LD', name: 'schema_json', type: 'textarea' },
             ].map(({ label, name, type, required }) => (
               <div key={name}>
                 <label className="block mb-2 text-white">{label}</label>
@@ -77,7 +92,7 @@ function NewPost({ categories }) {
                     value={formData[name]}
                     onChange={handleChange}
                     className="w-full p-2 border rounded"
-                    rows={name === 'content' ? '10' : '3'}
+                    rows={name === 'seo_description' || name === 'schema_json' ? '5' : '3'}
                     required={required}
                   />
                 ) : (
@@ -92,6 +107,20 @@ function NewPost({ categories }) {
                 )}
               </div>
             ))}
+
+            {/* Content with rich text editor */}
+            <div>
+              <label className="block mb-2 text-white">Content</label>
+              <div className="border rounded bg-white overflow-hidden">
+                <StableTiptapEditor
+                  value={formData.content}
+                  onChange={(content) =>
+                    setFormData((prev) => ({ ...prev, content }))
+                  }
+                  placeholder="Write your blog content here..."
+                />
+              </div>
+            </div>
 
             <div>
               <label className="block mb-2 text-white">Category</label>

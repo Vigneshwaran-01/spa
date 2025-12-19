@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { 
-  Search, ArrowUpRight, ChevronLeft, ChevronRight, Loader2, Mail, ArrowRight 
+  Search, ArrowUpRight, ChevronLeft, ChevronRight, Loader2, Mail, ArrowRight, CalendarDays 
 } from 'lucide-react';
+
 import { BackgroundBeams } from "../../components/ui/background-beams"; 
 import { blogSchema } from '../../lib/data/schema';
 
@@ -27,7 +28,7 @@ function BlogIndex({ initialData }) {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`/api/posts?page=${page}&search=${encodeURIComponent(search)}`);
+      const response = await fetch(`/api/posts?page=${page}&limit=100&search=${encodeURIComponent(search)}`);
       if (!response.ok) throw new Error("Failed to fetch posts");
       const data = await response.json();
       setPosts(data.posts || []);
@@ -61,6 +62,7 @@ function BlogIndex({ initialData }) {
   const featuredPost = posts[0];
   const sidePosts = posts.slice(1, 3);
   const remainingPosts = posts.slice(3);
+  const topPosts = [featuredPost, ...sidePosts].filter(Boolean);
 
   return (
     <div className="min-h-screen bg-[#020617] text-slate-200 font-sans selection:bg-blue-600/30">
@@ -118,7 +120,7 @@ function BlogIndex({ initialData }) {
       </section>
 
       {/* =========================================
-          RECENT BLOG POSTS (Layout: 1 Big Left, 2 Right)
+          RECENT BLOG POSTS (Layout: 3-column card-style)
          ========================================= */}
       <div className="container mx-auto px-4 py-20 max-w-7xl">
   
@@ -147,97 +149,46 @@ function BlogIndex({ initialData }) {
       {error}
     </div>
   ) : (
-    <div className="grid lg:grid-cols-2 gap-10 lg:gap-14">
-      
-      {/* =========================================
-          LEFT COLUMN: Featured Big Post
-         ========================================= */}
-      {featuredPost && (
-        <a href={`/blog/${featuredPost.slug}`} className="group flex flex-col gap-6">
-          {/* Image Container */}
-          <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl bg-slate-800 shadow-2xl shadow-black/50 border border-white/5">
-             {featuredPost.featured_image ? (
+    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {topPosts.map((post) => (
+        <a 
+          href={`/blog/${post.slug}`} 
+          key={post.id} 
+          className="group flex flex-col h-full rounded-3xl overflow-hidden bg-slate-900/60 border border-white/5 shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-transform duration-300"
+        >
+          {/* Image with hover overlay */}
+          <div className="relative w-full aspect-[16/8] overflow-hidden">
+            {post.featured_image ? (
               <img 
-                src={featuredPost.featured_image} 
-                alt={featuredPost.title}
+                src={post.featured_image} 
+                alt={post.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-             ) : (
+            ) : (
               <div className="w-full h-full flex items-center justify-center bg-slate-900 text-slate-600">No Image</div>
-             )}
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="px-4 py-1 rounded-full bg-white text-slate-900 text-sm font-medium shadow">
+                Read More
+              </span>
+            </div>
           </div>
-          
           {/* Content */}
-          <div className="flex flex-col">
-            <div className="flex items-center gap-3 text-sm mb-3">
-              <span className="text-blue-500 font-bold text-xs uppercase tracking-wider">Featured</span>
-              <span className="w-1 h-1 rounded-full bg-slate-600"/>
-              <span className="text-slate-400 font-medium">{formatDate(featuredPost.created_at)}</span>
+          <div className="flex flex-col flex-1 px-4 py-3">
+            <div className="flex items-center text-xs text-slate-400 mb-3">
+              <CalendarDays className="w-4 h-4 mr-2" />
+              <span>{formatDate(post.created_at)}</span>
             </div>
-            
-            <div className="flex justify-between items-start gap-4">
-              <h3 className="text-3xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors leading-tight">
-                {featuredPost.title}
-              </h3>
-              <ArrowUpRight className="w-6 h-6 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all flex-shrink-0" />
-            </div>
-
-            <p className="text-slate-400 text-base leading-relaxed line-clamp-3 mb-5">
-              {featuredPost.excerpt}
+            <h3 className="text-base md:text-lg font-semibold text-white mb-1.5 group-hover:text-blue-400 transition-colors leading-snug">
+              {post.title}
+            </h3>
+            <p className="text-xs md:text-sm text-slate-400 leading-relaxed line-clamp-2 mb-2.5">
+              {post.excerpt}
             </p>
-            
-            <div className="flex gap-2">
-               <span className="px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs font-medium text-slate-300">Design</span>
-               <span className="px-3 py-1 rounded-full bg-slate-900 border border-slate-700 text-xs font-medium text-slate-300">Research</span>
-            </div>
           </div>
         </a>
-      )}
-
-      {/* =========================================
-          RIGHT COLUMN: Stacked Side Posts
-          (Image Left, Content Right layout)
-         ========================================= */}
-      <div className="flex flex-col gap-10">
-        {sidePosts.map((post) => (
-          <a href={`/blog/${post.slug}`} key={post.id} className="group flex flex-col md:flex-row gap-6 items-start">
-            
-            {/* Small Image */}
-            <div className="relative w-full md:w-72 aspect-[4/3] flex-shrink-0 overflow-hidden rounded-xl bg-slate-800 border border-white/5 shadow-lg">
-              {post.featured_image ? (
-                <img 
-                  src={post.featured_image} 
-                  alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center bg-slate-900 text-slate-600">No Image</div>
-              )}
-            </div>
-
-            {/* Content */}
-            <div className="flex flex-col justify-center py-1">
-              <div className="flex items-center gap-2 text-xs mb-2">
-                <span className="text-blue-500 font-bold uppercase tracking-wider">Latest</span>
-                <span className="text-slate-500">•</span>
-                <span className="text-slate-500">{formatDate(post.created_at)}</span>
-              </div>
-              
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors leading-snug">
-                {post.title}
-              </h3>
-              
-              <p className="text-slate-400 text-sm line-clamp-2 mb-4 leading-relaxed">
-                {post.excerpt}
-              </p>
-              
-              <div className="flex gap-2">
-                <span className="px-2.5 py-1 rounded-full border border-slate-800 bg-slate-900/50 text-[10px] font-medium text-slate-400">Strategy</span>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
+      ))}
     </div>
   )}
 
@@ -256,22 +207,43 @@ function BlogIndex({ initialData }) {
         </button>
       </div>
     ) : (
-      // ... (Your existing grid code for remaining posts) ...
       <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-         {/* ... render remainingPosts grid here ... */}
-         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-             {remainingPosts.map((post) => (
-                <a href={`/blog/${post.slug}`} key={post.id} className="group block">
-                  {/* Grid Item Card */}
-                  <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-slate-800 mb-4 border border-white/5">
-                    <img src={post.featured_image} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt=""/>
-                  </div>
-                  <div className="text-blue-500 text-xs font-bold mb-2 uppercase">{formatDate(post.created_at)}</div>
-                  <h4 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{post.title}</h4>
-                  <p className="text-slate-400 text-sm line-clamp-2">{post.excerpt}</p>
-                </a>
-             ))}
-         </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {remainingPosts.map((post) => (
+            <a 
+              href={`/blog/${post.slug}`} 
+              key={post.id} 
+              className="group flex flex-col h-full rounded-3xl overflow-hidden bg-slate-900/60 border border-white/5 shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-transform duration-300"
+            >
+              {/* Grid Item Card */}
+              <div className="relative aspect-[16/8] w-full overflow-hidden">
+                {post.featured_image ? (
+                  <img 
+                    src={post.featured_image} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                    alt={post.title}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-slate-900 text-slate-600">No Image</div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="px-4 py-1 rounded-full bg-white text-slate-900 text-sm font-medium shadow">
+                    Read More
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-col flex-1 px-5 py-4">
+                <div className="flex items-center text-xs text-slate-400 mb-3">
+                  <CalendarDays className="w-4 h-4 mr-2" />
+                  <span>{formatDate(post.created_at)}</span>
+                </div>
+                <h4 className="text-base md:text-lg font-semibold text-white mb-1.5 group-hover:text-blue-400 transition-colors leading-snug">{post.title}</h4>
+                <p className="text-xs md:text-sm text-slate-400 leading-relaxed line-clamp-2">{post.excerpt}</p>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     )}
   </div>
@@ -283,7 +255,7 @@ function BlogIndex({ initialData }) {
 export async function getServerSideProps() {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-    const response = await fetch(`${baseUrl}/api/posts`);
+    const response = await fetch(`${baseUrl}/api/posts?limit=1000`);
     if (!response.ok) throw new Error('Failed to fetch');
     const data = await response.json();
     return { props: { initialData: data } };

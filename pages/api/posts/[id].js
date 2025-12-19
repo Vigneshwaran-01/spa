@@ -14,12 +14,24 @@ export default async function handler(req, res) {
     const { id } = req.query;
 
     if (req.method === 'PUT') {
-      const { title, excerpt, content, category_id, published, tags } = req.body;
+      const { title, excerpt, content, category_id, published, tags, featured_image, seo_title, seo_description, seo_keywords, seo_canonical_url, schema_json } = req.body;
 
-      // Update post
       const [result] = await connection.execute(
-        'UPDATE blog_posts SET title = ?, excerpt = ?, content = ?, category_id = ?, published = ? WHERE id = ?',
-        [title, excerpt, content, category_id, published, id]
+        'UPDATE blog_posts SET title = ?, excerpt = ?, content = ?, category_id = ?, published = ?, featured_image = ?, seo_title = ?, seo_description = ?, seo_keywords = ?, seo_canonical_url = ?, schema_json = ? WHERE id = ?',
+        [
+          title,
+          excerpt,
+          content,
+          category_id,
+          published,
+          featured_image || null,
+          seo_title || null,
+          seo_description || null,
+          seo_keywords || null,
+          seo_canonical_url || null,
+          schema_json || null,
+          id,
+        ]
       );
 
       // Update tags if provided

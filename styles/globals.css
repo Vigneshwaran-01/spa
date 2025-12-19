@@ -334,3 +334,79 @@ body {
     }
   }
 }
+
+/* FAQ Styles for Tiptap Editor */
+@layer components {
+  .faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .faq-question {
+    font-weight: 600;
+    color: #111827;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+  
+  .faq-question:hover {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  }
+  
+  .faq-question-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .faq-badge {
+    background: #3b82f6;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-right: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  
+  .faq-icon {
+    font-size: 1.5rem;
+    color: #6b7280;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .faq-answer {
+    color: #374151;
+    line-height: 1.6;
+    padding: 0;
+    border-top: 1px solid #e5e7eb;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-answer-content {
+    padding: 1.25rem;
+  }
+  
+  .faq-answer-badge {
+    background: #10b981;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-right: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+}

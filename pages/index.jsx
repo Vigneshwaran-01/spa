@@ -17,6 +17,8 @@ import Blogslider from './section/Blogslider';
 import { homeSchema } from '../lib/data/schema'
 import ProofpointCarousel from './section/ProofpointCarousel';
 import { MailCheck, MailOpen } from 'lucide-react';
+import SnowfallEffect from '../components/SnowfallEffect';
+import SantaAnimation from '../components/SantaAnimation';
 
 
 const styles = StyleSheet.create({
@@ -127,6 +129,8 @@ export default function New({ homeData, error }) {
 
   return (
     <div>
+      <SnowfallEffect />
+      <SantaAnimation />
       <Head>
         <title>Email Security Service Provider | Spamcloud </title>
         <meta name="description" content="SpamCloud Email Security Services protects your information, prevents financial fraud, and maintains organizational trust with an intrusion prevention service" />
@@ -169,21 +173,7 @@ export default function New({ homeData, error }) {
           }}></div>
         </div>
 
-        {/* Floating Particles */}
-        <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-emerald-400 rounded-full opacity-60"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 2}s`
-              }}
-            ></div>
-          ))}
-        </div>
+    
 
         {/* Scanning Line Effect */}
         <div className="absolute inset-0 overflow-hidden">
@@ -231,7 +221,7 @@ export default function New({ homeData, error }) {
                       <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                       </svg>
-                       Get Proctected
+                       Get Protected
                       <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -244,7 +234,7 @@ export default function New({ homeData, error }) {
                       <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
-                      Talk to soultion Consultant
+                      Talk to Solution Consultant
                     </span>
                   </Link>
                 </div>

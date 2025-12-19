@@ -1,16 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 import AdminLayout from '../../../../components/AdminLayout';
-import RichTextEditor from '../../../../components/RichTextEditor';
 import TagManager from '../../../../components/TagManager';
+
+const StableTiptapEditor = dynamic(
+  () => import('../../../../components/StableTiptapEditor'),
+  {
+    ssr: false,
+    loading: () => <div className="min-h-[200px] px-4 py-3 text-sm text-slate-500">Loading editor...</div>,
+  }
+);
 
 export default function EditPost({ post, categories, tags: initialTags }) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     title: '',
+    slug: '',
+    excerpt: '',
     content: '',
     category_id: '',
     published: false,
+    featured_image: '',
+    seo_description: '',
+    seo_canonical_url: '',
+    schema_json: '',
   });
   const [selectedTags, setSelectedTags] = useState([]);
   const [availableTags, setAvailableTags] = useState(initialTags || []);
@@ -26,6 +40,10 @@ export default function EditPost({ post, categories, tags: initialTags }) {
         content: post.content || '',
         category_id: post.category_id || '',
         published: post.published || false,
+        featured_image: post.featured_image || '',
+        seo_description: post.seo_description || '',
+        seo_canonical_url: post.seo_canonical_url || '',
+        schema_json: post.schema_json || '',
       });
       setSelectedTags(post.tags || []);
     }
@@ -95,7 +113,24 @@ export default function EditPost({ post, categories, tags: initialTags }) {
           {/* Content */}
           <div>
             <label className="block text-sm font-medium text-gray-700">Content</label>
-            <RichTextEditor value={formData.content} onChange={(content) => setFormData({ ...formData, content })} />
+            <div className="mt-1 border rounded-md overflow-hidden bg-white">
+              <StableTiptapEditor
+                value={formData.content}
+                onChange={(content) => setFormData({ ...formData, content })}
+                placeholder="Write your blog content here..."
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Featured Image URL</label>
+            <input
+              type="text"
+              name="featured_image"
+              value={formData.featured_image}
+              onChange={handleChange}
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            />
           </div>
 
           {/* Category */}
@@ -130,6 +165,43 @@ export default function EditPost({ post, categories, tags: initialTags }) {
           <div>
             <label className="block mb-2">Tags</label>
             <TagManager selectedTags={selectedTags} availableTags={availableTags} onTagsChange={setSelectedTags} />
+          </div>
+
+          <div className="border-t pt-4 space-y-4">
+            <h2 className="text-lg font-semibold text-gray-800">SEO & Schema</h2>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700">SEO Description</label>
+              <textarea
+                name="seo_description"
+                value={formData.seo_description}
+                onChange={handleChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                rows={3}
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Canonical URL</label>
+              <input
+                type="text"
+                name="seo_canonical_url"
+                value={formData.seo_canonical_url}
+                onChange={handleChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Schema JSON-LD</label>
+              <textarea
+                name="schema_json"
+                value={formData.schema_json}
+                onChange={handleChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                rows={4}
+              />
+            </div>
           </div>
 
           {/* Buttons */}
