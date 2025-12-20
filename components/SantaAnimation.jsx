@@ -17,9 +17,10 @@ const SantaAnimation = () => {
         position: 'fixed',
         top: '15%',
         left: '-200px',
-        zIndex: 5,
+        zIndex: 999,
         pointerEvents: 'none',
-        animation: 'santa-ride 12s linear forwards',
+        animation: 'santa-ride 12s linear ',
+        animationIterationCount: 4,
       }}
     >
       {/* Santa Image */}

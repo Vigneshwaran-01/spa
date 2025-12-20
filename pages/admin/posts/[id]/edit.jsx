@@ -4,12 +4,17 @@ import dynamic from 'next/dynamic';
 import AdminLayout from '../../../../components/AdminLayout';
 import TagManager from '../../../../components/TagManager';
 
-const StableTiptapEditor = dynamic(
-  () => import('../../../../components/StableTiptapEditor'),
+const SimpleEditor = dynamic(
+  () =>
+    import('../../../../components/tiptap-templates/simple/simple-editor').then(
+      (mod) => mod.SimpleEditor,
+    ),
   {
     ssr: false,
-    loading: () => <div className="min-h-[200px] px-4 py-3 text-sm text-slate-500">Loading editor...</div>,
-  }
+    loading: () => (
+      <div className="min-h-[200px] px-4 py-3 text-sm text-slate-500">Loading editor...</div>
+    ),
+  },
 );
 
 export default function EditPost({ post, categories, tags: initialTags }) {
@@ -113,8 +118,8 @@ export default function EditPost({ post, categories, tags: initialTags }) {
           {/* Content */}
           <div>
             <label className="block text-sm font-medium text-gray-700">Content</label>
-            <div className="mt-1 border rounded-md overflow-hidden bg-white">
-              <StableTiptapEditor
+            <div className="mt-1">
+              <SimpleEditor
                 value={formData.content}
                 onChange={(content) => setFormData({ ...formData, content })}
                 placeholder="Write your blog content here..."

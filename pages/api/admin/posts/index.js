@@ -2,8 +2,8 @@ import mysql from 'mysql2/promise';
 import slugify from 'slugify';
 
 export default async function handler(req, res) {
-  // Only allow POST, PUT, and DELETE methods
-  if (!['POST', 'PUT', 'DELETE'].includes(req.method)) {
+  // Allow GET for listing posts, and POST/PUT/DELETE for mutations
+  if (!['GET', 'POST', 'PUT', 'DELETE'].includes(req.method)) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
@@ -19,6 +19,27 @@ export default async function handler(req, res) {
       password: process.env.DB_PASSWORD,
       ssl: process.env.DATABASE_SSL === 'true',
     });
+
+    // GET: Return list of posts for admin UI
+    if (req.method === 'GET') {
+      const [rows] = await connection.execute(
+        `SELECT id, title, slug, excerpt, author, published, created_at
+         FROM blog_posts
+         ORDER BY created_at DESC`
+      );
+
+      const posts = rows.map((row) => ({
+        id: row.id,
+        title: row.title,
+        slug: row.slug,
+        excerpt: row.excerpt || '',
+        published: !!row.published,
+        createdAt: row.created_at,
+        author: { username: row.author || 'Admin' },
+      }));
+
+      return res.status(200).json({ success: true, posts });
+    }
 
     const {
       id,
@@ -37,6 +58,35 @@ export default async function handler(req, res) {
       seo_canonical_url,
       schema_json,
     } = req.body;
+
+    // Validate and format scheduled_for date
+    let formattedScheduledFor = null;
+    if (scheduled_for) {
+      try {
+        // Check if it's a valid date string
+        const scheduledDate = new Date(scheduled_for);
+        if (isNaN(scheduledDate.getTime())) {
+          return res.status(400).json({ message: 'Invalid scheduled date format' });
+        }
+        formattedScheduledFor = scheduledDate.toISOString();
+      } catch (error) {
+        return res.status(400).json({ message: 'Invalid scheduled date format' });
+      }
+    }
+
+    // Validate and format featured_image URL
+    let formattedFeaturedImage = null;
+    if (featured_image) {
+      // Remove any leading/trailing whitespace
+      const cleanImageUrl = featured_image.trim();
+      
+      // If URL doesn't start with http://, https://, or /, add leading slash
+      if (!cleanImageUrl.match(/^https?:\/\//) && !cleanImageUrl.startsWith('/')) {
+        formattedFeaturedImage = '/' + cleanImageUrl;
+      } else {
+        formattedFeaturedImage = cleanImageUrl;
+      }
+    }
 
     // Generate a slug from the title if not provided
     const generatedSlug = slug ? slugify(slug, { lower: true }) : slugify(title || '', { lower: true });
@@ -61,9 +111,9 @@ export default async function handler(req, res) {
           category_id,
           author,
           author_bio,
-          featured_image || null,
+          formattedFeaturedImage,
           published || false,
-          scheduled_for,
+          formattedScheduledFor,
           status || 'draft',
           seo_description || null,
           seo_canonical_url || null,
@@ -97,9 +147,9 @@ export default async function handler(req, res) {
           excerpt || null,
           category_id,
           author,
-          featured_image || null,
+          formattedFeaturedImage,
           published || false,
-          scheduled_for,
+          formattedScheduledFor,
           status || 'draft',
           seo_description || null,
           seo_canonical_url || null,

@@ -17,8 +17,6 @@ import Blogslider from './section/Blogslider';
 import { homeSchema } from '../lib/data/schema'
 import ProofpointCarousel from './section/ProofpointCarousel';
 import { MailCheck, MailOpen } from 'lucide-react';
-import SnowfallEffect from '../components/SnowfallEffect';
-import SantaAnimation from '../components/SantaAnimation';
 
 
 const styles = StyleSheet.create({
@@ -129,8 +127,7 @@ export default function New({ homeData, error }) {
 
   return (
     <div>
-      <SnowfallEffect />
-      <SantaAnimation />
+      
       <Head>
         <title>Email Security Service Provider | Spamcloud </title>
         <meta name="description" content="SpamCloud Email Security Services protects your information, prevents financial fraud, and maintains organizational trust with an intrusion prevention service" />

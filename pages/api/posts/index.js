@@ -47,8 +47,28 @@ export default async function handler(req, res) {
     const totalPosts = countResult[0].total;
     const totalPages = Math.ceil(totalPosts / limit);
 
+    // Format posts with proper URL validation
+    const formattedPosts = posts.map(post => {
+      const newPost = { ...post };
+      
+      // Validate and format featured_image URL
+      if (post.featured_image) {
+        // Remove any leading/trailing whitespace
+        const cleanImageUrl = post.featured_image.trim();
+        
+        // If URL doesn't start with http://, https://, or /, add leading slash
+        if (!cleanImageUrl.match(/^https?:\/\//) && !cleanImageUrl.startsWith('/')) {
+          newPost.featured_image = '/' + cleanImageUrl;
+        } else {
+          newPost.featured_image = cleanImageUrl;
+        }
+      }
+      
+      return newPost;
+    });
+
     return res.status(200).json({
-      posts,
+      posts: formattedPosts,
       pagination: {
         currentPage: parseInt(page),
         totalPages,

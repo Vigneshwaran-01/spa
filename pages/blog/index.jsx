@@ -25,21 +25,32 @@ function BlogIndex({ initialData }) {
 
   // --- Fetch Logic ---
   const fetchPosts = async (page = 1, search = '') => {
+  
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`/api/posts?page=${page}&limit=100&search=${encodeURIComponent(search)}`);
+      const apiUrl = `/api/posts?page=${page}&limit=100&search=${encodeURIComponent(search)}`;
+     
+      const response = await fetch(apiUrl);
+     
       if (!response.ok) throw new Error("Failed to fetch posts");
       const data = await response.json();
+    
       setPosts(data.posts || []);
       setPagination(data.pagination || { currentPage: page, totalPages: 0 });
     } catch (err) {
+     
       setError(err.message);
       setPosts([]);
     } finally {
       setIsLoading(false);
     }
   };
+
+  // Fetch latest posts from the API on first mount so we see live DB data
+  useEffect(() => {
+    fetchPosts(1, '');
+  }, []);
 
   const handleSearch = (e) => {
     if (e.key === 'Enter') fetchPosts(1, e.target.value);
